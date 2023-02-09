@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div class="container">
+
+    <article>
+
+        {% assign publications = site.publications | sort: 'year' %}
+        {% assign publications = publications | sort: 'order' %}
+
+        {% for pub in site.publications %}
+        {% if pub.type == 'preprint' %}
+        {% assign haspreprints = true %}
+        {% endif %}
+        {% endfor %}
+
+        {% if haspreprints %}
+        <h1>Preprints</h1>
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == 'preprint' %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <h1>Peer-Reviewed Journal and Conference Papers </h1>
+
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == "paper" %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+
+
+        <h1>Commentary</h1>
+
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == "commentary" %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+
+        <h1>Selected Posters</h1>
+
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == "poster" %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+
+        <h1>Dissertations and Theses</h1>
+
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == "thesis" %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+
+        <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
+
+
+    </article>
+</div>
+
+<br>
+<br>

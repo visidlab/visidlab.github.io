@@ -1,0 +1,7 @@
+---
+- link: /
+  name: about
+- link: /people/
+  name: people
+- link: /research/
+  name: research

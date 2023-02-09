@@ -1,0 +1,40 @@
+---
+layout: header
+---
+
+<div class="container">
+    <h1>{{ page.title }}</h1>
+
+    <!-- CONTENT ABOUT US -->
+    {{ content }}
+
+    <!-- FACULTY -->
+    {% for person in site.people %}
+    {% if person.role == "faculty" %}
+    {% include person.html %}
+
+    {% endif %}
+    {% endfor %}
+
+
+    <!-- STUDENTS -->
+    {% for person in site.people %}
+    {% if person.role != "alumnus" and person.role != "faculty" %}
+    {% include person.html %}
+
+    {% endif %}
+    {% endfor %}
+
+
+    <!-- Alumni -->
+    <h2> Alumni </h2>
+    {% for person in site.people %}
+    {% if person.role == "alumnus" %}
+    <strong>{{ person.first_name }} {{ person.last_name }}</strong> -- {{ person.graduated }}
+
+    {% endif %}
+    {% endfor %}
+</div>
+
+<br>
+<br>

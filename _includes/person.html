@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-sm-4">
+        <img src="../assets/photos/{{ person.last_name }}.jpg"
+            alt="Photo of {{ person.first_name }} {{ person.last_name }}" style="max-width: 100%; height: auto" />
+    </div>
+    <div class="col-sm-8">
+        <h3> {{ person.first_name }} {{ person.last_name }}</h3>
+
+        <p> {{ person.blurb }}</p>
+
+
+        {{ page.first_name }} {{ page.last_name }}<br>
+        {{ page.position}} <br>
+        <p>
+            <b>Contact</b> <br>
+            <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a> <br>
+
+            {% if person.gs %}
+            <a href="{{ person.gs }}"><i class="fa fa-google"></i> Google Scholar</a><br>
+            {% endif %}
+            {% if person.twitter %}
+            <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i> Twitter</a><br>
+            {% endif %}
+            {% if person.github %}
+            <a href="{{person.github}}"><i class="fa fa-github"></i> GitHub</a><br>
+            {% endif %}
+            {% if person.personal-site %}
+            <a href="{{person.personal-site}}"><i class="fa fa-github"></i> Personal Site</a><br>
+            {% endif %}
+        </p>
+    </div>
+</div>
+<br>

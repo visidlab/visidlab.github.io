@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Lora|Darker+Grotesque&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+/* TEXT */
+a.navbar-brand {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-family: "Nanum Pen Script";
+    color: DarkSlateGray;
+    
+  }
+
+
+h2 {
+    font-family: "IBM Plex Mono", serif;
+    color: #575657;
+    letter-spacing: 0;
+  }
+
+/* BACKGROUND COLOR OF THE SITE */
+  body {
+    background-color: lightgray ;
+  }
+  
+  li, p,
+  summary {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* BUTTONS */
+  button {
+    padding-left:0;
+    border: none;
+  }
+
+  button:hover {
+    color: palevioletred;
+  }
+
+  a:hover {
+    background-color: #adb5bdcf;
+  }
+
+  /* ABOUT PAGE */
+  #photo {
+    width: 20%;
+    float: left;
+    display: inline;
+    margin-right: 25pt;
+    margin-top: 25pt;
+  }
+
+  #about-me {
+    display: inline-block;
+  }
+
+  /* CHANGE PHOTO ON MOBILE */
+
+  @media only screen and (max-width: 600px) {
+    #photo {
+      width: 70%;
+      float: left;
+      display: block;
+      margin: 25pt;
+    }
+  }
