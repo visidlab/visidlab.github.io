@@ -1,6 +1,6 @@
 # Vis Collective Lab Website
 
-The Vis Collective Lab Website draws inspo from the Vis Design Lab and is built with Jekyll.
+The Vis Collective Lab Website draws inspo (& code) from the [Vis Design Lab](https://github.com/visdesignlab/visdesignlab.github.io) and is built with Jekyll.
 
 ## Setup Jekyll
 
