@@ -19,5 +19,5 @@ address: |
   601 74 Norrköping, Sweden  <br>
 orchid: 0000-0001-9419-3402
 twitter: gotdairyya
-blurb: Poke minim occaecat meditation. Plaid vape gastropub godard minim jean shorts adipisicing locavore bitters kogi et chia lomo. Migas ut selvage JOMO pitchfork. Four loko eiusmod beard, +1 sriracha commodo woke gentrify messenger bag aliqua. Woke lumbersexual beard tousled bitters in roof party chicharrones. Church-key brunch veniam bicycle rights. Tousled cliche twee helvetica iPhone street art.
+blurb: Derya is interested in applying critical theory + visualization, communicating science research ,understanding how data became important, learning Swedish, and hanging out with her cat Fig. 
 ---
