@@ -13,5 +13,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: jsmrcaga/action-netlify-deploy@master
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDXcv6P4dWcoMj/7ajt4RKR1INvocY8bkhElWM8VlVp1A3RYgCrwjgNhk2AEn82B9Hk7FzuQfRfyi0rIfkrpuNVorIzYNB4VQLyU8UBdTV23eBk7WaZaT2/G/128HW8xwoUKbyw/UCwM5bzQ0XfbKgLODyg+UUzSpDpePiige9JIMn0G33qWr5f0omFrg/gCMSOankoj01qYbxf6hbSYqBT+qhZUz4Ki34VaGp83DX4RYMaI31lSy5vc491Lp8CBOOyOwt2cgpZTXvxmLypF1CSH6oG0Xxub748e6xkPUOldHVXiL63rBZfZLcM3HRlBlOnpJg5YeViXzR5Yna3YEbXu64vUhQ3X9UHhOdwPVttToC2oQWR3c4+4SaT9VIfjsyGPqmRYY+WuRf4fJ1oOqnzI5gkNXye05v0DinuVJrd4t7S5Eb8CO7L5AuE1pK8G2sGCvKqrk22tpuEHEb3PSn6kWgU3eK4TKaTkWKaC7FzJzur6RWlgoFvcACc5AKQhmPhW7ncGuSP8RXSSGO9VVpr8SPs8VA+IJynnIKdoQbK/itskP7gt1xC3uqd+KUBdXrAwA6YP5Lp/l9qTtCwUDBqSXNP4GzwjRDsGBbT8CNavX8CTZwSF/LIiIzHn1BuEVm6KptSYTXNIPVfwOaSLkr9V+fIN9nOL8rJQh70ci/9xw== }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.qKnl5-oT3LvWqjJbbruh8nSU5nDnThu6bLV0ArxUKq4 }}
           NETLIFY_SITE_ID: ${{ secrets.deft-starship-bffdf1 }}
