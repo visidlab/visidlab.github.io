@@ -13,7 +13,7 @@ Further details on installing Jekyll and its requirements: https://jekyllrb.com/
 
 ### Run Jekyll
 
-`jekyll serve -i`
+`bundle exec jekyll serve -i`
 Running Jekyll in incremental (-i) mode is significantly faster.
 
 ### View the Generated Site
@@ -23,11 +23,15 @@ Running Jekyll in incremental (-i) mode is significantly faster.
 ## Without local set up
 
 1. Create a branch from main
-![image](https://user-images.githubusercontent.com/8480871/218048347-6809786b-815a-45b5-884f-33b156855cf3.png)
+
+   ![image](https://user-images.githubusercontent.com/8480871/218048347-6809786b-815a-45b5-884f-33b156855cf3.png)
 
 2. Make your changes
 3. Create a pull request
 4. View deployed preview on the branch
-<img width="916" alt="image" src="https://user-images.githubusercontent.com/8480871/218048223-8ebebdb0-d8f4-4704-98b9-cb8056bd260e.png">
+
+   <img width="916" alt="image" src="https://user-images.githubusercontent.com/8480871/218048223-8ebebdb0-d8f4-4704-98b9-cb8056bd260e.png">
+
 5. Merge branch
-![image](https://user-images.githubusercontent.com/8480871/218048746-84385789-18af-4d1e-a596-49ac31fc3cec.png)
+
+   ![image](https://user-images.githubusercontent.com/8480871/218048746-84385789-18af-4d1e-a596-49ac31fc3cec.png)
