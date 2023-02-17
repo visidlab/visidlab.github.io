@@ -1,10 +1,13 @@
 ---
+layout: publication
 title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
-key: 2023_chi_troublingcollab
+key: 2023_chi_troubling
 type: paper
 order: 2023-2
 
-shortname: Troubling Collaboration
+shortname: Troubling
+image: 2023_chi_troubling.png
+image_large: 2023_chi_troubling_teaser.png
 
 authors:
   - akbaba
@@ -54,7 +57,7 @@ pdf: 2023_chi_troubling.pdf
 supplement: 2023_chi_troubling_supplement.zip
 
 # Link to an official preprint server
-preprint_server: https://osf.io/5y7ar/
+preprint_server: https://doi.org/10.31219/osf.io/5y7ar
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
@@ -87,4 +90,7 @@ abstract: "
 
 # Acknowledgements
 
-Thank you to our interview participants for their trust, candor, and time. We wish to acknowledge Ericka Johnson, Kathyrn Norlock, Sheldene Simola, the Vis Collective at LiU, the Vis Design Lab at the U, and our anonymous reviewers for fruitful discussions and feedback. This work is partially funded by the National Science Foundation (OAC 1835904), and by the Wallenberg AI, Autonomous Systems and Software Program (WASP) funded by the Knut and Alice Wallenberg Foundation.
+Thank you to our interview participants for their trust, candor, and time. We wish to acknowledge Ericka Johnson, Kathyrn Norlock, Sheldene Simola, the Vis Collective at LiU, the Vis Design Lab at the U, and our anonymous reviewers for fruitful discussions and feedback.
+This work is partially funded by the National Science Foundation (OAC 1835904), and by the Wallenberg AI, Autonomous
+Systems and Software Program (WASP) funded by the Knut and
+Alice Wallenberg Foundation.
