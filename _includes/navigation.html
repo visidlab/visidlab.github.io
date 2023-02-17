@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container" role="navigation">
         <a class="navbar-brand" href="">
-            Visualization Collective
+            <img src="/assets/logo.png" alt="vis.c" class="logo">
         </a>
         <ul class="nav">
             {% for item in site.data.navigation %}
@@ -9,8 +9,10 @@
                 <a class="nav-link" href="{{ item.link }}" {% if page.url==item.link %} {% endif %}>
                     {{ item.name }}
                 </a>
+
                 {% endfor %}
             </li>
         </ul>
     </div>
 </nav>
+<br>

@@ -16,7 +16,7 @@ layout: default
         {% endfor %}
 
         {% if haspreprints %}
-        <h1>Preprints</h1>
+        <h2>Preprints</h2>
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == 'preprint' %}
@@ -25,7 +25,7 @@ layout: default
         {% endfor %}
         {% endif %}
 
-        <h1>Peer-Reviewed Journal and Conference Papers </h1>
+        <h2>Peer-Reviewed Journal and Conference Papers </h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -35,7 +35,7 @@ layout: default
         {% endfor %}
 
 
-        <h1>Commentary</h1>
+        <h2>Commentary</h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -44,7 +44,7 @@ layout: default
         {% endif %}
         {% endfor %}
 
-        <h1>Selected Posters</h1>
+        <h2>Selected Posters</h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -53,7 +53,7 @@ layout: default
         {% endif %}
         {% endfor %}
 
-        <h1>Dissertations and Theses</h1>
+        <h2>Dissertations and Theses</h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -62,7 +62,7 @@ layout: default
         {% endif %}
         {% endfor %}
 
-        <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
+        <!-- <h2>Commentaries, Editorials, Book Chapters & Published Abstracts </h2>-->
 
 
     </article>

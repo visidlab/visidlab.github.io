@@ -4,21 +4,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
+/* COLORS */
+:root {
+  --yellow: #F2B03E;
+  --orange: #EE7B2F;
+  --red: #D12C3D;
+  --lightgreen: rgba(211, 220, 50, .6);
+  --darkgreen: #929818;
+}
+
+
 /* TEXT */
 a.navbar-brand {
     font-family: 'Montserrat';
 }
 
+em {
+  text-emphasis: "*"; 
+  text-emphasis-position: under;
+  text-emphasis-color:var(--red);
+  font-style: normal;
+}
+
+a.nav-link {
+  font-family: "IBM Plex Mono", serif;
+  color: #030200;
+}
+
 h1 {
     font-family: "Nanum Pen Script";
-    color: DarkSlateGray;
-    
+    color: var(--darkgreen);
+    font-size: 3rem;
   }
 
 
 h2 {
     font-family: "IBM Plex Mono", serif;
-    color: #575657;
+    color: var(--orange);
+    letter-spacing: 0;
+  }
+
+  h3 {
+    font-family: "IBM Plex Mono", serif;
     letter-spacing: 0;
   }
 
@@ -40,34 +67,12 @@ h2 {
     border: none;
   }
 
-  button:hover {
-    color: palevioletred;
-  }
-
-  a:hover {
-    background-color: #adb5bdcf;
-  }
-
-  /* ABOUT PAGE */
-  #photo {
-    width: 20%;
-    float: left;
-    display: inline;
-    margin-right: 25pt;
-    margin-top: 25pt;
-  }
-
-  #about-me {
+  img.logo {
     display: inline-block;
+    height: 5em;
   }
 
-  /* CHANGE PHOTO ON MOBILE */
-
-  @media only screen and (max-width: 600px) {
-    #photo {
-      width: 70%;
-      float: left;
-      display: block;
-      margin: 25pt;
-    }
+  nav.navbar {
+    background-color: darkgrey;
+    border-bottom: 3mm ridge var(--lightgreen) ;
   }
