@@ -26,6 +26,11 @@ em {
   font-style: normal;
 }
 
+team {
+  font-style: normal;
+  color: var(--darkgreen);
+}
+
 a.nav-link {
   font-family: "IBM Plex Mono", serif;
   color: #030200;
@@ -75,4 +80,10 @@ h2 {
   nav.navbar {
     background-color: darkgrey;
     border-bottom: 3mm ridge var(--lightgreen) ;
+  }
+
+  .image-frame {
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+    margin-top: 10px;
   }
