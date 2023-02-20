@@ -12,24 +12,26 @@
 
 
         {{ page.first_name }} {{ page.last_name }}<br>
-        {{ page.position}} <br>
-        <p>
-            <b>Contact</b> <br>
-            <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a> <br>
 
-            {% if person.gs %}
-            <a href="{{ person.gs }}"><i class="fa fa-google"></i> Google Scholar</a><br>
-            {% endif %}
-            {% if person.twitter %}
-            <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i> Twitter</a><br>
-            {% endif %}
-            {% if person.github %}
-            <a href="{{person.github}}"><i class="fa fa-github"></i> GitHub</a><br>
-            {% endif %}
-            {% if person.personal-site %}
-            <a href="{{person.personal-site}}"><i class="fa fa-github"></i> Personal Site</a><br>
-            {% endif %}
-        </p>
+        <div class="right">
+            <h4>Contact</h4>
+            <p>
+                <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a> <br>
+
+                {% if person.gs %}
+                <a href="{{ person.gs }}"><i class="fa fa-google"></i> Google Scholar</a><br>
+                {% endif %}
+                {% if person.twitter %}
+                <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i> Twitter</a><br>
+                {% endif %}
+                {% if person.github %}
+                <a href="{{person.github}}"><i class="fa fa-github"></i> GitHub</a><br>
+                {% endif %}
+                {% if person.personal-site %}
+                <a href="{{person.personal-site}}"><i class="fa fa-github"></i> Personal Site</a>
+                {% endif %}
+            </p>
+        </div>
     </div>
 </div>
 <br>

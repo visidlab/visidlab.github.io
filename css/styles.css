@@ -36,6 +36,23 @@ a.nav-link {
   color: #030200;
 }
 
+/* GENERAL LINK STYLING */
+i {
+  color: var(--darkgreen);
+}
+
+p > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p > a:hover {
+  background-color: var(--yellow);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ */
+
+
 h1 {
     font-family: "Nanum Pen Script";
     color: var(--darkgreen);
@@ -50,6 +67,11 @@ h2 {
   }
 
   h3 {
+    font-family: "IBM Plex Mono", serif;
+    letter-spacing: 0;
+  }
+
+  h4 {
     font-family: "IBM Plex Mono", serif;
     letter-spacing: 0;
   }
