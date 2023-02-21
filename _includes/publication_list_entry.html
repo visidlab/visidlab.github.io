@@ -1,9 +1,14 @@
 <div class="row">
-    <div class="col-lg-1 ">
-        <img class="img-fluid image-frame " src="../assets/publication-images/{{ publication.image}}"
-            alt="Teaser image for paper {{ publication.title }}" style="max-width: 100%; height: auto;  " />
+    <div class="col-lg-1">
+        <a href="{{ site.baseurl }}{{ publication.url }}">
+            <img class=" img-fluid
+                image-frame" src="../assets/publication-images/{{ publication.image}}"
+                alt="Teaser image for paper {{ publication.title }}" style="max-width: 100%; height: auto;  " />
+        </a>
     </div>
     <div class="col-lg-11">
+        <span class="paper-title"><a href="{{ site.baseurl }}{{ publication.url }}">{{ publication.title
+                }}</a></span><br />
         <p>
             {% for author in publication.authors %}
             {% assign known = false %}
@@ -33,8 +38,7 @@
 
             {% endfor %}
             <br />
-            <span class="paper-title"><a href="{{ site.baseurl }}{{ publication.url }}">{{ publication.title
-                    }}</a></span><br />
+
             {% if publication.type == "thesis" %}
             {{ publication.institution }}, {{ publication.thesis_type }}, {{ publication.month }} {{ publication.year }}
 
