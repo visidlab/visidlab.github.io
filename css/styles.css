@@ -76,6 +76,11 @@ h2 {
     letter-spacing: 0;
   }
 
+  img {
+    max-width: 100%; 
+    height: auto;
+  }
+
   /* PAPER TITLES ON PUBLICATION LIST */
 
   .paper-title > a {
