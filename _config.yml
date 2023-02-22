@@ -1,11 +1,11 @@
 title: Visualization Collective
-email: viscollective@gmail.com
+email:
 description: >- # this means to ignore newlines until "baseurl:"
   This vis collective is a lab at Linkoping University.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://viscollective.com/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
+url: "https://viscollective.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+github_username:
 
 # Build settings
 # plugins:
