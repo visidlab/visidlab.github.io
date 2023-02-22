@@ -21,7 +21,6 @@ permalink: /team/meyer/
 # Pick one of the following
 role: faculty | postdoc | phdstudent | msstudent | undergrad | intern
 email: miriah.meyer@liu.se
-image: ../assets/photos/meyer.jpeg
 organization: Linköping University
 # leave empty if you don't have apersonal website
 personal-site: https://miriah.github.io/
