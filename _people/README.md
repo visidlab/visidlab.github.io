@@ -36,6 +36,8 @@ address: |
 orchid: 0000-0002-8971-6245
 twitter: miriah_meyer
 
+# This is where you should write something about yourself.
+blurb:
 ---
 ```
 

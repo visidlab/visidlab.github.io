@@ -20,4 +20,5 @@ address: |
   601 74 Norrköping, Sweden  <br>
 orchid: 0000-0002-2796-6820
 twitter: cberret
+blurb:
 ---
