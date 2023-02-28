@@ -5,26 +5,36 @@ layout: header
 <div class="container">
     <h1>{{ page.title }}</h1>
 
-    <!-- CONTENT ABOUT US -->
-    {{ content }}
+    <div class="row">
+        <div class="col-lg-7">
+            <!-- CONTENT ABOUT US -->
+            {{ content }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- FACULTY -->
+            {% for person in site.people %}
+            {% if person.role == "faculty" %}
+            {% include person.html %}
 
-    <!-- FACULTY -->
-    {% for person in site.people %}
-    {% if person.role == "faculty" %}
-    {% include person.html %}
-
-    {% endif %}
-    {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </div>
 
 
-    <!-- STUDENTS -->
-    {% for person in site.people %}
-    {% if person.role != "alumnus" and person.role != "faculty" %}
-    {% include person.html %}
+        <!-- STUDENTS -->
+        <div class="col-lg-6">
+            {% for person in site.people %}
+            {% if person.role != "alumnus" and person.role != "faculty" %}
 
-    {% endif %}
-    {% endfor %}
+            {% include person.html %}
 
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
 
     <!-- Alumni -->
     <h2> Alumni </h2>
@@ -34,6 +44,7 @@ layout: header
 
     {% endif %}
     {% endfor %}
+
 </div>
 
 <br>

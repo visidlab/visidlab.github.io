@@ -1,19 +1,38 @@
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm">
         <img src="../assets/photos/{{ person.key }}.jpg"
             alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm">
         <em>
             <h3> {{ person.first_name }} {{ person.last_name }}</h3>
         </em>
 
-        <p> {{ person.keywords }}</p>
+        {% assign role = '' %}
+        {% if person.role == 'phdstudent' %}
+        {% assign role = 'PhD Student' %}
+        {% elsif person.role == 'postdoc' %}
+        {% assign role = 'Post-Doctoral Researcher' %}
+        {% elsif person.role == 'faculty' %}
+        {% assign role = 'Professor' %}
+        {% elsif person.role == 'msstudent' %}
+        {% assign role = 'Masters Student' %}
+        {% elsif person.role == 'undergrad' %}
+        {% assign role = 'Undergraduate Student' %}
+        {% elsif person.role == 'intern' %}
+        {% assign role = 'Intern' %}
+        {% endif %}
+        <p> {{ role }} | {{ person.division}} </p>
+
+        {% if person.organization != 'LiU' %}
+        <p> {{ person.organization }} </p>
+        {% endif %}
+        <p> {{ person.keywords }} </p>
 
 
         {{ page.first_name }} {{ page.last_name }}<br>
 
-        <div class="right">
+        <div>
             <h4>Contact</h4>
             <p>
                 <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a> <br>
