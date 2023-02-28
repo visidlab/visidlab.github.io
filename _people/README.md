@@ -45,7 +45,7 @@ keywords:
 
 ## Adding a Member Picture
 
-All active members should add a headshot.
+All active members should add a headshot to the [assets/photos](https://github.com/viscollective/viscollective.github.io/tree/main/assets/photos) folder.
 The image should be 370 pixels x 370 pixels.
 Name it {last_name}.
 It should be a jpg.
