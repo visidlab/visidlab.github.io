@@ -32,3 +32,14 @@ Named: `YYYY_CONFSHORTNAME_PAPERSHORTNAME_teaser.png`
 Dimensions: 1200x600 (keep a 2:1 aspect ratio)
 
 File Size: 200-300 kb
+
+## Personal Images
+
+All active members should add a headshot to the [assets/photos](https://github.com/viscollective/viscollective.github.io/tree/main/assets/photos) folder, or you will have a nice cat filler image :)
+
+The image should be 370 pixels x 370 pixels.
+
+Name it {last_name}.
+
+It should be a jpg.
+
