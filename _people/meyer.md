@@ -25,6 +25,5 @@ orcid: 0000-0002-8971-6245
 twitter: miriah_meyer
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords:
-visualization, critical data studies, HCI, cake
+keywords: visualization, critical data studies, HCI, cake
 ---
