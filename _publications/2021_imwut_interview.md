@@ -9,8 +9,8 @@ image: 2021_imwut_interview.png
 image_large: 2021_imwut_interview_teaser.png
 
 authors:
-- moore
-- pgoffin
+- Jimmy Moore
+- Pascal Goffin
 - Jason Wiese
 - meyer
 
