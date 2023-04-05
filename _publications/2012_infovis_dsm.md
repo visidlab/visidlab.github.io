@@ -24,7 +24,7 @@ bib:
   pages: 2431--2440
   month: dec
 
-award: IEEE InfoVis 2012 Honorable Mention Award
+award: IEEE InfoVis 2012 Honorable Mention Award, IEEE VIS Test of Time Award
 
 video: 
 preview-video: 
