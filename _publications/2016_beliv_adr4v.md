@@ -12,7 +12,7 @@ image: 2016_beliv_adr4v.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- mccurdy
+- Nina Mccurdy
 - Jason Dykes
 - meyer
 
