@@ -12,7 +12,7 @@ image: 2016_infovis_hanpuku.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- bigelow
+- Alex Bigelow
 - Steven Drucker
 - Danyel Fisher
 - meyer
