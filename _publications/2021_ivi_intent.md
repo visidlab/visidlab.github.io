@@ -13,14 +13,14 @@ redirect_from:
  - /publications/2020_preprint_intent/
 
 authors:
-  - kiran
-  - goertler
-  - zcutler
-  - nobre
+  - Kiran Gadhave
+  - Jochen Goertler
+  - Zach Cutler
+  - Carolina Nobre
   - Oliver Deussen
   - meyer
   - Jeff Phillips
-  - lex
+  - Alexander Lex
 
 journal-short: IVI
 year: 2021
