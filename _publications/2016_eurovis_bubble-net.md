@@ -9,7 +9,7 @@ image: 2016_eurovis_bubble-net.png
 image_large: 2016_eurovis_bubble-net_teaser.png
 
 authors:
-- mckenna
+- Sean Mckenna
 - Diane Staheli
 - Cody Fulcher
 - meyer
