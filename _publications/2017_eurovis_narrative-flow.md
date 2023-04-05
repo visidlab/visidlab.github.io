@@ -9,7 +9,7 @@ image: 2017_eurovis_narrative-flow.png
 image_large: 2017_eurovis_narrative-flow_teaser.png
 
 authors:
-- mckenna
+- Sean Mckenna
 - Nathalie Henry Riche
 - Bongshin Lee
 - Jeremy Boy
