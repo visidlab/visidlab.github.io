@@ -9,8 +9,8 @@ image: 2017_pdv_daf-worksheets.png
 image_large: 2017_pdv_daf-worksheets-teaser.png
 
 authors:
-- mckenna
-- lex
+- Sean Mckenna
+- Alexander Lex
 - meyer
 
 journal-short: PDV
