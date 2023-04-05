@@ -28,7 +28,7 @@ bib:
 
 award: 
 
-video: 2010_eurovis_pathline_video
+video: 
 preview-video:
 
 
