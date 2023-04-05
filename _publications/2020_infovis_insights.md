@@ -10,10 +10,10 @@ image_large: 2020_infovis_insights_teaser.png
 order: 2020-05
 
 authors:
-- rogers
+- Jen Rogers
 - Austin H Patton
 - Luke Harmon
-- lex
+- Alexander Lex
 - meyer
 
 journal-short: InfoVis
