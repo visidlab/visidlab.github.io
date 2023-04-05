@@ -9,10 +9,10 @@ image: 2016_infovis_binning.png
 image_large: 2016_infovis_binning_teaser.png
 
 authors:
-- padilla
-- quinan
+- Lace Padilla
+- Sam Quinan
 - meyer
-- creem-regehr
+- Sarah Creem-Regehr
 
 journal-short: InfoVis
 year: 2017
