@@ -12,7 +12,7 @@ image: 2015_clfl_rhyme-design.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- mccurdy
+- Nina Mccurdy
 - Vivek Srikumar
 - meyer
 
