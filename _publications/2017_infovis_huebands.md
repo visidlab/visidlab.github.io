@@ -8,9 +8,9 @@ shortname: RCM Poster
 image: 2017_infovis_huebands_teaser.png
 
 authors:
-- quinan
-- padilla
-- creem-regehr
+- Samuel Quinan
+- Lace Padilla
+- Sarah Creem-Regehr
 - meyer
 
 journal-short: InfoVis Posters
