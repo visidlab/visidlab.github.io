@@ -14,7 +14,7 @@ image_large: 2015_infovis_weaver_teaser.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- quinan
+- Samuel Quinan
 - meyer
 
 journal-short: InfoVis
