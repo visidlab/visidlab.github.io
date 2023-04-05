@@ -8,9 +8,9 @@ shortname: origraph poster
 image: 2018_infovis_origraph.png
 
 authors:
-- bigelow
-- nobre
-- lex
+- Alex Bigelow
+- Carolina Nobre
+- Alexander Lex
 - meyer
 
 journal-short: InfoVis Posters
