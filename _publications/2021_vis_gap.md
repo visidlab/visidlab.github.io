@@ -23,8 +23,8 @@ image_large: 2021_vis_gap_teaser.png
 
 # Authors in the "database" can be used with just their person "key"
 authors:
-- moore
-- pgoffin
+- Jimmy Moore
+- Pascal Goffin
 - Jason Wiese
 - meyer
 
