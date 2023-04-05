@@ -12,7 +12,7 @@ image: 2015_infovis_poemage.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- mccurdy
+- Nina Mccurdy
 - Julie Lein
 - Katharine Coles
 - meyer
