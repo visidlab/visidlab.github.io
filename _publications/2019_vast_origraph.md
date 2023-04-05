@@ -19,10 +19,10 @@ image_large: 2019_vast_origraph_large.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-  - bigelow
-  - nobre
+  - Alex Bigelow
+  - Carolina Nobre
   - meyer
-  - lex
+  - Alexander Lex
 
 journal-short: VAST
 year: 2019
