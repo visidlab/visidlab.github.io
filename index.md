@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: about
 title: About Us
 ---
 
-hello. this is the visualization collective
-
-hey hej hey
+this is where you write stuff about us @miriah!

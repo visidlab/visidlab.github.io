@@ -1,0 +1,25 @@
+---
+layout: header
+---
+<div class="container">
+    <h1>{{ page.title }}</h1>
+    <div class="row">
+        <div class="col-sm-8">
+
+            <!-- CONTENT -->
+            {{ content }}
+        </div>
+        <div class="col-sm-4">
+            <h2>Recent Publications</h2>
+
+            {% include recent_pub_list.html %}
+            <br>
+
+            <h2>News</h2>
+            {% include recent_news_list.html %}
+        </div>
+    </div>
+</div>
+
+<br>
+<br>

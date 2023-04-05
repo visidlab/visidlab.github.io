@@ -92,6 +92,12 @@ h2 {
   }
 /* ~~~~~~~~~~~~~~~~~~~~~ */
 
+/* LIST STYLE ON ABOUT PAGE */
+.about-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* BACKGROUND COLOR OF THE SITE */
   body {

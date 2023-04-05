@@ -1,0 +1,14 @@
+<ul class="about-list">
+    {% assign sorted_news = site.data.news | sort: 'year' %}
+    {% assign sorted_news = sorted_news | sort: 'monthnumber' %}
+    {% for news_item in sorted_news %}
+    <li>
+        <span>
+            {{ news_item.content }}
+        </span>
+        <div style="margin-bottom: 5px">
+            {{ news_item.month }} {{ news_item.year }}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
