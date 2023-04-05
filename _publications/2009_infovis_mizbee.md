@@ -4,7 +4,6 @@ title: "MizBee: A Multiscale Synteny Browser,"
 key: 2009_infovis_mizbee
 type: paper
 
-
 shortname: MizBee
 image: 2009_infovis_mizbee.png
 
