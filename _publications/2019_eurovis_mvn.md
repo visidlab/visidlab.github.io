@@ -17,10 +17,10 @@ image_large: 2019_eurovis_mvnv_teaser.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- nobre
-- streit
+- Carolina Nobre
+- Marc Streit
 - meyer
-- lex
+- Alexander Lex
 
 journal-short: EuroVis
 year: 2019
