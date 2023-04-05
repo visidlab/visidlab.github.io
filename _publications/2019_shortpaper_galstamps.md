@@ -16,7 +16,7 @@ image_large: 2019_shortpapers_galstamps_teaser.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- mccurdy
+- Nina Mccurdy
 - meyer
 
 journal-short: VIS Short Papers
