@@ -14,8 +14,8 @@ image_large: 2017_eurovis_graffinity_teaser.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- kerzner
-- lex
+- Ethan Kerzner
+- Alexander Lex
 - Crystal Lynn Sigulinsky
 - Timothy Urness
 - Bryan William Jones
