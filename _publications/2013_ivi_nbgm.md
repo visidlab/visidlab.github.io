@@ -13,7 +13,7 @@ image: 2013_ivi_nbgm.png
 authors:
 - meyer
 - Michael Sedlmair
-- quinan
+- Samuel Quinan
 - Tamara Munzner
 
 journal-short: IVI
