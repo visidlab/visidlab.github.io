@@ -9,7 +9,7 @@ image: 2014_infovis_design-activity.png
 image_large: 2014_infovis_design-activity_teaser.png
 
 authors:
-- mckenna
+- Sean Mckenna
 - Dominika Mazur
 - James Agutter
 - meyer
