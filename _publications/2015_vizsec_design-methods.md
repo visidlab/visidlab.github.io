@@ -9,7 +9,7 @@ image: 2015_vizsec_design-methods.png
 image_large: 2015_vizsec_design-methods_teaser.png
 
 authors:
-- mckenna
+- Sean Mckenna
 - Diane Staheli
 - meyer
 
