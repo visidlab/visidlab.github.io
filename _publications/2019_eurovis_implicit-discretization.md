@@ -10,9 +10,9 @@ image: 2019_eurovis_implicit-discretization.png
 image_large: 2019_eurovis_implicit-discretization_teaser.png
 
 authors:
-- quinan
-- padilla
-- creem-regehr
+- Samuel Quinan
+- Lace Padilla
+- Sarah Creem-Regehr
 - meyer
 
 journal-short: EuroVis
