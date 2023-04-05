@@ -1,5 +1,4 @@
 ---
-layout: person
 first_name: Charles
 last_name: Berret
 key: berret
@@ -8,7 +7,7 @@ permalink: /team/berret/
 role: postdoc
 email: charles.berret@liu.se
 department: ITN
-division: MIT
+division: MIT & Tema G
 organization: LiU
 # leave empty if you don't have apersonal website
 personal-site: https://charlesberret.net

@@ -17,22 +17,20 @@ layout: header
             {% for person in site.people %}
             {% if person.role == "faculty" %}
             {% include person.html %}
-
             {% endif %}
             {% endfor %}
         </div>
-
-
-        <!-- STUDENTS -->
+        {% for person in site.people %}
         <div class="col-lg-6">
-            {% for person in site.people %}
+            <!-- STUDENTS -->
             {% if person.role != "alumnus" and person.role != "faculty" %}
 
             {% include person.html %}
 
             {% endif %}
-            {% endfor %}
+
         </div>
+        {% endfor %}
 
     </div>
 
@@ -40,8 +38,13 @@ layout: header
     <h2> Alumni </h2>
     {% for person in site.people %}
     {% if person.role == "alumnus" %}
+    {% if person.graduated != "N" %}
     <strong>{{ person.first_name }} {{ person.last_name }}</strong> -- {{ person.graduated }}
-
+    <br>
+    {% elsif person.graduated == "N" %}
+    <strong>{{ person.first_name }} {{ person.last_name }}</strong>
+    <br>
+    {% endif %}
     {% endif %}
     {% endfor %}
 
