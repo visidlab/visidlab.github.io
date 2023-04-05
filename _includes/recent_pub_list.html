@@ -1,7 +1,7 @@
 <ul class="about-list">
     {% assign sorted_publications = site.publications | sort: 'year' %}
     {% assign sorted_publications = sorted_publications | sort: 'order' %}
-    {% for publication in sorted_publications reversed %}
+    {% for publication in sorted_publications reversed limit: 10 %}
     <li>
         <span class="paper-title">
             <a href="{{ site.baseurl }}{{ publication.url }}"><b>{{ publication.title }}</b></a>
