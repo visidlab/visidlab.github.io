@@ -9,7 +9,7 @@ image: 2015_jcgs_s-corrplot.png
 image_large: 2015_jcgs_s-corrplot_teaser.png
 
 authors:
-- mckenna
+- Sean Mckenna
 - meyer
 - Christopher Gregg
 - Samuel Gerber
