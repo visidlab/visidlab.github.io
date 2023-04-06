@@ -1,8 +1,9 @@
 <ul class="about-list">
     {% assign sorted_publications = site.publications | sort: 'year' %}
     {% assign sorted_publications = sorted_publications | sort: 'order' %}
-    {% for publication in sorted_publications reversed limit: 10 %}
-    <li>
+    {% assign count = 0 %}
+    {% for publication in sorted_publications reversed %}
+    {% if count < 10 %} <li>
         <span class="paper-title">
             <a href="{{ site.baseurl }}{{ publication.url }}"><b>{{ publication.title }}</b></a>
         </span>
@@ -11,6 +12,8 @@
             }}, {{ publication.month }} {{ publication.year }} {% else %}
             {{publication.journal-short}}, {{publication.year}} {% endif %}
         </div>
-    </li>
-    {% endfor %}
+        </li>
+        {% assign count = count | plus: 1 %}
+        {% endif %}
+        {% endfor %}
 </ul>
