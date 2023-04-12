@@ -20,7 +20,9 @@ layout: header
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == 'preprint' %}
-        {% include publication_list_entry.html %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
         {% endif %}
         {% endfor %}
         {% endif %}
@@ -30,26 +32,32 @@ layout: header
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == "paper" %}
-        {% include publication_list_entry.html %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
         {% endif %}
         {% endfor %}
 
 
-        <h2>Commentary</h2>
+        <!-- <h2>Commentary</h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == "commentary" %}
-        {% include publication_list_entry.html %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
         {% endif %}
-        {% endfor %}
+        {% endfor %} -->
 
         <h2>Selected Posters</h2>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == "poster" %}
-        {% include publication_list_entry.html %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
         {% endif %}
         {% endfor %}
 
@@ -58,7 +66,9 @@ layout: header
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == "thesis" %}
-        {% include publication_list_entry.html %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
         {% endif %}
         {% endfor %}
 
