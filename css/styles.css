@@ -15,6 +15,16 @@
 
 
 /* TEXT */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: var(--yellow);
+}
+
+
 a.navbar-brand {
     font-family: 'Montserrat';
 }
@@ -79,6 +89,17 @@ h2 {
   img {
     max-width: 100%; 
     height: auto;
+  }
+
+  .authors > a {
+    text-decoration: none;
+    color: var(--darkgreen)
+  }
+
+  .authors > a:hover {
+    text-decoration: none;
+    color: var(--darkgreen);
+    background-color: var(--yellow);
   }
 
   /* PAPER TITLES ON PUBLICATION LIST */
