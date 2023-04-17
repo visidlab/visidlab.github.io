@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Sara
 last_name: Akhlaq
 key: akhlaq

@@ -5,8 +5,8 @@
 {% if author == person.key %}
 
 <span>
-    {% if person.website %}
-    {{ person.first_name }}&nbsp;{{ person.last_name }}{% if author !=
+    {% if author == person.key %}
+    <a href="{{ person.permalink }}">{{ person.first_name }}&nbsp;{{ person.last_name }}</a>{% if author !=
     el.authors.last %}, {% endif %}
     {% else %}
     <team>{{ person.first_name }}&nbsp;{{ person.last_name }}</team>{% if author != el.authors.last

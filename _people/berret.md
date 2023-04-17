@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Charles
 last_name: Berret
 key: berret

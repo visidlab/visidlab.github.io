@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Myrto
 last_name: Dagkouli-Kyriakolgou
 key: mdag

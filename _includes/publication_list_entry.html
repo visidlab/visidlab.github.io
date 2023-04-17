@@ -1,37 +1,39 @@
-<div class="col-lg-1">
-    <a href="{{ site.baseurl }}{{ publication.url }}">
-        <img class=" img-fluid
-                image-frame" src="../assets/publication-images/{{ publication.image}}"
-            alt="Teaser image for paper {{ publication.title }}" style="max-width: 100%; height: auto;  " />
-    </a>
-</div>
-<div class="col-lg-11">
-    <span class="paper-title"><a href="{{ site.baseurl }}{{ publication.url }}">{{ publication.title
-            }}</a></span><br />
-    <p>
-        {% include author_list.html input_type=publication %}
+<div class="row">
+    <div class="col-lg-1">
+        <a href="{{ site.baseurl }}{{ publication.url }}">
+            <img class=" img-fluid
+                image-frame" src="{{ site.baseurl }}/assets/publication-images/{{ publication.image}}"
+                alt="Teaser image for paper {{ publication.title }}" style="max-width: 100%; height: auto;  " />
+        </a>
+    </div>
+    <div class="col-lg-11">
+        <span class="paper-title"><a href="{{ site.baseurl }}{{ publication.url }}">{{ publication.title
+                }}</a></span><br />
+        <p>
+            {% include author_list.html input_type=publication %}
 
-        {% if publication.type == "thesis" %}
-        {{ publication.institution }}, {{ publication.thesis_type }}, {{ publication.month }} {{ publication.year }}
+            {% if publication.type == "thesis" %}
+            {{ publication.institution }}, {{ publication.thesis_type }}, {{ publication.month }} {{ publication.year }}
 
-        {% else %}
-        {% assign published-where = '' %}
-        {% if publication.bib.journal %}
-        {% assign published-where = publication.bib.journal %}
-        {% elsif publication.bib.booktitle %}
-        {% assign published-where = publication.bib.booktitle %}
-        {% elsif publication.bib.publisher %}
-        {% assign published-where = publication.bib.publisher %}
-        {% endif %}
+            {% else %}
+            {% assign published-where = '' %}
+            {% if publication.bib.journal %}
+            {% assign published-where = publication.bib.journal %}
+            {% elsif publication.bib.booktitle %}
+            {% assign published-where = publication.bib.booktitle %}
+            {% elsif publication.bib.publisher %}
+            {% assign published-where = publication.bib.publisher %}
+            {% endif %}
 
-        {{ published-where }}, {{ publication.year }}
-        {% endif %}
+            {{ published-where }}, {{ publication.year }}
+            {% endif %}
 
-        {%if publication.award %}
-        <br>
-        <span class="award">
-            <i class="fa fa-trophy"></i>&nbsp;{{publication.award}}
-        </span>
-        {% endif %}
-    </p>
+            {%if publication.award %}
+            <br>
+            <span class="award">
+                <i class="fa fa-trophy"></i>&nbsp;{{publication.award}}
+            </span>
+            {% endif %}
+        </p>
+    </div>
 </div>

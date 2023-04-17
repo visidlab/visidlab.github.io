@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Derya
 last_name: Akbaba
 key: akbaba

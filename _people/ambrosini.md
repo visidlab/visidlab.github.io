@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Lorenzo
 last_name: Ambrosini
 key: ambrosini
