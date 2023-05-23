@@ -3,12 +3,13 @@
     {% assign sorted_news = sorted_news | sort: 'monthnumber' %}
     {% for news_item in sorted_news limit: 10 %}
     <li>
+        <div style="margin-bottom: 5px">
+            <strong>{{ news_item.month }} {{ news_item.year }}</strong>
+        </div>
         <span>
             {{ news_item.content }}
         </span>
-        <div style="margin-bottom: 5px">
-            {{ news_item.month }} {{ news_item.year }}
-        </div>
+
     </li>
     {% endfor %}
 </ul>

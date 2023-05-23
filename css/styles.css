@@ -11,6 +11,7 @@
   --red: #D12C3D;
   --lightgreen: rgba(211, 220, 50, .6);
   --darkgreen: #929818;
+  --blue: #00ABD6;
 }
 
 
@@ -64,9 +65,9 @@ p > a:hover {
 
 
 h1 {
-    font-family: "Nanum Pen Script";
-    color: var(--darkgreen);
-    font-size: 3rem;
+    font-family: "IBM Plex Mono", serif;
+    color: #005F8B;
+    font-size: 2.5rem;
   }
 
 
@@ -74,6 +75,7 @@ h2 {
     font-family: "IBM Plex Mono", serif;
     color: var(--orange);
     letter-spacing: 0;
+    font-size: 1.5rem;
   }
 
   h3 {
@@ -146,7 +148,7 @@ h2 {
 
   nav.navbar {
     background-color: darkgrey;
-    border-bottom: 3mm ridge var(--lightgreen) ;
+    border-bottom: 3mm ridge var(--blue) ;
   }
 
 

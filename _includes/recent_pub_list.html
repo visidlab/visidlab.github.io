@@ -3,7 +3,7 @@
     {% assign sorted_publications = sorted_publications | sort: 'order' %}
     {% assign count = 0 %}
     {% for publication in sorted_publications reversed %}
-    {% if count < 10 %} <li>
+    {% if count < 5 %} <li>
         <span class="paper-title">
             <a href="{{ site.baseurl }}{{ publication.url }}"><b>{{ publication.title }}</b></a>
         </span>

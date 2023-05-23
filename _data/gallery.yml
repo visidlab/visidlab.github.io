@@ -1,10 +1,13 @@
 ---
 - name: ufo.png
   thumb: ufo.png
-  text: Image of UFO Sweden exhibit at Arbets museum.
+  text: Image of UFO Sweden exhibit at Arbetets museum.
+  link: https://www.ufo.se/
 - name: mmaps.jpeg
   thumb: mmaps.jpeg
-  text: Photo of Myrto looking at maps.
+  text: Photo of Myrto looking at maps at Arbetets museum.
+  link: https://www.arbetetsmuseum.se/
 - name: viscenter.jpeg
   thumb: viscenter.jpeg
   text: Image of vis center logo
+  link: https://visualiseringscenter.se/

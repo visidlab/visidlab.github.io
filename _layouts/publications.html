@@ -16,7 +16,7 @@ layout: header
         {% endfor %}
 
         {% if haspreprints %}
-        <h2>Preprints</h2>
+        <h1>Preprints</h1>
         {% for publication in publications reversed %}
         {% if publication.personal %}
         {% elsif publication.type == 'preprint' %}
@@ -27,7 +27,7 @@ layout: header
         {% endfor %}
         {% endif %}
 
-        <h2>Peer-Reviewed Journal and Conference Papers </h2>
+        <h1>Peer-Reviewed Journal and Conference Papers </h1>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -38,7 +38,7 @@ layout: header
         {% endif %}
         {% endfor %}
 
-        <h2>Selected Posters</h2>
+        <h1>Selected Posters</h1>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -49,7 +49,7 @@ layout: header
         {% endif %}
         {% endfor %}
 
-        <h2>Dissertations and Theses</h2>
+        <h1>Dissertations and Theses</h1>
 
         {% for publication in publications reversed %}
         {% if publication.personal %}
@@ -60,7 +60,7 @@ layout: header
         {% endif %}
         {% endfor %}
 
-        <!-- <h2>Commentaries, Editorials, Book Chapters & Published Abstracts </h2>-->
+        <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
 
 
     </article>

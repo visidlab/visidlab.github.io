@@ -5,18 +5,16 @@ layout: header
     <h1>{{ page.title }}</h1>
     <div class="row">
         <div class="col-sm-8">
-
-            <!-- CONTENT -->
-            {{ content }}
-
-            <!-- heading text -->
-            <ul class="image-gallery">
-                {% for photo in site.data.gallery limit: 10 %}
-                <li>
-                    <img src="assets/nrkp/{{ photo.name }}" alt="{{ photo.text }}" />
-                </li>
-                {% endfor %}
-            </ul>
+            <div class="row">
+                <div class="col-sm-8">
+                    <img src="assets/photos/group{{ page.groupimgyear }}.gif" class="img-fluid" alt="Photo of the group"
+                        style="border-radius: 5px;">
+                </div>
+                <div class="col-sm-4">
+                    <!-- CONTENT -->
+                    {{ content }}
+                </div>
+            </div>
         </div>
         <div class="col-sm-4">
             <h2>Recent Publications</h2>
@@ -28,6 +26,23 @@ layout: header
             {% include recent_news_list.html %}
         </div>
     </div>
+
+    <!-- Photo gallery -->
+    <h3>Location</h3>
+    <h4>Norrköping, Sweden</h4>
+
+    <p>You can find us in the Norrköping campus of Linköping University. As an old textile city, now the old mills have
+        been converted to university offices and a research park.
+    </p>
+
+    <ul class="image-gallery">
+        {% for photo in site.data.gallery limit: 10 %}
+        <li>
+            <a href="{{ photo.link }}" target="_blank"><img src="assets/nrkp/{{ photo.name }}"
+                    alt="{{ photo.text }}" /></a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 <br>
