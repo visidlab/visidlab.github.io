@@ -1,0 +1,10 @@
+---
+- name: ufo.png
+  thumb: ufo.png
+  text: Image of UFO Sweden exhibit at Arbets museum.
+- name: mmaps.jpeg
+  thumb: mmaps.jpeg
+  text: Photo of Myrto looking at maps.
+- name: viscenter.jpeg
+  thumb: viscenter.jpeg
+  text: Image of vis center logo

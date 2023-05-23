@@ -8,6 +8,15 @@ layout: header
 
             <!-- CONTENT -->
             {{ content }}
+
+            <!-- heading text -->
+            <ul class="image-gallery">
+                {% for photo in site.data.gallery limit: 10 %}
+                <li>
+                    <img src="assets/nrkp/{{ photo.name }}" alt="{{ photo.text }}" />
+                </li>
+                {% endfor %}
+            </ul>
         </div>
         <div class="col-sm-4">
             <h2>Recent Publications</h2>
