@@ -5,16 +5,11 @@ layout: header
     <h1>{{ page.title }}</h1>
     <div class="row">
         <div class="col-sm-8">
-            <div class="row">
-                <div class="col-sm-8">
-                    <img src="assets/photos/group{{ page.groupimgyear }}.gif" class="img-fluid" alt="Photo of the group"
-                        style="border-radius: 5px;">
-                </div>
-                <div class="col-sm-4">
-                    <!-- CONTENT -->
-                    {{ content }}
-                </div>
-            </div>
+            <!-- CONTENT -->
+            {{ content }}
+            <br>
+            <img src="assets/photos/group{{ page.groupimgyear }}.gif" class="img-fluid" alt="Photo of the group"
+                style="border-radius: 5px; width: 80%;">
         </div>
         <div class="col-sm-4">
             <h2>Recent Publications</h2>
@@ -22,7 +17,7 @@ layout: header
             {% include recent_pub_list.html %}
             <br>
 
-            <h2>News</h2>
+            <h2>Blog & News</h2>
             {% include recent_news_list.html %}
         </div>
     </div>
@@ -32,10 +27,14 @@ layout: header
     <em>Department of Science & Technology, Linköping University</em>
     <em>Norrköping, Sweden</em>
 
-    <p>The Vis Collective is a research group situated within the Department of Science & Technology at Linköping University. We are affiliated with the Division of Media & Information Technology as well as the Visualiserings Center. 
+    <p>The Vis Collective is a research group situated within the Department of Science & Technology at Linköping
+        University. We are affiliated with the Division of Media & Information Technology as well as the Visualiserings
+        Center.
     </p>
-    
-    <p>Geographically we are located on LiU's campus in Norrköping, Sweden. Norrköping is a picturesque city about 150km south-west of Stockholm. As a former textile city, the old mills have now been converted to university offices, a research park, and public musuem spaces.
+
+    <p>Geographically we are located on LiU's campus in Norrköping, Sweden. Norrköping is a picturesque city about 150km
+        south-west of Stockholm. As a former textile city, the old mills have now been converted to university offices,
+        a research park, and public musuem spaces.
     </p>
 
     <ul class="image-gallery">
