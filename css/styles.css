@@ -6,12 +6,15 @@
 
 /* COLORS */
 :root {
-  --yellow: #F2B03E;
-  --orange: #EE7B2F;
-  --red: #D12C3D;
-  --lightgreen: rgba(211, 220, 50, .6);
-  --darkgreen: #929818;
-  --blue: #00ABD6;
+  --yellow: #F7B322;
+  --orange: #E7511E;
+  --pink: #E4136F;
+  --lightgreen: #B5CA00;
+  --midgreen: #598E22;
+  --darkgreen: #016124;
+  --lightblue: #00ABD6;
+  --midblue: #018FB5;
+  --darkblue: #005F8B;
 }
 
 
@@ -33,7 +36,7 @@ a.navbar-brand {
 em {
   text-emphasis: "*"; 
   text-emphasis-position: under;
-  text-emphasis-color:var(--red);
+  text-emphasis-color:var(--pink);
   font-style: normal;
 }
 
@@ -124,7 +127,8 @@ h2 {
 
 /* BACKGROUND COLOR OF THE SITE */
   body {
-    background-color: lightgray ;
+    /* background-color: lightgray ; */
+    background-color: white ;
   }
 /* ~~~~~~~~~~~~~~~~~~~~~ */
   
@@ -147,8 +151,9 @@ h2 {
   }
 
   nav.navbar {
-    background-color: darkgrey;
-    border-bottom: 3mm ridge var(--blue) ;
+    /* background-color: darkgrey; */
+    background-color: white;
+    border-bottom: 3mm ridge var(--lightblue) ;
   }
 
 
