@@ -52,7 +52,7 @@ a.nav-link {
 
 /* GENERAL LINK STYLING */
 i {
-  color: var(--darkgreen);
+  color: var(--lightgreen);
 }
 
 p > a {
@@ -69,14 +69,14 @@ p > a:hover {
 
 h1 {
     font-family: "IBM Plex Mono", serif;
-    color: #005F8B;
+    color: var(--lightgreen);
     font-size: 2.5rem;
   }
 
 
 h2 {
     font-family: "IBM Plex Mono", serif;
-    color: var(--orange);
+    color: var(--midblue);
     letter-spacing: 0;
     font-size: 1.5rem;
   }
@@ -98,12 +98,12 @@ h2 {
 
   .authors > a {
     text-decoration: none;
-    color: var(--darkgreen)
+    color: var(--midblue)
   }
 
   .authors > a:hover {
     text-decoration: none;
-    color: var(--darkgreen);
+    color: black;
     background-color: var(--yellow);
   }
 
@@ -166,7 +166,7 @@ h2 {
   }
 
   .image-frame:hover {
-    opacity: 80%;
+    filter: drop-shadow(10px 10px 4px var(--yellow));
   }
   /* ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -193,3 +193,8 @@ h2 {
     border-radius: 5px;
   }
   /* ~~~~~~~~~~~~~~~~~~~~~ */
+
+  /* REMOVE HIGHLIGHT ON CITATIONS */
+  .citation {
+    pointer-events: none;
+  }
