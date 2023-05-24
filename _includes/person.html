@@ -3,8 +3,19 @@
         <img src="../assets/photos/{{ person.key }}.jpg"
             alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
     </div>
+
+    <!-- Generate random person font color -->
+    <!-- Random ID generation -->
+    {% assign min = 0 %}
+    {% assign max = 9 %}
+    {% assign diff = max | minus: min %}
+    {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+    <!-- /Random ID generation -->
+    {% assign color = site.data.colors[randomNumber].name %}
+
+
     <div class="col-sm">
-        <em>
+        <em style="text-emphasis-color: var({{ color }})">
             <h3> {{ person.first_name }} {{ person.last_name }}</h3>
         </em>
 
@@ -29,27 +40,31 @@
         {% endif %}
         <p> {{ person.keywords }} </p>
 
-        <p><a href="{{ person.permalink }}"><i class="fa fa-folder-open"></i> Publications</a></p>
+        <p><a href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
+                Publications</a></p>
 
 
         {{ page.first_name }} {{ page.last_name }}
-
         <div>
             <h4>Contact</h4>
             <p>
-                <a href="mailto:{{ person.email }}"><i class="fa fa-envelope"></i> {{ person.email }}</a> <br>
+                <a href="mailto:{{ person.email }}"><i class="fa fa-envelope" style="color: var({{ color }})"></i> {{
+                    person.email }}</a> <br>
 
                 {% if person.gs %}
-                <a href="{{ person.gs }}"><i class="fa fa-google"></i> Google Scholar</a><br>
+                <a href="{{ person.gs }}"><i class="fa fa-google" style="color: var({{ color }})"></i> Google
+                    Scholar</a><br>
                 {% endif %}
                 {% if person.twitter %}
-                <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i> Twitter</a><br>
+                <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"
+                        style="color: var({{ color }})"></i> Twitter</a><br>
                 {% endif %}
                 {% if person.github %}
-                <a href="{{person.github}}"><i class="fa fa-github"></i> GitHub</a><br>
+                <a href="{{person.github}}"><i class="fa fa-github" style="color: var({{ color }})"></i> GitHub</a><br>
                 {% endif %}
                 {% if person.personal-site %}
-                <a href="{{person.personal-site}}"><i class="fa fa-github"></i> Personal Site</a>
+                <a href="{{person.personal-site}}"><i class="fa fa-github" style="color: var({{ color }})"></i> Personal
+                    Site</a>
                 {% endif %}
             </p>
         </div>
