@@ -1,6 +1,6 @@
 ---
 layout: team
-title: our team
+title: Our Team
 ---
 
 This is where we say soemthing about the lab.
