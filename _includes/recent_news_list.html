@@ -4,12 +4,8 @@
     {% for news_item in sorted_news limit: 10 %}
     <li>
         <div style="margin-bottom: 5px">
-            <strong>{{ news_item.month }} {{ news_item.year }}</strong>
+            <b>{{ news_item.month }} {{ news_item.year }}:</b> {{ news_item.content }}
         </div>
-        <span>
-            {{ news_item.content }}
-        </span>
-
     </li>
     {% endfor %}
 </ul>
