@@ -150,11 +150,11 @@ h2 {
     height: 5em;
   }
 
-  nav.navbar {
-    /* background-color: darkgrey; */
-    background-color: white;
+  /* nav.navbar {
+    background-color: darkgrey;
+    background-color: white; 
     border-bottom: 3mm ridge var(--lightblue) ;
-  }
+  } */
 
 
   /* PUBLICATION LIST TEASER */
