@@ -26,10 +26,6 @@ a {
   color: black;
 }
 
-a:hover {
-  background-color: var(--yellow);
-}
-
 em {
   text-emphasis: "*"; 
   text-emphasis-position: under;
@@ -46,6 +42,11 @@ a.nav-link {
   font-size: x-large;
   color: black;
   font-weight: 600;
+}
+
+a.nav-link:hover {
+  text-decoration: underline;
+  background-color: none;
 }
 
 .navbar-brand > p {
