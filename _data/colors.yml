@@ -1,19 +1,10 @@
 ---
 - name: --yellow
-  hex: F7B322
-- name: --orange
-  hex: E7511E
-- name: --pink
-  hex: E4136F
 - name: --lightgreen
-  hex: B5CA00
-- name: --midgreen
-  hex: 598E22
-- name: --darkgreen
-  hex: 016124
-- name: --lightblue
-  hex: 00ABD6
 - name: --midblue
-  hex: 018FB5
+- name: --pink
+- name: --midgreen
+- name: --lightblue
+- name: --darkgreen
 - name: --darkblue
-  hex: 005F8B
+- name: --orange

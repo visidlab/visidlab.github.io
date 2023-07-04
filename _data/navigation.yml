@@ -1,6 +1,6 @@
 ---
 - link: /
-  name: about
+  name: home
 - link: /people/
   name: people
 - link: /publications/

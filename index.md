@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Vis Collective
+title:
 groupimgyear: 2023
 ---
 

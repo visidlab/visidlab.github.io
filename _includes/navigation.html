@@ -2,11 +2,15 @@
     <div class="container" role="navigation">
         <a class="navbar-brand" href="/">
             <img src="/assets/logo.png" alt="vis.c" class="logo">
+            <p>the Visualization Collective</p>
         </a>
         <ul class="nav">
             {% for item in site.data.navigation %}
+            {% assign color = site.data.colors[forloop.index0].name %}
+
             <li class="nav-item">
-                <a class="nav-link" href="{{ item.link }}" {% if page.url==item.link %} {% endif %}>
+                <a class="nav-link" href="{{ item.link }}" style="color: var({{ color }})" {% if page.url==item.link %}
+                    {% endif %}>
                     {{ item.name }}
                 </a>
 
