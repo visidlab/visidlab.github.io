@@ -63,8 +63,10 @@ p > a {
   text-decoration: none;
 }
 
-p > a:hover {
-  background-color: var(--yellow);
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~ */
@@ -107,9 +109,9 @@ h1 {
   }
 
   .authors > a:hover {
-    text-decoration: none;
-    color: black;
-    background-color: var(--yellow);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--yellow);
   }
 
   /* PAPER TITLES ON PUBLICATION LIST */
@@ -118,8 +120,11 @@ h1 {
     color: black;
     text-decoration: none;
   }
+
   .paper-title > a:hover {
-    background-color: var(--yellow);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--yellow);
   }
 /* ~~~~~~~~~~~~~~~~~~~~~ */
 
