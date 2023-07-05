@@ -47,6 +47,7 @@ a.nav-link {
 a.nav-link:hover {
   text-decoration: underline;
   background-color: none;
+  text-decoration-style: wavy;
 }
 
 .navbar-brand > p {
