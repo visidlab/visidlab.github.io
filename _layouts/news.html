@@ -1,0 +1,43 @@
+---
+layout: header
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1>News</h1>
+            {% for post in site.news %}
+
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <h3>
+                    {{ post.title }}
+                </h3>
+            </a>
+            <span><i>Posted: {{ post.date | date: "%b %Y" }}</i></span>
+
+            <div>
+                {% if post.lead-image %}
+                {% assign alt-text = "Post lead image" %}
+                {% if post.lead-image-alt-text %}
+                {% assign alt-text=post.lead-image-alt-text %}
+                {% endif %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <img src="{{site.baseurl}}{{post.lead-image}}" alt="{{alt-text}}" />
+                </a>
+                {% endif %}
+                <br>
+                <br>
+
+                <div class="post-excerpt">
+                    {{ post.excerpt }}
+                </div>
+
+
+            </div>
+            <div><a class="post-list-link" href="{{ post.url | prepend: site.baseurl }}">More...</a></div>
+            <br><br>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>

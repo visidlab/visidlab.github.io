@@ -216,3 +216,8 @@ h1 {
   .citation {
     pointer-events: none;
   }
+
+.post-excerpt {
+    height:130px;
+    overflow:hidden;
+}

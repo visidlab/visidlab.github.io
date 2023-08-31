@@ -1,11 +1,14 @@
 <ul class="about-list">
-    {% assign sorted_news = site.data.news | sort: 'year' %}
-    {% assign sorted_news = sorted_news | sort: 'monthnumber' %}
-    {% for news_item in sorted_news limit: 10 %}
+    {% for news in site.news limit:4 %}
     <li>
         <div style="margin-bottom: 5px">
-            <b>{{ news_item.month }} {{ news_item.year }}:</b> {{ news_item.content }}
+            <a href="{{ site.baseurl }}{{ news.url }}"><b>{{ news.date | date: "%B %Y" }}:</b>
+                {{ news.title }}</a>
         </div>
     </li>
     {% endfor %}
+    <br>
+
+    <a href="{{ site.baseurl }}/news"
+        style="text-align: right; color: var(--lightblue); font-weight: bold; font-size: 1.25rem;">More news...</a>
 </ul>

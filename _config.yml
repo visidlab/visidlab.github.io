@@ -25,6 +25,9 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
+  news:
+    output: true
+    permalink: /news/:path/
 
 # Build settings
 permalink: pretty

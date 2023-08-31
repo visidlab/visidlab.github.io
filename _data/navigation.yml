@@ -5,3 +5,5 @@
   name: people
 - link: /publications/
   name: publications
+- link: /news/
+  name: news
