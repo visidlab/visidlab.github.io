@@ -12,3 +12,4 @@ akbaba, Devin Lange, Michael Correll, Alex Lex, and meyer: [Troubling Collaborat
 
 Stephen Kasica, berret, and Tamara Munzner: [Dirty Data in the Newsroom: Comparing Data Preparation in Journalism and Data Science](https://www.cs.ubc.ca/group/infovis/pubs/2023/dirty-data-in-the-newsroom/).
 
+Congrats Derya, Charles, and Miriah!
