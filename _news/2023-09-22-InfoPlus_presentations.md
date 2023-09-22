@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Acceptances to Info+
-date: 2023-04-28 15:00:00
-lead-image: infoplus23-logo.JPG
+lead-image: infoplus23-logo.png
 lead-image-alt-text: Logo for the Information+ 2023 conference
 ---
 

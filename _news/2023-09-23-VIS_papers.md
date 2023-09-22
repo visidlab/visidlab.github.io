@@ -1,12 +1,11 @@
 ---
 layout: post
 title: Accepted papers to VIS 23
-date: 2023-06-115 15:00:00
 lead-image: vis23-logo.png
 lead-image-alt-text: Logo for the IEEE VIS 23 conference
 ---
 
-The Vis.C has had two papers accepted to the [IEEE VIS 23 conference](https://ieeevis.org/year/2023/welcome). Melbourne, here we come! 
+The Vis.C has had two papers accepted to the [IEEE VIS 23 conference](https://ieeevis.org/year/2023/welcome). Melbourne, here we come!
 
 akbaba and meyer: ["Two Heads are Better than One": Pair-Interviews for Visualization](https://osf.io/h793u/).
 
