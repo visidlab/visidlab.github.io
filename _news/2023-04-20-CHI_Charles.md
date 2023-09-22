@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Charles receives a CHI 2023 honorable mention 
-date: 2023-04-20 15:00:00
+date: 2023-03-01 15:00:00
 lead-image: charles-award-chi23.png
 lead-image-alt-text: Overview figure from Charles' award winning CHI 23 paper
 ---
