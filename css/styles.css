@@ -48,6 +48,7 @@ a.nav-link:hover {
   text-decoration: underline;
   background-color: none;
   text-decoration-style: wavy;
+  text-decoration-skip-ink: none;
 }
 
 .navbar-brand > p {
@@ -68,6 +69,7 @@ p > a {
 a:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
+  text-decoration-skip-ink: none;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~ */
@@ -113,6 +115,7 @@ h1 {
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-color: var(--yellow);
+    text-decoration-skip-ink: none;
   }
 
   /* PAPER TITLES ON PUBLICATION LIST */
@@ -126,6 +129,7 @@ h1 {
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-color: var(--yellow);
+    text-decoration-skip-ink: none;
   }
 /* ~~~~~~~~~~~~~~~~~~~~~ */
 
