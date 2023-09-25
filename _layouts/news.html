@@ -31,13 +31,12 @@ layout: header
                 <br>
 
                 <div class="post-excerpt">
-                    {{ post.excerpt }}
+                    {{ post.content }}
                 </div>
 
 
             </div>
-            <div><a class="post-list-link" href="{{ post.url | prepend: site.baseurl }}">More...</a></div>
-            <br><br>
+            <br>
             <hr>
             {% endfor %}
         </div>

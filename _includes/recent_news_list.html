@@ -3,13 +3,12 @@
     {% for news in newspaper limit: 4 %}
     <li>
         <div style="margin-bottom: 5px">
-            <a href="{{ site.baseurl }}{{ news.url }}"><b>{{ news.date | date: "%B %Y" }}:</b>
-                {{ news.title }}</a>
+            <b>{{ news.date | date: "%B %Y" }}: </b>{{ news.title }}
         </div>
     </li>
     {% endfor %}
     <br>
 
     <a href="{{ site.baseurl }}/news"
-        style="text-align: right; color: var(--lightblue); font-weight: bold; font-size: 1.25rem;">More news...</a>
+        style="text-align: right; color: var(--lightblue); font-weight: bold; font-size: 1.25rem;">Read more...</a>
 </ul>
