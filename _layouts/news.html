@@ -6,7 +6,7 @@ layout: header
     <div class="row">
         <div class="col-sm-8">
             <h1>News</h1>
-            {% for post in site.news %}
+            {% for post in site.news reversed %}
 
             <a href="{{ post.url | prepend: site.baseurl }}">
                 <h3>
@@ -14,6 +14,7 @@ layout: header
                 </h3>
             </a>
             <span><i>Posted: {{ post.date | date: "%b %Y" }}</i></span>
+            <br>
 
             <div>
                 {% if post.lead-image %}
@@ -22,7 +23,8 @@ layout: header
                 {% assign alt-text=post.lead-image-alt-text %}
                 {% endif %}
                 <a href="{{ site.baseurl }}{{ post.url }}">
-                    <img src="{{site.baseurl}}{{post.lead-image}}" alt="{{alt-text}}" />
+                    <img src="/assets/photos/{{ post.lead-image }}" alt="{{post.alt-text}}" class="img-fluid"
+                        style="padding-top: 6;" />
                 </a>
                 {% endif %}
                 <br>

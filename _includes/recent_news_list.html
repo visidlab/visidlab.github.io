@@ -1,5 +1,6 @@
 <ul class="about-list">
-    {% for news in site.news limit:4 %}
+    {% assign newspaper = site.news | | sort: 'date' | reverse %}
+    {% for news in newspaper limit: 4 %}
     <li>
         <div style="margin-bottom: 5px">
             <a href="{{ site.baseurl }}{{ news.url }}"><b>{{ news.date | date: "%B %Y" }}:</b>
