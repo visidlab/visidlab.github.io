@@ -27,9 +27,10 @@ a {
 }
 
 em {
-  text-emphasis: "*"; 
-  text-emphasis-position: under;
-  text-emphasis-color:var(--pink);
+  text-decoration: underline; 
+  text-decoration-style: wavy;
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--pink);
   font-style: normal;
 }
 
