@@ -1,16 +1,15 @@
-<div class="row">
-    <div class="col-lg-1">
+<div class="row align-items-center">
+    <div class="col-lg-2">
         <a href="{{ site.baseurl }}{{ publication.url }}">
             <img class=" img-fluid
                 image-frame" src="{{ site.baseurl }}/assets/publication-images/{{ publication.image}}"
-                alt="Teaser image for paper {{ publication.title }}"
-                style=" height:70%; max-width: auto; align-content: center; " />
+                alt="Teaser image for paper {{ publication.title }}" style=" align-content: center; " />
         </a>
     </div>
-    <div class="col-lg-11">
+    <div class="col-lg-10">
         <span class="paper-title"><a href="{{ site.baseurl }}{{ publication.url }}">{{ publication.title
                 }}</a></span><br />
-        <p>
+        <p style="margin-bottom: 0;">
             {% include author_list.html input_type=publication %}
 
             {% if publication.type == "thesis" %}

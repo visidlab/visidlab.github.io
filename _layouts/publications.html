@@ -47,6 +47,16 @@ layout: header
         </div>
         {% endif %}
         {% endfor %} -->
+        <h1>Selected Abstracts</h1>
+
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == "abstract" %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
         <br>
         <h1>Dissertations and Theses</h1>
 

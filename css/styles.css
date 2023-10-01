@@ -109,13 +109,13 @@ h1 {
 
   .authors > a {
     text-decoration: none;
-    color: var(--midblue)
+    color: var(--lightgreen)
   }
 
   .authors > a:hover {
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--lightgreen);
     text-decoration-skip-ink: none;
   }
 
@@ -124,13 +124,15 @@ h1 {
   .paper-title > a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
   }
 
   .paper-title > a:hover {
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--midblue);
     text-decoration-skip-ink: none;
+    color:var(--midblue)
   }
 /* ~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -189,6 +191,7 @@ a.newslink:hover {
     border: 2px solid var(--yellow);
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
     opacity: 1;
   }
 

@@ -18,15 +18,11 @@ However, if there are multiple files of the same extension type, then the
 ## Steps to Adding a Publication
 
 1. Add a `*.md` file in this folder following the template below. Use the unique key for your publication's filenames.
-<!-- 2. Upload the following files:
-    - publication PDF (`KEY.pdf`) - *mandatory*
-    - thumbnail figure (`KEY.png`) - *mandatory*
-    - teaser figure (`KEY_teaser.png`) - *strongly recommended*
-    - Supplementary Material PDF (`KEY_supplement.pdf`)
-    - full video (`KEY.mp4`)
-    - preview video (`KEY_preview.mp4`)
-    - talk video (`KEY_talk.mp4`)
-2. Upload supplemental figures that are _not_ in the paper. The figures are placed in a folder in the `assets/images/publications` folder, where the foldername is the KEY. The point of these is that they can be used, e.g., in review articles without having to pay the publisher. [Read more about adding supplemental images here](../assets/images/README.md) - you need to provide high-res figures and thumbnails. -->
+2. Upload the following files:
+   - publication PDF (`KEY.pdf`) - _mandatory_
+   - thumbnail figure (`KEY.png`) - _mandatory_
+
+<!-- 2. Upload supplemental figures that are _not_ in the paper. The figures are placed in a folder in the `assets/images/publications` folder, where the foldername is the KEY. The point of these is that they can be used, e.g., in review articles without having to pay the publisher. [Read more about adding supplemental images here](../assets/images/README.md) - you need to provide high-res figures and thumbnails. -->
 
 ## Publication Template
 
@@ -44,7 +40,7 @@ title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
 # Keys must be unique to each paper, see section below for more details
 key: 2023_chi_troublingcollab
 # Select one of the options below
-type: paper | preprint | poster | thesis | commentary
+type: paper | preprint | poster | thesis | commentary | abstract
 
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than
