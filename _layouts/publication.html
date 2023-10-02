@@ -167,6 +167,14 @@ layout: header
                     </li>
                     {% endif %}
 
+                    {% if page.videos %}
+                    {% for video in page.videos %}
+                    <li>
+                        <i class="fa fa-external-link"></i> &nbsp;<a href="{{ video.link }}">{{ video.name }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+
                     {% if page.preprint_server %}
                     <li>
                         <i class="fa fa-external-link"></i> &nbsp;<a href="{{ page.preprint_server }}">Preprint
