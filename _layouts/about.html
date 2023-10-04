@@ -46,7 +46,7 @@ layout: header
     </p>
 
     <ul class="image-gallery">
-        {% for photo in site.data.gallery limit: 10 %}
+        {% for photo in site.data.gallery limit: 4 %}
         <li>
             <a href="{{ photo.link }}" target="_blank"><img src="assets/nrkp/{{ photo.name }}"
                     alt="{{ photo.text }}" /></a>
