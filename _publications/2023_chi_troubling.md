@@ -21,7 +21,7 @@ year: 2023
 
 bibentry: inproceedings
 bib:
-  booktitle: "SIGCHI Conference on Human Factors in Computing Systems (CHI) (to appear)"
+  booktitle: "SIGCHI Conference on Human Factors in Computing Systems (CHI)"
   publisher: ACM
   doi: 10.1145/3544548.3581168
   # pages: 1-12
