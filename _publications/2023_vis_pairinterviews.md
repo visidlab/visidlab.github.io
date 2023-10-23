@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "'Two Heads are Better than One': Pair-Interviews for Visualization"
+title: ' “Two Heads are Better than One": Pair-Interviews for Visualization'
 key: 2023_vis_pairinterviews
 type: abstract
 order: 2023-11
