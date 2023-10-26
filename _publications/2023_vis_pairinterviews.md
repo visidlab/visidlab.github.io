@@ -29,7 +29,7 @@ bib:
 # Links to a project hosted on VDL, or else externally on your own site
 
 # project:
-# external-project: https://ferret.sci.utah.edu/
+external-project: https://gotdairyya.github.io/pair-interview-primer/
 
 # Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
 # you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
@@ -51,7 +51,7 @@ bib:
 # Provide a preprint and supplement pdf
 
 # pdf: 2023_vis_pairinterviews.pdf
-supplement: https://gotdairyya.github.io/pair-interview-primer/about/
+# supplement: https://gotdairyya.github.io/pair-interview-primer/about/
 
 # Link to an official preprint server
 preprint_server: https://osf.io/h793u/
