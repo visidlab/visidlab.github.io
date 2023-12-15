@@ -4,14 +4,10 @@
             alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
     </div>
 
-    <!-- Generate random person font color -->
-    <!-- Random ID generation -->
-    {% assign min = 0 %}
-    {% assign max = 9 %}
-    {% assign diff = max | minus: min %}
-    {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-    <!-- /Random ID generation -->
-    {% assign color = site.data.colors[randomNumber].name %}
+
+    <!-- Color generation -->
+    {% assign indexNum = include.data %}
+    {% assign color = site.data.colors[indexNum].name %}
 
 
     <div class="col-sm">

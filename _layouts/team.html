@@ -16,21 +16,23 @@ layout: header
             <!-- FACULTY -->
             {% for person in site.people %}
             {% if person.role == "faculty" %}
-            {% include person.html %}
+            {% include person.html data = 1 %}
             {% endif %}
             {% endfor %}
         </div>
+        {% assign count = 2 %}
         {% for person in site.people %}
         <div class="col-lg-6">
             <!-- STUDENTS -->
             {% if person.role != "alumnus" and person.role != "faculty" %}
 
-            {% include person.html %}
+            {% include person.html data=count %}
 
             {% endif %}
 
         </div>
         <br>
+        {% assign count = count | plus: 1 %}
         {% endfor %}
 
     </div>
