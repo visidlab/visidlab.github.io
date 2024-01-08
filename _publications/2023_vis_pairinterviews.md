@@ -18,10 +18,10 @@ year: 2023
 
 bibentry: inproceedings
 bib:
-  booktitle: "IEEE Visualization Short Papers (to appear)"
+  booktitle: "2023 IEEE Visualization and Visual Analytics (VIS)"
   publisher: IEEE
-  doi: 
-  # pages: 1-12
+  doi: 10.1109/VIS54172.2023.00050
+  pages: 206-210
   award:
 
 # award: IEEE VIS 2021 Honorable Mention Award
