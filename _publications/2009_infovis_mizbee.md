@@ -30,7 +30,7 @@ preview-video:
 
 external-project: http://www.cs.utah.edu/~miriah/mizbee/Overview.html
 
-pdf: 2009_infovis_mizbee.pdf
+pdf: https://users.cs.utah.edu/~miriah/publications/mizbee.pdf
 supplement:
 
 abstract: "
