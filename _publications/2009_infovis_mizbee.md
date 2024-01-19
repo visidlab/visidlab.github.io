@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "MizBee: A Multiscale Synteny Browser,"
+title: "MizBee: A Multiscale Synteny Browser"
 key: 2009_infovis_mizbee
 type: paper
 
