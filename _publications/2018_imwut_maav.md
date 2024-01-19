@@ -56,32 +56,12 @@ bib:
 # Provide a link to the publisher's webpage if no DOI is available
 
 
-# Link to an official preprint server
-# preprint_server: 
 
-# Links to a project hosted on VDL, or else externally on your own site
-project: 
-# external-project: https://pathfinder.caleydoapp.org/
-
-# Video entry and preview video
-# video: 2016_eurovis_pathfinder_video
-# preview-video: 2016_eurovis_pathfinder_video_preview
 
 # Provide a preprint and supplement pdf
-pdf: 2018_imwut_maav.pdf
-supplement: 2018_imwut_maav_supplement.zip
+pdf: https://sci.utah.edu/~vdl/papers/2018_imwut_maav.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2018_imwut_maav_supplement.zip
 
-# Extra supplements, such as talk slides, data sets, etc.
-supplements: 
-name: Presentation Slides
-link: 2018_imwut_maav_slides.pdf
-# Use link instead of abslink if you want to link to the master directory
-# link: 2018_imwut_maav_supplement.zip
-# Defaults to a download icon, use this if you want a link-out icon
-# linksym: true
-
-# Link to the repository where the code is hosted
-# code: 
 
 abstract: "<p>
 Air quality is important, varies across time and space, and is largely invisible. Pioneering past work deploying air quality
