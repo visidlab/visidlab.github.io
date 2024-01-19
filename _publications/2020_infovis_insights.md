@@ -37,58 +37,17 @@ blog-post:
 
 # Links to a project hosted on VDL, or else externally on your own site
 
-project:
-#-external-project: https://vdl.sci.utah.edu/Trevo/
-#-external-project: https://vdl.sci.utah.edu/trrrace/
-
-# Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
-# you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
-
-videos:
-- name: "Insights from Experiments with Rigor in an EvoBio Design Study"
-  youtube-id: 0lIJarVNxcM
-  file: 2020_infovis_insights_talk.mp4
 
 
-# Provide a preprint and supplement pdf
-
-pdf: 2020_infovis_insights.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2020_infovis_insights.pdf
 supplement: 
 
 # Link to an official preprint server
 preprint_server: https://arxiv.org/abs/2008.11564
 
-blog-post: 2020/10/30/interpret-lens/
-
-# # Extra supplements, such as talk slides, data sets, etc.
-
-supplements:
-- name: "Trevo App"
-  abslink: https://vdl.sci.utah.edu/Trevo/
-  linksym: true
-- name: "Trevo App Code"
-  abslink: https://github.com/visdesignlab/Trevo
-  linksym: true
-- name: "EvoBio tRRRace Website"
-  abslink: https://vdl.sci.utah.edu/trrrace/
-  linksym: true
-- name: "EvoBio tRRRace Website Code"
-  abslink: https://github.com/visdesignlab/trrrace
-  linksym: true
 
 
-# Supplemental, cc-by images. Make caption brief (at most 60 chars)
-images:
-- path: 2020_infovis_insights_trrrace_selected.png
-  caption: Trrrace interface showing details of an artifact and concept selected. 
-- path: 2020_infovis_insights_summary_view.png
-  caption: Trevo summary view shows aggregated trait values for groups of species. 
-- path: 2020_infovis_insights_pair_view.png
-  caption: Trevo Pair view ranks pairs of species to identify known evolutionary patterns.
-- path: 2020_infovis_insights_pair_hover.png
-  caption: Pair view showing hover interaction
 
-code: 
 
 
 abstract: "
