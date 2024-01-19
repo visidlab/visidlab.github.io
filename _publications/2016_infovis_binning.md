@@ -33,16 +33,8 @@ project:
 external-project:
 
 video: 
-preview-video: 2016_infovis_binning_preview
-pdf: 2016_infovis_binning.pdf
-supplement:
-
-supplements:
-- name: Supplemental Materials
-  # use link instead of abslink if you want to link to the master directory
-  link: 2016_infovis_binning_supplemental.zip
-  # defaults to a download icon, use this if you want a link-out icon
-  linksym: true
+pdf: https://sci.utah.edu/~vdl/papers/2016_infovis_binning.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2016_infovis_binning_supplemental.zip
 
 code:
 
@@ -51,3 +43,7 @@ abstract: "
 
 # After the --- you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.
 ---
+
+# Acknowledgements
+
+This work was funded by NSF grant IIS-1212806.

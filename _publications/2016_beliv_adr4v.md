@@ -8,7 +8,8 @@ type: paper
 # The shortname is used for auto-generated titels
 shortname: adr4v
 # add a 2:1 aspect ration (e.g., width: 400px, height: 200px) to the folder /assets/images/papers/
-image: 2016_beliv_adr4v.png
+image: 2016_beliv_adr4v_sm.png
+image_large: 2016_beliv_adr4v.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
@@ -40,7 +41,7 @@ video:
 preview-video: 
 
 # the prerint
-pdf: 2016_beliv_adr4v.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2016_beliv_adr4v.pdf
 # A supplement PDF
 supplement: 
 

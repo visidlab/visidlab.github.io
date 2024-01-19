@@ -44,23 +44,14 @@ project:
 # Use this if you have an external project website
 #external-project: http://github.com/visdesignlab/graffinity
 
-# The reference to the video entry
-video: 2017_eurovis_graffinity_video
-# The reference to the preview video entry
-#preview-video: 2016_eurovis_clue_video_preview
+
 
 # the prerint
-pdf: 2017_eurovis_graffinity.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2017_eurovis_graffinity.pdf
 # A supplement PDF
-supplement: 2017_eurovis_graffinity_supplement.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2017_eurovis_graffinity_supplement.pdf
 
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-#- name: Vials Conference Talk Slides
-#  # use link instead of abslink if you want to link to the master directory
-#  abslink: http://vials.io/talk/
-#  # defaults to a download icon, use this if you want a link-out icon
-#  linksym: true
+
 
 # Link to the repository where the code is hostet
 code: https://github.com/visdesignlab/graffinity
