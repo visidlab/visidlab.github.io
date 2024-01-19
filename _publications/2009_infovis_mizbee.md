@@ -6,6 +6,7 @@ type: paper
 
 shortname: MizBee
 image: 2009_infovis_mizbee.png
+image_large: 2009_infovis_mizbee_large.png
 
 authors:
 - meyer
@@ -38,3 +39,12 @@ abstract: "
 
 ---
 
+# Acknowledgements
+
+This work was funded in part by the Initiative in Innovative Computing
+at Harvard University. We thank our biology collaborators Manfred
+Grabherr and Li-Jun Ma from the Broad Institute for their time and
+the use of their data, and Janet Iwasa and Matthew Tobiasz for their
+helpful comments regarding previous drafts of this paper. We also
+thank the Broad Viz Group for seeding the initial inspiration of this
+work, and for continued feedback throughout the development.
