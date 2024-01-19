@@ -22,13 +22,7 @@ bib:
   booktitle: Proceedings of the IEEE Information Visualization Conference - Posters (InfoVis)
 
 pdf: https://sci.utah.edu/~vdl/papers/2019_vast_origraph.pdf
-
-supplements:
-- name: Poster
-  link: 2018_infovis_origraph_poster.pdf
-- name: Origraph Interface
-  abslink: https://origraph.github.io
-  linksym: true
+external-project: https://origraph.github.io/
 
 code: https://github.com/origraph
 
@@ -57,3 +51,9 @@ that can, in turn, be used to select, navigate, and reshape the under-
 lying data. Additionally, we discuss an early software prototype of a
 visual graph wrangling system based on this library.</p>"
 ---
+
+# Acknowledgements
+
+This work was funded by the National Science Foundation (OAC
+1835904, IIS 1350896, IIS 1751238) and by the Utah Genome
+Project.
