@@ -7,6 +7,7 @@ type: paper
 
 shortname: PoemViewer
 image: 2013_eurovis_poemviewer.png
+image_large: 2013_eurovis_poemviewer_large.png
 
 authors: 
 - Alfie Abdul-Rahman
@@ -36,7 +37,7 @@ video:
 preview-video: 
 
 
-pdf: 2013_eurovis_poemviewer.pdf
+pdf: https://users.cs.utah.edu/~miriah/publications/poem-viewer13.pdf
 supplement:
 
 abstract: "
@@ -44,4 +45,7 @@ abstract: "
 
 ---
 
+# Acknowledgements
 
+This work was funded jointly by NEH (USA) and JISC (UK)
+under the Digging Into Data Challenge program.
