@@ -42,35 +42,12 @@ award:
 # Use if this paper is linked to an internal project. This will link to the project site
 # project:
 
-# Use this if you have an external project website
-external-project: 
 
-# The reference to the video entry
-# video: 
-# The reference to the preview viedo entry
-videos:  
- - name: "Fast Forward" 
-   youtube-id: 
-   file: 2019_infovis_criteria_preview.mov
- - name: "VIS talk" 
-   vimeo-id: 369711672
-   file: 2019_infovis_criteria.mp4
 
 # the prerint
-pdf: 2019_infovis_criteria.pdf
-# A supplement PDF
-# supplement: 
+pdf: https://sci.utah.edu/~vdl/papers/2019_infovis_criteria.pdf
 
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-#- name: General UpSet
-#  # use link instead of abslink if you want to link to the master directory
-#  abslink: http://vials.io/talk/
-#  # defaults to a download icon, use this if you want a link-out icon
-#  linksym: true
 
-# Link to the repository where the code is hostet
-#code: 
 
 # Link to an official preprint server
 preprint_server: https://arxiv.org/pdf/1907.08495.pdf
