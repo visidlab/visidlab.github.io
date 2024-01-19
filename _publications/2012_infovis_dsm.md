@@ -7,6 +7,7 @@ type: paper
 
 shortname: DSM
 image: 2012_infovis_dsm.png
+image_large: 2012_infovis_dsm_large.png
 
 authors:
 - Michael Sedlmair
@@ -30,7 +31,7 @@ video:
 preview-video: 
 
 
-pdf: 2012_infovis_dsm.pdf
+pdf: https://users.cs.utah.edu/~miriah/publications/dsm12.pdf
 supplement:
 
 abstract: "
