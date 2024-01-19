@@ -59,42 +59,32 @@ bib:
   month:
   pmcid:
 
-# Add things like "Best Paper Award at InfoVis 2099, selected out of 4000 submissions"
-award: 
 
-# Provide a link to the publisher's webpage if no DOI is available
-publisherURL: 
-
-# Link to an official preprint server
-preprint_server: 
-
-# Links to a project hosted on VDL, or else externally on your own site
-project: 
-
-
-# Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
-# you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
-videos:  
- - name: "HyperLabels VIS talk"
-   youtube-id: Tu2SSJjQI3c
-   file:
  
 # Provide a preprint and supplement pdf
-pdf: 2020_tvcg_hyperlabels.pdf
-supplement: 
-
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-
-# Supplemental, cc-by images. Make caption brief (at most 60 chars).
-images:
+pdf: https://sci.utah.edu/~vdl/papers/2020_tvcg_hyperlabels.pdf
 
 
-# Link to the repository where the code is hosted
-code: 
 
 abstract: "<p>
 We present a method for the browsing of hierarchical 3D models in which we combine the typical navigation of hierarchical structures in a 2D environment---using clicks on nodes, links, or icons---with a 3D spatial data visualization. Our approach is motivated by large molecular models, for which the traditional single-scale navigational metaphors are not suitable. Multi-scale phenomena, e. g., in astronomy or geography, are complex to navigate due to their large data spaces and multi-level organization. Models from structural biology are in addition also densely crowded in space and scale. Cutaways are needed to show individual model subparts. The camera has to support exploration on the level of a whole virus, as well as on the level of a small molecule. We address these challenges by employing HyperLabels: active labels that---in addition to their annotational role---also support user interaction. Clicks on HyperLabels select the next structure to be explored. Then, we adjust the visualization to showcase the inner composition of the selected subpart and enable further exploration. Finally, we use a breadcrumbs panel for orientation and as a mechanism to traverse upwards in the model hierarchy. We demonstrate our concept of hierarchical 3D model browsing using two exemplary models from meso-scale biology.
 </p>"
 
 ---
+
+# Acknowledgements
+
+This work was funded through the ILLUSTRARE grant by
+both the Austrian Science Fund (FWF): I 2953-N31, and the
+French National Research Agency (ANR): ANR-16-CE91-
+0011-01. This work was also funded under the ILLVISATION
+grant by WWTF (VRG11-010). The research was further
+supported by the King Abdullah University of Science and
+Technology (KAUST) Office of Sponsored Research (OSR),
+under award numbers OSR-2019-CPF-4108 and BAS/1/1680-
+01-01. This paper was partly written in collaboration with
+the VRVis Competence Center. We thank Nanographics
+GmbH (nanographics.at) for providing the Marion Software
+Framework. We also thank Haichao Miao for his help with
+the video as well as the anonymous reviewers and the
+associate editor for their comments to improve the article.

@@ -31,41 +31,18 @@ bib:
   pages:
   month:
 
-blog-post: 2021/09/19/chartjunk
 
-# Provide a link to the publisher's webpage if no DOI is available
-publisherURL: https://altvis.github.io/
-
-
-# Links to a project hosted on VDL, or else externally on your own site
-
-project:
 external-project: https://chartjunk.art/
 
-# Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
-# you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
 
-videos:
- - name: 'Chartjunk: The Video'
-   youtube-id: wX1M9vVHJAE
-   file:
- - name: 'alt.VIS presentation'
-   youtube-id: jFbsYto_2ys
 
-# Provide a preprint and supplement pdf
+pdf: https://sci.utah.edu/~vdl/papers/2021_altvis_chartjunk.pdf
 
-pdf: 2021_altvis_chartjunk.pdf
-supplement: 
 
 # Link to an official preprint server
 preprint_server: https://arxiv.org/abs/2109.10132
 
 
-# # Extra supplements, such as talk slides, data sets, etc.
-
-supplements:
-- name: alt.VIS Talk Slides
-  link: 2021_altvis_chartjunk_talk_slides.pdf
 
 
 abstract: "
@@ -73,3 +50,12 @@ abstract: "
 "
 
 ---
+
+# Acknowledgements
+
+The authors wish to thank the Visualization Design Lab for inspiring
+conversations that sparked the genesis of this paper, Mierle Laderman Ukeles for maintenance art and art maintenance, and for all of
+the people out there dedicated to maintenance work, even when it is
+a drag. This work is partially funded by the National Science Foundation (OAC 1835904), and by the Wallenberg AI, Autonomous
+Systems and Software Program (WASP) funded by the Knut and
+Alice Wallenberg Foundation.

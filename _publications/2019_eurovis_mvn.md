@@ -48,31 +48,11 @@ award:
 # Use this if you have an external project website
 external-project: https://vdl.sci.utah.edu/mvnv/
 
-videos:
-- name: "Multivariate Network Visualization Preview" 
-  youtube-id: FyEVhJLlv3Q
-  file: 2019_eurovis_mvnv_preview.mp4
 
-# The reference to the preview video entry
-#preview-video: 2018_tvcg_lineage_video_preview
 
 # the preprint
-pdf: 2019_eurovis_mvnv.pdf
-# A supplement PDF
-#supplement: 2018_tvcg_lineage_supplement.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2019_eurovis_mvnv.pdf
 
-# Extra supplements, such as talk slides, data sets, etc.
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-- name: EuroVis Talk Slides - Keynote
-  link: 2019_eurovis_mvnv_talkSlides.key
-- name: EuroVis Talk Slides - PDF
-  link: 2019_eurovis_mvnv_talkSlides.pdf
-
-#  # use link instead of abslink if you want to link to the master directory
-#  abslink: http://vials.io/talk/
-#  # defaults to a download icon, use this if you want a link-out icon
-#  linksym: true
 
 # Link to the repository where the code is hosted
 code: https://github.com/visdesignlab/mvnv
