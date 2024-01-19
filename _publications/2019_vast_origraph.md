@@ -41,36 +41,15 @@ bib:
   pages: 81-92
   month:
 
-# Add things like "Best Paper Award at InfoVis 2099, selected out of 4000 submissions"
-award:
 
-# Use if this paper is linked to an internal project. This will link to the project site
-# project: upset
 
 # Use this if you have an external project website
 external-project: https://origraph.github.io/
 
-videos:
- - name: "Origraph Introduction"
-   youtube-id: bSFf2iD4TLI
-   file: 2019_vast_origraph.mp4
- - name: "Fast Forward"
-   youtube-id: bxjDvq6kjeo
-   file: 2019_vast_origraph_fastForward.mp4
+
 
 # the prerint
-pdf: 2019_vast_origraph.pdf
-# A supplement PDF
-#supplement: 2017_preprint_lineage_supplement.pdf
-
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-- name: Large Figures
-  link: 2019_vast_origraph_supplement.pdf
-#  # use link instead of abslink if you want to link to the master directory
-#  abslink: http://vials.io/talk/
-#  # defaults to a download icon, use this if you want a link-out icon
-#  linksym: true
+pdf: https://sci.utah.edu/~vdl/papers/2019_vast_origraph.pdf
 
 # Link to the repository where the code is hostet
 code: https://github.com/origraph
