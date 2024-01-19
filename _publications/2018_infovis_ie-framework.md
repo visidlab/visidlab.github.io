@@ -44,7 +44,7 @@ award:
 # project: upset
 
 # Use this if you have an external project website
-external-project: http://bit.ly/IEFramework
+external-project: https://vdl.sci.utah.edu/CVOWorkshops/
 
 # The reference to the video entry
 # video: 2018_tvcg_lineage_video
