@@ -57,20 +57,10 @@ bib:
 
 
 
-videos:  
- - name: "Outtakes" 
-   youtube-id: 8EKUTMKrhcQ
-   file: 2021_vis_gap_outtakes.mp4
- - name: "Personal Informatics Analysis Gap Preview" 
-   youtube-id: CYG3qVClPb0
-   file: 2021_vis_gap_preview.mp4
- - name: "Personal Infomatics Analysis Gap Conference Presentation"
-   youtube-id: Qk20ayrFhxw
-   file: 2021_vis_gap_presentation.mp4
 
 # Provide a preprint and supplement pdf
-pdf: 2021_preprint_gap.pdf
-supplement: 2021_preprint_gap_supplement.zip
+pdf: https://sci.utah.edu/~vdl/papers/2021_preprint_gap.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2021_preprint_gap_supplement.zip
 
 
 
