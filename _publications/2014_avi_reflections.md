@@ -31,7 +31,8 @@ bib:
 # Add things like "Best Paper Award at InfoVis 2099, selected out of 4000 submissions"
 award: AVI 2014 Best Paper Award
 
-pdf: https://users.cs.utah.edu/~miriah/publications/design-vis.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2014_avi_reflections.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2014_avi_reflections_supplement.zip
 
 # Extra supplements, such as talk slides, data sets, etc.
 supplements:
