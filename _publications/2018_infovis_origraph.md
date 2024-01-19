@@ -6,6 +6,7 @@ type: poster
 
 shortname: origraph poster
 image: 2018_infovis_origraph.png
+image_large: 2018_infovis_origraph_large.png
 
 authors:
 - Alex Bigelow
@@ -20,7 +21,7 @@ bibentry: inproceedings
 bib:
   booktitle: Proceedings of the IEEE Information Visualization Conference - Posters (InfoVis)
 
-pdf: 2018_infovis_origraph.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2019_vast_origraph.pdf
 
 supplements:
 - name: Poster
