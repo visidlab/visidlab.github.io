@@ -38,15 +38,9 @@ videos:
  - youtube-id: wJK5teqwMx0
  - file: 2019_eurovis_implicit-discretization_preview.mp4
 
-pdf: 2019_eurovis_implicit-discretization.pdf
-supplement:
+pdf: https://sci.utah.edu/~vdl/papers/2019_eurovis_implicit-discretization.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2019_eurovis_implicit-discretization_supplemental.zip
 
-supplements:
-- name: Supplemental Materials
-  # use link instead of abslink if you want to link to the master directory
-  link: 2019_eurovis_implicit-discretization_supplemental.zip
-  # defaults to a download icon, use this if you want a link-out icon
-  linksym: true
 
 code: https://github.com/samquinan/ExaminingEV19
 
@@ -55,3 +49,9 @@ abstract: "
 
 # After the --- you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.
 ---
+
+# Acknowledgements
+
+The authors wish to thank Bernice Rogowitz, Danielle Szafir,
+Karen Schloss, and Bill Thompson for their feedback and assistance regarding various aspects of this work. This work was funded
+in part by NSF grant IIS-1212806.
