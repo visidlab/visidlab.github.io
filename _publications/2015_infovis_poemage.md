@@ -9,6 +9,8 @@ type: paper
 shortname: Poemage
 # add a 2:1 aspect ration (e.g., width: 400px, height: 200px) to the folder /assets/images/papers/
 image: 2015_infovis_poemage.png
+image_large: 2015_infovis_poemage_large.png
+
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
@@ -43,7 +45,7 @@ video:
 preview-video: 
 
 # the prerint
-pdf: 2015_infovis_poemage.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2015_infovis_poemage.pdf
 
 
 # Link to the repository where the code is hostet

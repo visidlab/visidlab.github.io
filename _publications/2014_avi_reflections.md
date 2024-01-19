@@ -9,6 +9,8 @@ type: paper
 shortname: Reflections
 # add a 2:1 aspect ration (e.g., width: 400px, height: 200px) to the folder /assets/images/papers/
 image: 2014_avi_reflections.png
+image_large: 2014_avi_reflections_large.png
+
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
@@ -29,7 +31,8 @@ bib:
 # Add things like "Best Paper Award at InfoVis 2099, selected out of 4000 submissions"
 award: AVI 2014 Best Paper Award
 
-pdf: 2014_avi_reflections.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2014_avi_reflections.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2014_avi_reflections_supplement.zip
 
 # Extra supplements, such as talk slides, data sets, etc.
 supplements:
@@ -55,3 +58,11 @@ number of themes that provide a new perspective on design
 considerations for visualization tool creators, as well as on
 known engineering problems.</p>"
 ---
+
+# Acknowledgements
+
+We greatly appreciate the feedback, interviews, and participation of our designers, especially for the help from Ben
+Fry, Isabel Meirelles, Bang Wong, Chris Goranson, Jihoon
+Kang, Jim Agutter, and Jonathan Hickerson. This work is
+sponsored in part by the Air Force Research Laboratory and
+the DARPA XDATA program.

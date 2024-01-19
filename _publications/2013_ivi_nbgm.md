@@ -8,6 +8,7 @@ type: paper
 shortname: NBGM
 # add a 2:1 aspect ration (e.g., width: 400px, height: 200px) to the folder /assets/images/papers/
 image: 2013_ivi_nbgm.png
+image_large: 2013_ivi_nbgm_large.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
@@ -43,7 +44,7 @@ video:
 preview-video: 
 
 # the prerint
-pdf: 2013_ivi_nbgm.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2013_ivi_nbgm.pdf
 # A supplement PDF
 supplement:
 
@@ -63,3 +64,11 @@ abstract: "
 
 # After the --- you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.
 ---
+
+# Acknowledgements
+
+We greatly appreciate feedback from the infovis groups at Utah and
+UBC that helped in clarifying the ideas in this paper: Alex Bigelow,
+Matt Brehmer, Jessica Dawson, Joel Ferstay, Stephen Ingram, and
+Sean McKenna. This work was funded in part by an NSERC Strategic Grant, a Microsoft Research Faculty Fellowship, and NSF grant
+IIS-1212806.
