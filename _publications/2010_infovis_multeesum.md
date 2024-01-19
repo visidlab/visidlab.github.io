@@ -7,6 +7,7 @@ type: paper
 
 shortname: MulteeSum
 image: 2010_infovis_multeesum.png
+image_large: 2010_infovis_multeesum_large.png
 
 authors:
 - meyer
@@ -41,3 +42,11 @@ abstract: "
 
 ---
 
+# Acknowledgements
+
+The authors wish to thank the members of the DePace Lab, as well as
+Charless Fowlkes, for their input and support during the development
+of this work. This work was supported in part by the National Science
+Foundation under Grant 0937060 to the Computing Research Association for the CIFellows Project, the Helen Hay Whitney postdoctoral
+fellowship, the Armenise Foundation of Harvard Medical School, and
+the Natural Sciences and Engineering Research Council of Canada.
