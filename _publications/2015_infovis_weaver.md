@@ -44,17 +44,9 @@ video: 2015_infovis_weaver_video
 preview-video: 2015_infovis_weaver_video_preview
 
 # the prerint
-pdf: 2015_infovis_weaver.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2015_infovis_weaver.pdf
 # A supplement PDF
-supplement:
-
-# Extra supplements, such as talk slides, data sets, etc. 
-supplements:
-- name: Supplemental Materials
-  # use link instead of abslink if you want to link to the master directory
-  link: 2015_infovis_weaver_supplemental.tgz
-  # defaults to a download icon, use this if you want a link-out icon
-  linksym: true
+supplement: https://sci.utah.edu/~vdl/papers/2015_infovis_weaver_supplemental.tgz
 
 # Link to the repository where the code is hostet
 code: https://github.com/samquinan/WeaVER
@@ -64,3 +56,11 @@ abstract: "
 
 # After the --- you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.
 ---
+
+# Acknowledgements
+
+The authors wish to thank the following individuals for their feedback and assistance: Mike Kirby, Ross Whitaker, Mahsa Mirzargar,
+Shelby Law, Chuck Maxwell, Lance Avey, Jim Steenburgh, Trevor
+Alcott, Jack Kain, Kent Knopfmeier, Don House, Mike Goodchild,
+Steve Kruger, Jason Dykes, and Alan MacEachran. This work was
+funded by NSF grant IIS–1212806.
