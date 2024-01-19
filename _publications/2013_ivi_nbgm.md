@@ -44,7 +44,7 @@ video:
 preview-video: 
 
 # the prerint
-pdf: https://users.cs.utah.edu/~miriah/publications/nbgm.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2013_ivi_nbgm.pdf
 # A supplement PDF
 supplement:
 
