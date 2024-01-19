@@ -7,6 +7,7 @@ type: paper
 
 shortname: Pathline
 image: 2010_eurovis_pathline.png
+image_large: 2010_eurovis_pathline_large.png
 
 authors:
 - meyer
@@ -32,7 +33,7 @@ video:
 preview-video:
 
 
-pdf: 2010_eurovis_pathline.pdf
+pdf: https://users.cs.utah.edu/~miriah/publications/pathline.pdf
 supplement:
 
 abstract: "
@@ -40,3 +41,8 @@ abstract: "
 
 ---
 
+# Acknowledgements
+
+We thank our biology collaborators in the Regev lab for all of
+their time, enthusiasm, and support: Michelle Chan, Courtney French, Jay Konieczka, Jenna Pfiffner, Aviv Regev, and
+Dawn Thompson. This work was supported by the Data Visualization Initiative at the Broad Institute, and by the National Science Foundation under Grant 0937060 to the Computing Research Association for the CIFellows Project.
