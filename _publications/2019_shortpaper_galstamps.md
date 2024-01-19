@@ -45,26 +45,10 @@ award:
 # Use this if you have an external project website
 external-project: http://bit.ly/GalStamps
 
-# The reference to the video entry
-# video: 2018_tvcg_lineage_video
-# The reference to the preview viedo entry
-preview-video: 2019_shortpapers_galstamps_video_preview
 
 # the prerint
-pdf: 2019_shortpapers_galStamps.pdf
-# A supplement PDF
-# supplement: 2018_tvcg_lineage_supplement.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2019_shortpapers_galStamps.pdf
 
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-#- name: General UpSet
-#  # use link instead of abslink if you want to link to the master directory
-#  abslink: http://vials.io/talk/
-#  # defaults to a download icon, use this if you want a link-out icon
-#  linksym: true
-
-# Link to the repository where the code is hostet
-code:
 
 # Link to an official preprint server
 # preprint_server: https://doi.org/10.1101/128579
