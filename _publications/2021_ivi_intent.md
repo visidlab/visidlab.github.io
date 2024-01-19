@@ -8,9 +8,7 @@ order: 2021-06
 shortname: Intent-Inference
 image: 2021_ivi_intent.png
 image_large: 2021_ivi_intent_teaser.png
-redirect_from: 
- - /publications/2020_intent/
- - /publications/2020_preprint_intent/
+
 
 authors:
   - Kiran Gadhave
@@ -44,49 +42,23 @@ bib:
 
 # Links to a project hosted on VDL, or else externally on your own site
 
-project:
 external-project: https://vdl.sci.utah.edu/predicting-intent/
 
 # Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
 # you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
 
-videos:
- - name: 'Intent System Introduction'
-   youtube-id: jDf4ndtekpk
-   file: 2021_ivi_intent.mp4
 
 # Provide a preprint and supplement pdf
 
-pdf: 2021_ivi_intent.pdf
-supplement: 2021_ivi_intent_supplement.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2021_ivi_intent.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2021_ivi_intent_supplement.pdf
 
 # Link to an official preprint server
 preprint_server: http://dx.doi.org/10.31219/osf.io/mq2rk
 
-# # Extra supplements, such as talk slides, data sets, etc.
 
-# supplements:
-# - name:
-# - link:
 
-# Supplemental, cc-by images. Make caption brief (at most 60 chars)
-images:
-- path: 2021_ivi_intent_gapminder.png
-  caption: Gapminder public health dataset loaded in the prototype.
-- path: 2021_ivi_intent_brush.png
-  caption: Selections can be made using paint brush of varying sizes.
-- path: 2021_ivi_intent_brush_union.png
-  caption: Analyst can specify using union of multiple selections.
-- path: 2021_ivi_intent_brush_intersection.png
-  caption: Analyst can specify using intersection of multiple selections.
-- path: 2021_ivi_intent_study_UD_instructions.png
-  caption: Instructions for user driven tasks in the study.
-- path: 2021_ivi_intent_study_UD.png
-  caption: Example of user driven task in the study.
-- path: 2021_ivi_intent_study_CS_instructions.png
-  caption: Instructions for computer supported tasks in the study.
-- path: 2021_ivi_intent_study_CS.png
-  caption: Example of computer supported task in the study.
+
 
 code: https://github.com/visdesignlab/intent-system
 
