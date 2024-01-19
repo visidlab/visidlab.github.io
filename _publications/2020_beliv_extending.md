@@ -76,21 +76,23 @@ project:
 videos:  
  
 # Provide a preprint and supplement pdf
-pdf: 2020_beliv_extending.pdf
-supplement: 2020_beliv_extending_supplement.zip
+pdf: https://sci.utah.edu/~vdl/papers/2020_beliv_extending.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2020_beliv_extending_supplement.zip
 
-# Extra supplements, such as talk slides, data sets, etc.
-supplements:
-
-# Supplemental, cc-by images. Make caption brief (at most 60 chars).
-images:
-
-
-# Link to the repository where the code is hosted
-code: 
 
 abstract: "<p>
 Participatory design is an approach in human-computer interaction to involve all relevant stakeholders coequally in the design process. A recent participatory method for visualization design is the creative visualization-opportunities (CVO) workshop, which is used to efficiently develop visualization design requirements in the early stages of applied visualization work. In this paper we report on our experiences of running four CVO workshops in different domains with diverse participants to explore new methods and variations of workshop variables. Through reflection on our experiences we propose two contributions that extend existing guidance for planning, executing, and analyzing CVO workshops: a set of 12 pragmatic recommendations that extend and complement existing ones; and a recommended method for analyzing workshop results, called user stories. Additionally, we report on the outcomes of our successful workshops to provide evidence for the efficacy of CVO workshops.
 </p>"
 
 ---
+
+# Acknowledgements
+
+We wish to thank all of the participants, facilitators, and partnering
+institutions for their time and participation in the workshops, as well
+as the anonymous reviewers for their helpful feedback. This work
+was partially supported by the Interactive and Visual Analysis of
+Networks (IVAN) project, which is funded by CHIST-ERA (together
+with FWF, SNSF, ANR) and the Diachronic Dynamics of Lexical
+Networks (DYLEN) project, which is funded by the OAW go!digital ¨
+Next Generation grant (GDNG 2018-020).
