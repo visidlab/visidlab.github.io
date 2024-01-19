@@ -34,7 +34,7 @@ video: 2010_infovis_multeesum_video
 preview-video:
 
 
-pdf: 2010_infovis_multeesum.pdf
+pdf: https://users.cs.utah.edu/~miriah/publications/multeesum.pdf
 supplement:
 
 abstract: "
