@@ -42,18 +42,14 @@ bib:
   pages: 1-28
   month: dec
 
-# Link to an official preprint server
-preprint_server: 
 
-# Links to a project hosted on VDL, or else externally on your own site
-#project:
 external-project: https://vdl.sci.utah.edu/EngagementInterviews/
 
 # Video entries, a preview , talk, and intro video. Vimeo IDs or youtube IDs are supported
 # you need to pick either a vimeo or youtube ID. We definitely want a downloadable video too.
 
 # Provide a preprint and supplement pdf
-pdf: 2021_imwut_interview.pdf
+pdf: https://sci.utah.edu/~vdl/papers/2021_imwut_interview.pdf
 
 abstract: "<p>
 Whether investigating research questions or designing systems, many researchers and designers need to engage users with their personal data. However, it is difficult to successfully design user-facing tools for interacting with personal data without first understanding what users want to do with their data. Techniques for raw data exploration, sketching, or physicalization can avoid the perils of tool development, but prevent direct analytical access to users' rich personal data. We present a new method that directly tackles this challenge: the data engagement interview. This interview method incorporates an analyst to provide real-time personal data analysis, granting interview participants the opportunity to directly engage with their data, and interviewers to observe and ask questions throughout this engagement. We describe the method's development through a case study with asthmatic participants, share insights and guidance from our experience, and report a broad set of insights from these interviews.

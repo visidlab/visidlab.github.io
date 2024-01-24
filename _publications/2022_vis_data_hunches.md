@@ -46,50 +46,22 @@ bib:
   volume: 29
   number: 1
 
-# Provide a link to the publisher's webpage if no DOI is available
-publisherURL:
+
 
 # Link to an official preprint server
 preprint_server: https://osf.io/zud5t/
 
 # Links to a project hosted on VDL, or else externally on your own site
-#project: http://vdl.sci.utah.edu/data-hunch/
+
 external-project: http://vdl.sci.utah.edu/data-hunch/
 
-blog-post: 2022/04/27/loon/
 
-# Video entry and preview video
-videos:
- - name: 'VIS Preview'
-   youtube-id: 1Dfh4p8gA0A
-   file: 2022_vis_data_hunches_preview.mp4
- - name: 'VIS Talk'
-   youtube-id: IqLqajd3mY0
-   file: 2022_vis_data_hunches_full.mp4
 
 # Provide a preprint and supplement pdf
-pdf: 2022_vis_data_hunches.pdf
-supplement: 2022_vis_data-hunches_supplement.xlsx
+pdf: https://sci.utah.edu/~vdl/papers/2022_vis_data_hunches.pdf
+supplement: https://sci.utah.edu/~vdl/papers/2022_vis_data-hunches_supplement.xlsx
 
-# Extra supplements, such as talk slides, data sets, etc.
-#supplements:
-#- name: Vials Conference Talk Slides
-  # Use link instead of abslink if you want to link to the master directory
- # abslink: http://vials.io/talk/
-  # Defaults to a download icon, use this if you want a link-out icon
-  #linksym: true
 
-images:
-- path: 2022_vis_data_hunches_overview.png
-  caption: The overall prototype to view and record data hunches.
-- path: 2022_vis_data_hunches_types.png
-  caption: A variety types of data hunches visualized on a single chart.
-- path: 2022_vis_data_hunches_options.png
-  caption: Different options to select from to add a data hunch to the chart.
-- path: 2022_vis_data_hunches_categorical.png
-  caption: Adding a categorical value hunch to the chart.
-- path: 2022_vis_data_hunches_vote.png
-  caption: Upvoting/downvoting to agree/disagree with the data hunch.
 # Link to the repository where the code is hosted
 code: https://github.com/visdesignlab/data-hunches-package
 
