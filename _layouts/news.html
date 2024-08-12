@@ -9,6 +9,14 @@ layout: header
             {% for post in site.news reversed %}
 
             <div>
+
+                <h2 id="{{ post.date | date: " %b %d %Y" }}" style="margin-bottom: 0;">
+                    {{ post.title }}
+                </h2>
+
+                <i>Posted: {{ post.date | date: "%b %Y" }}</i>
+                <br>
+
                 {% if post.lead-image %}
                 {% assign alt-text = "Post lead image" %}
                 {% if post.lead-image-alt-text %}
@@ -18,13 +26,6 @@ layout: header
                 <img src="/assets/photos/{{ post.lead-image }}" alt="{{post.alt-text}}" class="img-fluid"
                     style="padding-top: 6;" />
                 {% endif %}
-                <br>
-                <br>
-                <h3 id="{{ post.date | date: " %b %d %Y" }}" style="margin-bottom: 0;">
-                    {{ post.title }}
-                </h3>
-
-                <i>Posted: {{ post.date | date: "%b %Y" }}</i>
                 <br>
                 <br>
                 <div class="post-excerpt">
