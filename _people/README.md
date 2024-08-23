@@ -18,7 +18,7 @@ last_name: Meyer
 key: meyer
 permalink: /team/meyer/
 # Pick one of the following
-role: faculty | postdoc | phdstudent | msstudent | undergrad | intern
+role: faculty | postdoc | phdstudent | msstudent | undergrad | intern | alumnus
 email: miriah.meyer@liu.se
 
 # leave empty if you don't have apersonal website
@@ -26,6 +26,8 @@ personal-site: https://miriah.github.io/
 
 #  leave empty if you're active. Add something like "M.S.'16" or "B.S.'17" if you got a degree while with the Vis Collective. Add "N" if you left before you got a degree.
 graduated:
+# add your graduation year
+year_left:
 
 
 orcid: 0000-0002-8971-6245
