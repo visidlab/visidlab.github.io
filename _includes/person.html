@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm">
+    <div class="col-4">
         <img src="../assets/photos/{{ person.key }}.jpg"
             alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
     </div>
@@ -10,7 +10,7 @@
     {% assign color = site.data.colors[indexNum].name %}
 
 
-    <div class="col-sm">
+    <div class="col-8">
         <em style="text-decoration-color: var( {{ color }} )">
             <h3> {{ person.first_name }} {{ person.last_name }}</h3>
         </em>
