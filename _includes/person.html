@@ -31,39 +31,21 @@
         {% endif %}
         <p> {{ role }} | {{ person.division}} </p>
 
-        {% if person.organization != 'LiU' %}
-        <p> {{ person.organization }} </p>
-        {% endif %}
         <p> {{ person.keywords }} </p>
 
-        <p><a href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
-                Publications</a></p>
+        <a href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
+            Publications</a>
 
 
-        {{ page.first_name }} {{ page.last_name }}
-        <div>
-            <h4>Contact</h4>
-            <p>
-                <a href="mailto:{{ person.email }}"><i class="fa fa-envelope" style="color: var({{ color }})"></i> {{
-                    person.email }}</a> <br>
 
-                {% if person.gs %}
-                <a href="{{ person.gs }}"><i class="fa fa-google" style="color: var({{ color }})"></i> Google
-                    Scholar</a><br>
-                {% endif %}
-                {% if person.twitter %}
-                <a href="http://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"
-                        style="color: var({{ color }})"></i> Twitter</a><br>
-                {% endif %}
-                {% if person.github %}
-                <a href="{{person.github}}"><i class="fa fa-github" style="color: var({{ color }})"></i> GitHub</a><br>
-                {% endif %}
-                {% if person.personal-site %}
-                <a href="{{person.personal-site}}"><i class="fa fa-github" style="color: var({{ color }})"></i> Personal
-                    Site</a>
-                {% endif %}
-            </p>
-        </div>
+        <p>
+            <a href="mailto:{{ person.email }}"><i class="fa fa-envelope" style="color: var({{ color }})"></i> {{
+                person.email }}</a> <br>
+            {% if person.personal-site %}
+            <a href="{{person.personal-site}}"><i class="fa fa-github" style="color: var({{ color }})"></i> Personal
+                Site</a>
+            {% endif %}
+        </p>
     </div>
 </div>
 <br>
