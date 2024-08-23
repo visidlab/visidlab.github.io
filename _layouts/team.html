@@ -39,10 +39,13 @@ layout: header
 
     <!-- Alumni -->
     <h2> Alumni </h2>
-    {% for person in site.people %}
+    {% assign people = site.people | sort: 'year_left' %}
+    {% for person in people reversed %}
     {% if person.role == "alumnus" %}
     {% if person.graduated != "N" %}
-    <strong>{{ person.first_name }} {{ person.last_name }}</strong> -- {{ person.graduated }}
+    <strong>{{ person.first_name }} {{ person.last_name }}</strong> ({{ person.graduated }}) <a
+        href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
+        Publications</a>
     <br>
     {% elsif person.graduated == "N" %}
     <strong>{{ person.first_name }} {{ person.last_name }}</strong>
