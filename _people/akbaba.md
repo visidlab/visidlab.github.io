@@ -25,5 +25,5 @@ orchid: 0000-0001-9419-3402
 twitter: gotdairyya
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: feminist epistemology + visualization, communicating science research, hanging out with her cat (fig)
+keywords: feminist epistemology, vis, communicating science research, cats
 ---
