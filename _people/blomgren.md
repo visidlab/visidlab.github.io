@@ -1,15 +1,4 @@
-# Vis Collective Members
 
-Please regularly update your content.
-
-## Creating a Profile
-
-Please create a profile using the template here. Save this as a new Markdown
-file with your name as a unique key. In the template, do not remove or delete
-any rows! If you don't have the information right now, just leave the data empty
-or as-is. Please try to fill in something for every row, if possible. Active
-members should select their role, write down some interests, have a webpage, and
-include a photo.
 
 ```
 ---
@@ -36,10 +25,3 @@ orcid: 0009-0009-9186-5168
 keywords: data visualisation, feminist theory, game design, 
 ---
 ```
-
-## Adding a Member Picture
-
-All active members should add a headshot to the [assets/photos](https://github.com/viscollective/viscollective.github.io/tree/main/assets/photos) folder.
-The image should be 370 pixels x 370 pixels.
-Name it {last_name}.
-It should be a jpg.
