@@ -1,55 +1,18 @@
-# Adding a Publication
-
-Please use the template provided below when adding a new publication. Fill in
-all the information to the best of your ability.
-
-## Keys and Filenames
-
-Each publication must have a unique key following this pattern:
-`YYYY_CONFSHORTNAME_PAPERSHORTNAME`
-
-All files for your publication should use this key consistently, only varying by
-the file extension. For example: `2023_chi_troublingcollab.pdf`
-
-However, if there are multiple files of the same extension type, then the
-"secondary" type specified with an underscore, as in
-`2023_chi_troublingcollab_supplement.pdf`.
-
-## Steps to Adding a Publication
-
-1. Add a `*.md` file in this folder following the template below. Use the unique key for your publication's filenames.
-2. Upload the following files:
-   - publication PDF (`KEY.pdf`) - _mandatory_
-   - thumbnail figure (`KEY.png`) - _mandatory_
-
-<!-- 2. Upload supplemental figures that are _not_ in the paper. The figures are placed in a folder in the `assets/images/publications` folder, where the foldername is the KEY. The point of these is that they can be used, e.g., in review articles without having to pay the publisher. [Read more about adding supplemental images here](../assets/images/README.md) - you need to provide high-res figures and thumbnails. -->
-
-## Publication Template
-
-Modify the template below for your publication. Feel free to leave entries
-blank if they are not needed. You can also remove comments or unused fields.
-Each publication _**must**_ specify a `title`, `authors`, `bibentry`, and `year`
-in order to render proper BibTeX output.
-
-A current example is the CHI Troubling Collab entry.
-
-```yaml
 ---
-layout: publication
 # Quotes make the : possible, otherwise you can type this without quotes
-title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
+title: "Use of Generative AI for Fictional Field Studies in Design Courses"
 # Keys must be unique to each paper, see section below for more details
-key: 2023_chi_troublingcollab
+key: 2024_nordichi_genai
 # Select one of the options below
-type: paper | preprint | poster | thesis | commentary | abstract
+type: abstract
 
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than
 # 2023-11 below that paper. Notice that sorting is lexicographic.
-order: 2023-11
+order: 2024-100
 
 # Auto-generates titles and alt-descriptors
-shortname: Troubling Collaboration
+shortname: GenAI for Field Studies
 # Add a 2:1 aspect ratio (e.g., width: 400px, height: 200px) to the folder /assets/images/publications/
 # image: 2016_eurovis_pathfinder.png
 # Add a 2:1 aspect ratio teaser figure (e.g., width: 1200px, height: 600px) to the folder /assets/images/publications/
@@ -57,8 +20,8 @@ shortname: Troubling Collaboration
 
 # Authors in the "database" can be used with just their person "key"
 authors:
-- akbaba
-- meyer
+- ronnberg
+- borutecene
 
 # A link to an internal blog post (use only the relative URL)
 blog-post:
@@ -69,8 +32,8 @@ blog-post:
 # Don't mention organizations (IEEE, ACM), so VIS, not IEEE VIS, CHI, not ACM CHI.
 # Do include relevant qualifiers, such as "Short Papers" (VIS Short Papers) or "Posters" (VIS Posters)
 # Don't include a year, or a shorthand for the year, so NOT: InfoVis'14
-journal-short: CHI
-year: 2023
+journal-short: NordiCHI
+year: 2024
 
 # Create BibTeX info, using one of the entry choices
 # Articles have a "journal", and inproceedings have a "booktitle"
@@ -78,14 +41,14 @@ year: 2023
 # You can remove fields you don't need, or else leave them blank
 # Try to include a DOI, or use the publisher URL below
 # Specify new BibTeX fields by adding a new key and value inside "bib:"
-bibentry: article | inproceedings | phdthesis | book
+bibentry: inproceedings
 bib:
-  journal: SIGCHI Conference on Human Factors in Computing Systems (CHI)
-  booktitle:
+  journal: 
+  booktitle: Adjunct Proceedings of the 2024 Nordic Conference on Human-Computer Interaction
   editor:
   publisher: ACM
-  address:
-  doi: 10.1145/3544548.3581168
+  address: New York, NY, USA
+  doi: 10.1145/3677045.3685439
   url:
   volume:
   number:
@@ -97,7 +60,7 @@ bib:
 award:
 
 # Provide a link to the publisher's webpage if no DOI is available
-publisherURL:
+publisherURL: https://dl.acm.org/doi/10.1145/3677045.3685439
 
 # Link to an official preprint server
 preprint_server:
@@ -127,7 +90,7 @@ supplement:
 code:
 
 abstract: "<p>
-A common research process in visualization....
+In this paper, we present how we used generative AI (GenAI) as a pedagogical tool for students taking a course in tangible interaction design. In this course, the students design different physical-digital objects (PDOs) to learn designing, sketching and prototyping with code and hardware. However, due to the short course duration these PDOs are not evaluated or explored with any kind of field or user study. Therefore we gave the students the exercise of doing user interviews with GenAI to explore their design ideas further. With this paper, we contribute a description and the outcomes of this approach, and highlight the pedagogical implications for student learning.
 </p>"
 
 # After the ---, you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.
@@ -136,5 +99,3 @@ A common research process in visualization....
 
 # Acknowledgements
 
-This work was co-funded by ....
-```
