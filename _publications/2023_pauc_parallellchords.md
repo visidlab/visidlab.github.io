@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: "Parallel Chords: an audio-visual analytics design for parallel coordinates"
-key: 2023_pauc_parallelchords
+key: 2023_pauc_parallellchords
 type: paper
 order: 2023-9
 
