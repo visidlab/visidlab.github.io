@@ -5,7 +5,7 @@ key: 2024_pauc_parallelchords
 type: paper
 order: 2024-9
 
-shortname: SonAir
+shortname: ParallellChords
 image: 2023_pauc_parallellchords.png
 image_large: 2023_pauc_parallellchords.png
 
