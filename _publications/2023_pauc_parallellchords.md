@@ -6,8 +6,8 @@ type: paper
 order: 2024-9
 
 shortname: SonAir
-image: 
-image_large: 
+image: 2023_pauc_parallellchords.png
+image_large: 2023_pauc_parallellchords.png
 
 authors:
   - elmquist
@@ -36,7 +36,7 @@ bib:
   volume:
   number:
   pages:
-  month:5
+  month: 5
   pmcid:
 
 
