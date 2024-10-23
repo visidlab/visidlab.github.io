@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Niklas
 last_name: Rönnberg
 key: ronnberg
