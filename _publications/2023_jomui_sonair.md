@@ -6,8 +6,8 @@ type: paper
 order: 2023-9
 
 shortname: SonAir
-# image: 
-# image_large: 
+image: 2023_jomui_sonair.png
+image_large: 2023_jomui_sonair.png
 
 authors:
   - elmquist
