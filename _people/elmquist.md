@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Elias
 last_name: Elmquist
 key: elmquist
