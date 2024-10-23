@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: An interview method for engaging personal data
+title: "An interview method for engaging personal data"
 key: 2021_imwut_interview
 type: paper
 order: 2021-11

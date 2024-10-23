@@ -7,7 +7,7 @@ order: 2021-6
 
 shortname: OpenSpace Sonification
 image: 2021_icad_openspacesonification.png
-# image_large: 
+image_large: 2021_icad_openspacesonification.png
 
 authors:
   - elmquist
