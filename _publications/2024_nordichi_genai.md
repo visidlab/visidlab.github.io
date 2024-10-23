@@ -9,7 +9,7 @@ type: abstract
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than
 # 2023-11 below that paper. Notice that sorting is lexicographic.
-order: 2024-10
+order: 2024-100
 
 # Auto-generates titles and alt-descriptors
 shortname: GenAI for Field Studies
