@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Caterina (Kate)
 last_name: Blomgren
 key: blomgren
