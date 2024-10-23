@@ -9,7 +9,7 @@ type: paper
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do\
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than\
 # 2023-11 below that paper. Notice that sorting is lexicographic.\
-# order: 2023-11
+order: 2019-11
 
 # Auto-generates titles and alt-descriptors\
 shortname: Modal Synergy
@@ -20,8 +20,8 @@ image_large: 2019_icad_modalsynergy_teaser.png
 
 # Authors in the "database" can be used with just their person "key"
 authors:
-- ronnberg
-- lowgren
+  - ronnberg
+  - lowgren
 
 # A link to an internal blog post (use only the relative URL)\
 # blog-post:
@@ -44,11 +44,11 @@ year: 2019
 bibentry: inproceedings
 bib:
   journal:
-  booktitle: Proc. 25th Int. Conf. Auditory Display (ICAD)\
+  booktitle: Proc. 25th Int. Conf. Auditory Display (ICAD)
   editor:
   publisher:
   address:
-  doi: 10.21785/icad2019.010\
+  doi: 10.21785/icad2019.010
   url:
   volume:
   number:
@@ -76,12 +76,13 @@ bib:
 # Link to the repository where the code is hosted\
 # code:
 
-abstract: "<p>
+abstract: "
+<p>
 Photone is an interactive installation combining color images with musical sonification. The musical expression is generated based on the syntactic (as opposed to semantic) features of an image as it is explored by the user’s pointing device, intending to catalyze a holistic user experience we refer to as modal synergy where visual and auditory modalities multiply rather than add. We collected and analyzed two months’ worth of data from visitors’ interactions with Photone in a public exhibition at a science center. Our results show that a small proportion of visitors engaged in sustained interaction with Photone, as indicated by session times. Among the most deeply engaged visitors, a majority of the interaction was devoted to visually salient objects, i.e., semantic features of the images. However, the data also contains instances of interactive behavior that are best explained by exploration of the syntactic features of an image, and thus may suggest the emergence of modal synergy.
-</p>"
+</p>
+"
 
 # After the ---, you can put information that you want to appear on the website using markdown formatting or HTML. A good example are acknowledgements, extra references, an erratum, etc.\
 # The --- is REQUIRED!\
----
 
-# Acknowledgements
+---
