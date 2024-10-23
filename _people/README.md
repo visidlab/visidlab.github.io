@@ -13,6 +13,7 @@ include a photo.
 
 ```
 ---
+layout: personpage
 first_name: Miriah
 last_name: Meyer
 key: meyer
