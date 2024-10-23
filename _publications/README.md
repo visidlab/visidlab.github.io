@@ -35,6 +35,7 @@ A current example is the CHI Troubling Collab entry.
 
 ```yaml
 ---
+layout: publication
 # Quotes make the : possible, otherwise you can type this without quotes
 title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
 # Keys must be unique to each paper, see section below for more details
