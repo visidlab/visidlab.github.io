@@ -1,4 +1,5 @@
 ---
+layout: publication
 # Quotes make the : possible, otherwise you can type this without quotes\
 title: "Traces of modal synergy: Studying interactive musical sonification of images in general-audience use"
 # Keys must be unique to each paper, see section below for more details\
