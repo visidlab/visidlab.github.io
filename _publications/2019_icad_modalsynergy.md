@@ -41,7 +41,7 @@ year: 2019
 # You can remove fields you don't need, or else leave them blank\
 # Try to include a DOI, or use the publisher URL below\
 # Specify new BibTeX fields by adding a new key and value inside "bib:"\
-bibentry: inproceedings\
+bibentry: inproceedings
 bib:
   journal:
   booktitle: Proc. 25th Int. Conf. Auditory Display (ICAD)\
