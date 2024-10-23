@@ -27,7 +27,7 @@ bib:
   pages: 34-41
 
 
-award: ICAD Best Student paper and Best Academic Use of Sound
+# award: ICAD Best Student paper and Best Academic Use of Sound
 
 # Provide a preprint and supplement pdf
 
