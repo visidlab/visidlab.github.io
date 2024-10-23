@@ -6,7 +6,7 @@ layout: header
     <article>
 
         {% assign publications = site.publications | sort: 'year' %}
-        {% assign publications = publications | sort: 'order' %}
+        {% assign publications = publications | sort: 'title' %}
 
         {% for pub in site.publications %}
         {% if pub.type == 'preprint' %}
