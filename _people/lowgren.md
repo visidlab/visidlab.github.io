@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Jonas
 last_name: Löwgren
 key: lowgren
