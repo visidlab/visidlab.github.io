@@ -1,4 +1,5 @@
 ---
+layout: personpage
 first_name: Niklas
 last_name: Rönnberg
 key: ronnberg
@@ -14,7 +15,6 @@ personal-site: https://www.itn.liu.se/~nikro27/
 graduated:
 # add your graduation year
 year_left:
-
 
 orcid: 0000-0002-1334-0624
 
