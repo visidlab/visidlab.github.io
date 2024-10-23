@@ -19,5 +19,5 @@ year_left: 2025
 orcid: 0000-0001-5874-6356
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: Sonification, Integration, Audiovisual, Cinema
+keywords: sonification, integration, audiovisual, cinema
 ---
