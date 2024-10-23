@@ -19,5 +19,5 @@ year_left:
 orcid: 0000-0002-1334-0624
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords:
+keywords: sonification, sound design, interaction design, music
 ---
