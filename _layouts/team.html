@@ -12,19 +12,10 @@ layout: header
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6">
-            <!-- FACULTY -->
-            {% for person in site.people %}
-            {% if person.role == "faculty" %}
-            {% include person.html data = 1 %}
-            {% endif %}
-            {% endfor %}
-        </div>
-        {% assign count = 2 %}
         {% for person in site.people %}
         <div class="col-lg-6">
             <!-- STUDENTS -->
-            {% if person.role != "alumnus" and person.role != "faculty" %}
+            {% if person.role != "alumnus" %}
 
             {% include person.html data=count %}
 

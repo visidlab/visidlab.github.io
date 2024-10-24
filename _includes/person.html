@@ -8,8 +8,9 @@
 
     <div class="col-4">
 
-        <img src="../assets/photos/{{ person.key }}.jpg" onerror="this.src='../assets/photos/cats/default0.jpg'"
-            alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
+        <a href="{{ person.permalink }}"><img src="../assets/photos/{{ person.key }}.jpg"
+                onerror="this.src='../assets/photos/cats/default0.jpg'"
+                alt="Photo of {{ person.first_name }} {{ person.last_name }}" /></a>
     </div>
 
     <div class="col-8">
