@@ -3,11 +3,12 @@
     <!-- Color generation -->
     {% assign indexNum = include.data %}
     {% assign color = site.data.colors[indexNum].name %}
-    {% assign num = indexNum | divided_by: 2 | ceil %}
+    <!-- To Do: Fix random cat pic assignment mapping -->
+    <!-- {% assign num = indexNum | divided_by: 2 | ceil %} -->
 
     <div class="col-4">
 
-        <img src="../assets/photos/{{ person.key }}.jpg" onerror="this.src='../assets/photos/cats/default{{ num }}.jpg'"
+        <img src="../assets/photos/{{ person.key }}.jpg" onerror="this.src='../assets/photos/cats/default0.jpg'"
             alt="Photo of {{ person.first_name }} {{ person.last_name }}" />
     </div>
 
