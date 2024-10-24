@@ -55,10 +55,10 @@ bib:
   address:
   doi: 10.1177/20539517221110218
   url:
-  volume:9
-  number:2
+  volume: 9
+  number: 2
   pages:
-  month:July
+  month: July
   pmcid:
 
 # Add things like "Best Paper Award at InfoVis 2099, selected out of 4000 submissions"
