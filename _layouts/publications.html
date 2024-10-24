@@ -5,7 +5,7 @@ layout: header
 <div class="container">
     <article>
 
-        {% assign publications = site.publications | sort: 'year' %}
+        {% assign publications = site.publications | sort: 'key' %}
         {% assign publications = publications | sort: 'title' %}
 
         {% for pub in site.publications %}
