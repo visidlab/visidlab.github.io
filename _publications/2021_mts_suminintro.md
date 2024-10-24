@@ -55,9 +55,9 @@ bib:
   address:
   doi: 10.1109/MTS.2021.3101817
   url:
-  volume:40
-  number:3
-  pages:60-65
+  volume: 40
+  number: 3
+  pages: 60-65
   month:
   pmcid:
 
