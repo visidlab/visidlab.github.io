@@ -11,32 +11,28 @@ layout: header
             {{ content }}
         </div>
     </div>
+
+    {% assign count = 0 %}
+    {% assign people = site.people | sort: 'last_name' %}
     <div class="row">
-        {% for person in site.people %}
-        <div class="col-lg-6">
-            <!-- STUDENTS -->
-            {% if person.role != "alumnus" %}
-
+        {% for person in people %}
+        <div class="col-6">
+            {% if person.role != "alumnus"%}
             {% include person.html data=count %}
-
             {% endif %}
-
         </div>
-        <br>
         {% assign count = count | plus: 1 %}
         {% endfor %}
-
     </div>
 
     <!-- Alumni -->
     <h2> Alumni </h2>
-    {% assign people = site.people | sort: 'year_left' %}
-    {% for person in people reversed %}
+    {% assign alumni = site.people | sort: 'year_left' %}
+    {% for person in alumni reversed %}
     {% if person.role == "alumnus" %}
     {% if person.graduated != "N" %}
     <strong>{{ person.first_name }} {{ person.last_name }}</strong> ({{ person.graduated }}) <a
-        href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
-        Publications</a>
+        href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i> Publications</a>
     <br>
     {% elsif person.graduated == "N" %}
     <strong>{{ person.first_name }} {{ person.last_name }}</strong>
@@ -44,7 +40,6 @@ layout: header
     {% endif %}
     {% endif %}
     {% endfor %}
-
 </div>
 
 <br>
