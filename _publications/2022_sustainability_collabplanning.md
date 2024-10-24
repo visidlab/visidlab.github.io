@@ -54,9 +54,9 @@ bib:
   address:
   doi: 10.3390/su142417032
   url:
-  volume:14
-  number:24
-  pages:17032
+  volume: 14
+  number: 24
+  pages: 17032
   month:
   pmcid:
 
