@@ -6,8 +6,8 @@ type: paper
 order: 2024-9
 
 shortname: StarSoniVis
-image: 
-image_large: 
+image: 2024_cgf_starsonivis.png
+image_large: 2024_cgf_starsonivis.png
 
 authors:
   - Kajetan Enge
@@ -37,7 +37,7 @@ bib:
   # volume:
   # number:
   # pages:
-  month:5
+  month: 5
   # pmcid:
 
 

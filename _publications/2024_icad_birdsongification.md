@@ -6,8 +6,8 @@ type: paper
 order: 2024-6
 
 shortname: OpenSpace Sonification
-# image: 
-# image_large: 
+image: 2024_icad_birdsongification.png
+image_large: 2024_icad_birdsongification.png
 
 authors:
   - elmquist

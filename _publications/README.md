@@ -78,6 +78,7 @@ year: 2023
 # You can remove fields you don't need, or else leave them blank
 # Try to include a DOI, or use the publisher URL below
 # Specify new BibTeX fields by adding a new key and value inside "bib:"
+# Make sure to add a space between the colon and your entry
 bibentry: article | inproceedings | phdthesis | book
 bib:
   journal: SIGCHI Conference on Human Factors in Computing Systems (CHI)

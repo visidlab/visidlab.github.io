@@ -1,13 +1,13 @@
 ---
 layout: publication
 title: "Parallel Chords: an audio-visual analytics design for parallel coordinates"
-key: 2024_pauc_parallelchords
+key: 2023_pauc_parallellchords
 type: paper
-order: 2024-9
+order: 2023-9
 
-shortname: SonAir
-image: 
-image_large: 
+shortname: ParallellChords
+image: 2023_pauc_parallellchords.png
+image_large: 2023_pauc_parallellchords.png
 
 authors:
   - elmquist
@@ -22,7 +22,7 @@ authors:
   - ronnberg
   
 journal-short: PAUC
-year: 2024
+year: 2023
 
 bibentry: article
 bib:
@@ -36,7 +36,7 @@ bib:
   volume:
   number:
   pages:
-  month:5
+  month: 5
   pmcid:
 
 

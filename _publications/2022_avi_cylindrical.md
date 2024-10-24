@@ -6,8 +6,8 @@ type: paper
 order: 2022-5
 
 shortname: Cylindrical
-image: 
-image_large: 
+image: 2022_avi_cylindrical.png
+image_large: 2022_avi_cylindrical.png
 
 authors:
   - elmquist
@@ -29,7 +29,7 @@ bib:
   # volume:
   # number:
   # pages:
-  month:5
+  month: 5
   # pmcid:
 
 
