@@ -4,7 +4,7 @@ title: "Towards Interactive Sonification in Monitoring of Dynamic Processes"
 key: 2019_interactive_sonification
 type: paper
 
-order: 2019-13
+order: 2019-7
 
 shortname: Interactive Sonification
 image: 2019_interactive_sonification.png
