@@ -18,10 +18,10 @@ year: 2019
 
 bibentry: article
 bib:
-  journal: Behaviour \& Information Technology
+  journal: Behaviour & Information Technology
   booktitle: 
   editor: 
-  publisher: Taylor \& Francis
+  publisher: Taylor & Francis
   address: 
   doi: 10.1080/0144929X.2019.1657952
   url:
