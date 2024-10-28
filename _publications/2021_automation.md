@@ -22,7 +22,7 @@ year: 2021
 bibentry: article
 bib:
   journal: 
-  booktitle: 32nd European Conference on Cognitive Ergonomics: Designing Virtual and Physical Interactive Systems
+  booktitle: The 32nd European Conference on Cognitive Ergonomics: Designing Virtual and Physical Interactive Systems
   editor: 
   publisher: ACM Digital Library
   address: 
