@@ -25,7 +25,8 @@ bib:
   journal: Data
   booktitle: 
   editor: MDPI
-  publisher:   address: 
+  publisher:   
+  address: 
   doi: 10.3390/data4020074
   url:
   volume: 4
