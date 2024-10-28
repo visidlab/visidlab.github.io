@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "Automation, teamwork, and the feared loss of safety: Air traffic controllers’ experiences and expectations on current and future ATM systems"
+title: "Automation, teamwork, and the feared loss of safety: Air traffic controllers' experiences and expectations on current and future ATM systems"
 key: 2021_automation
 type: paper
 
@@ -22,7 +22,7 @@ year: 2021
 bibentry: article
 bib:
   journal: 
-  booktitle: The 32nd European Conference on Cognitive Ergonomics: Designing Virtual and Physical Interactive Systems
+  booktitle: "The 32nd European Conference on Cognitive Ergonomics: Designing Virtual and Physical Interactive Systems"
   editor: 
   publisher: ACM Digital Library
   address: 
