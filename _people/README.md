@@ -20,9 +20,10 @@ key: meyer
 permalink: /team/meyer/
 # Pick one of the following
 role: faculty | postdoc | phdstudent | msstudent | undergrad | intern | alumnus
-email: miriah.meyer@liu.se
 # If you selected faculty, then fill in your title below
 title: 
+email: miriah.meyer@liu.se
+
 
 # leave empty if you don't have apersonal website
 personal-site: https://miriah.github.io/

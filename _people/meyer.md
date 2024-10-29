@@ -6,6 +6,7 @@ key: meyer
 permalink: /team/meyer/
 # Pick one of the following
 role: faculty
+facultyrole: 
 email: miriah.meyer@liu.se
 department: ITN
 division: MIT

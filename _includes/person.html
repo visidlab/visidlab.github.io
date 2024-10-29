@@ -1,3 +1,4 @@
+<div class="container" style="margin: 15px;"> 
 <div class="row">
 
     <!-- Color generation -->
@@ -13,7 +14,7 @@
                 alt="Photo of {{ person.first_name }} {{ person.last_name }}" /></a>
     </div>
 
-    <div class="col-8">
+    <div class="col" style="max-width: 400px;">
         <em style="text-decoration-color: var( {{ color }} )">
             <h3> {{ person.first_name }} {{ person.last_name }}</h3>
         </em>
@@ -24,7 +25,7 @@
         {% elsif person.role == 'postdoc' %}
         {% assign role = 'Post-Doctoral Researcher' %}
         {% elsif person.role == 'faculty' %}
-        {% assign role = 'Professor' %}
+        {% assign role = {person.title} %}
         {% elsif person.role == 'msstudent' %}
         {% assign role = 'Masters Student' %}
         {% elsif person.role == 'undergrad' %}
@@ -51,4 +52,4 @@
         </p>
     </div>
 </div>
-<br>
+</div>
