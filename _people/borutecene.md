@@ -5,9 +5,9 @@ last_name: Börütecene
 key: borutecene
 permalink: /team/borutecene/
 # Pick one of the following
-role: faculty | postdoc | phdstudent | msstudent | undergrad | intern | alumnus
+role: faculty
 # If you selected faculty, then fill in your title below
-title: 
+title: Assistant Professor
 email: ahmet.borutecene@liu.se
 
 
