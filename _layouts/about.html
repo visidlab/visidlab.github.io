@@ -5,11 +5,12 @@ layout: header
     <h1>{{ page.title }}</h1>
     <div class="row">
         <div class="col-sm-7">
-            <!-- CONTENT -->
+            <!-- CONTENT 
+            <img src= "" class="img-fluid" alt="Photo of the group"
+            style="border-radius: 5px; width: 100%;"> -->
+            <br>
             {{ content }}
             <br>
-            <img src="assets/photos/group{{ page.groupimgyear }}.gif" class="img-fluid" alt="Photo of the group"
-                style="border-radius: 5px; width: 100%;">
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
@@ -22,10 +23,11 @@ layout: header
             {% include recent_news_list.html %}
         </div>
     </div>
-
+</div>
+<div class="container">
+<div class="row">
     <!-- Photo gallery -->
-    <br>
-    <br>
+    <div class="col">
     <!-- <hr style="color: var(--pink);"> -->
     <h2>Where We Are</h2>
     <h3 style="margin-bottom: 0;">Department of Science & Technology, Linköping University</h3>
@@ -34,7 +36,7 @@ layout: header
 
 
 
-    <p>The Vis Collective is a research group situated within the <a
+    <p>Visualization and Interaction Design is a research group situated within the <a
             href="https://liu.se/en/organisation/liu/itn">Department of Science & Technology</a> at
         <a href="https://liu.se/en">Linköping
             University</a>. We are affiliated with the <a href="https://liu.se/en/organisation/liu/itn/mit">Division of
@@ -58,6 +60,5 @@ layout: header
         {% endfor %}
     </ul>
 </div>
-
-<br>
-<br>
+</div>
+</div>
