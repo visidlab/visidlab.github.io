@@ -15,13 +15,14 @@ layout: header
     {% assign count = 0 %}
     {% assign people = site.people | sort: 'last_name' %}
     <div class="row">
-        {% for person in people %}
+        {% for person in people %} {% unless person.role == 'alumnus' %} 
         <div class="col-6">
-            {% if person.role != "alumnus"%}
+            <!-- {% if person.role != 'alumnus' %}{% endif %} --> 
+            
             {% include person.html data=count %}
-            {% endif %}
+           
         </div>
-        
+        {% endunless %}
         {% assign count = count | plus: 1 %}
         {% endfor %}
         
