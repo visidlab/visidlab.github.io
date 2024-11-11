@@ -1,8 +1,4 @@
 ---
-- name: ufo.png
-  thumb: ufo.png
-  text: Image of UFO Sweden exhibit at Arbetets museum.
-  link: https://www.ufo.se/
 - name: mmaps.jpeg
   thumb: mmaps.jpeg
   text: Photo of Myrto looking at maps at Arbetets museum.

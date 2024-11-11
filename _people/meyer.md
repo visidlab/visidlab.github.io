@@ -6,6 +6,8 @@ key: meyer
 permalink: /team/meyer/
 # Pick one of the following
 role: faculty
+# If you selected faculty, then fill in your title below
+title: Professor
 facultyrole: 
 email: miriah.meyer@liu.se
 department: ITN

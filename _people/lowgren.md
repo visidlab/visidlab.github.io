@@ -6,6 +6,8 @@ key: lowgren
 permalink: /team/lowgren/
 # Pick one of the following
 role: faculty
+# If you selected faculty, then fill in your title below
+title: Professor
 email: jonas.lowgren@liu.se
 
 # leave empty if you don't have apersonal website

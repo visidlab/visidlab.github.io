@@ -6,6 +6,8 @@ key: ronnberg
 permalink: /team/ronnberg/
 # Pick one of the following
 role: faculty
+# If you selected faculty, then fill in your title below
+title: Senior Associate Professor
 email: niklas.ronnberg@liu.se
 
 # leave empty if you don't have apersonal website
