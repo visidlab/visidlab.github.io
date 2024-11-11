@@ -7,7 +7,7 @@
         <span class="paper-title">
             <a href="{{ site.baseurl }}{{ publication.url }}"><b>{{ publication.title }}</b></a>
         </span>
-        <div style="margin-bottom: 5px">
+        <div style="margin-bottom: 15px">
             {% if publication.type == "thesis" %} {{ publication.thesis_type
             }}, {{ publication.month }} {{ publication.year }} {% else %}
             {{publication.journal-short}}, {{publication.year}} {% endif %}

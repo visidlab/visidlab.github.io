@@ -17,10 +17,19 @@
   --lightblue: #00ABD6;
   --midblue: #018FB5;
   --darkblue: #005F8B;
+  --lightpink: #fc6caa;
+  --violet: #8851cb;
 }
 
 
 /* TEXT */
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14pt;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -30,7 +39,6 @@ em {
   text-decoration: underline; 
   text-decoration-style: wavy;
   text-decoration-skip-ink: none;
-  text-decoration-color: var(--pink);
   font-style: normal;
 }
 
@@ -81,13 +89,19 @@ h1 {
     color: var(--lightgreen);
     letter-spacing: -1;
     font-size: 2.5rem; */
-    font-weight: 600;
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 3rem;
     color: var(--darkblue);
   }
 
 
   h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--darkblue);
     letter-spacing: 0;
   }
@@ -138,6 +152,7 @@ h1 {
 
 /* LIST STYLE ON ABOUT PAGE */
 .about-list {
+  font-weight: 400;
   list-style-type: none;
   padding-left: 0;
 }
@@ -156,16 +171,19 @@ a.newslink:hover {
   
   li, p,
   summary, div {
-    font-family: "Darker Grotesque", sans-serif;
-    font-size: 18px;
-    line-height: 22px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: medium;
+    line-height: 24px;
   }
 
   b {
-    font-family: "Darker Grotesque", sans-serif;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    line-height: 24px;
   }
 
   /* BUTTONS */
@@ -173,6 +191,11 @@ a.newslink:hover {
     padding-left:0;
     border: none;
   }
+  
+  img {
+    border-radius: 10px;
+  }
+
 
   img.logo {
     display: inline-block;
@@ -184,6 +207,7 @@ a.newslink:hover {
     background-color: white; 
     border-bottom: 3mm ridge var(--lightblue) ;
   } */
+  
 
 
   /* PUBLICATION LIST TEASER */
@@ -203,9 +227,10 @@ a.newslink:hover {
   /* NRKP GALLERY */
   .image-gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px;
     padding-left: 0;
+    width: 100%;
   }
   
   .image-gallery > li {

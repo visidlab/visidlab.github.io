@@ -2,15 +2,14 @@
     {% assign newspaper = site.news | sort: 'date' | reverse %}
     {% for news in newspaper limit: 4 %}
     <li>
-        <div style="margin-bottom: 5px">
+        <div style="margin-bottom: 15px">
             <a href="{{ site.baseurl }}/news#{{ news.date | date: " %b %d %Y" }}"
                 style="text-decoration-color: var(--pink)" class="newslink">
                 <b>{{ news.date | date: "%B %Y" }}: </b>{{ news.title }}</a>
         </div>
     </li>
     {% endfor %}
-    <br>
 
     <a href="{{ site.baseurl }}/news"
-        style="text-align: right; color: var(--lightblue); font-weight: bold; font-size: 1.25rem;">Read more...</a>
+        style="text-align: right; color: var(--lightblue); font-size: 1.25rem;">Read more...</a>
 </ul>

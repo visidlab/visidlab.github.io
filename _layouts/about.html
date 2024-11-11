@@ -4,7 +4,7 @@ layout: header
 <div class="container">
     <h1>{{ page.title }}</h1>
     <div class="row">
-        <div class="col-sm-8" style="margin: left: -15px; right: -15px;">
+        <div class="col-sm-8" style="padding: 30px;">
             <!-- CONTENT 
             <img src= "" class="img-fluid" alt="Photo of the group"
             style="border-radius: 5px; width: 100%;"> -->
@@ -24,7 +24,7 @@ layout: header
     </div>
 </div>
 <div class="container">
-<div class="row">
+<div class="row" style="padding-left: 30px; padding-right: 30px;">
     <!-- Photo gallery -->
     <div class="col">
     <!-- <hr style="color: var(--pink);"> -->
@@ -32,8 +32,6 @@ layout: header
     <h3 style="margin-bottom: 0;">Department of Science & Technology, Linköping University</h3>
     <h3>(campus) Norrköping, Sweden</h3>
     <br>
-
-
 
     <p>Visualization and Interaction Design is a research group situated within the <a
             href="https://liu.se/en/organisation/liu/itn">Department of Science & Technology</a> at
@@ -50,7 +48,7 @@ layout: header
     </p>
 
 
-    <ul class="image-gallery">
+    <ul class="image-gallery" style="width: fit-content">
         {% for photo in site.data.gallery limit: 4 %}
         <li>
             <a href="{{ photo.link }}" target="_blank"><img src="assets/nrkp/{{ photo.name }}"
@@ -58,6 +56,6 @@ layout: header
         </li>
         {% endfor %}
     </ul>
-</div>
+    </div>
 </div>
 </div>

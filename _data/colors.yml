@@ -1,10 +1,14 @@
 ---
 - name: --yellow
+- name: --pink
 - name: --lightgreen
 - name: --midblue
+- name: --orange
 - name: --pink
+- name: --lightpink
 - name: --midgreen
 - name: --lightblue
 - name: --darkgreen
 - name: --darkblue
-- name: --orange
+
+
