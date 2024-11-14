@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accepted papers to CHI 23
-lead-image: chi23-logo.png
+lead-image: /assets/photos/chi23-logo.png
 lead-image-alt-text: Logo for the CHI 23 conference
 ---
 

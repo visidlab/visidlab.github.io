@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Acceptances to Info+
-lead-image: infoplus23-logo.png
+lead-image: /assets/photos/infoplus23-logo.png
 lead-image-alt-text: Logo for the Information+ 2023 conference
 ---
 

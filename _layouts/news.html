@@ -5,37 +5,31 @@ layout: header
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
-            <h1>News</h1>
+            <h1 style="margin-bottom: 20px;">News</h1>
             {% for post in site.news reversed %}
 
-            <div>
+            <div class="card">
+            <a href="{{post.url | prepend: site.baseurl}}">
+                
+                <img class="card-img-top" src="{{post.lead-image}}" alt="{{post.alt-text}}" />
+                
+            <div clas="card-body" style="padding: 20px;">
 
-                <h2 id="{{ post.date | date: " %b %d %Y" }}" style="margin-bottom: 0;">
+                <h2 class="card-title" id="{{ post.date | date: " %b %d %Y" }}" >
                     {{ post.title }}
                 </h2>
-
-                <i>Posted: {{ post.date | date: "%b %Y" }}</i>
+            
+                <i class="card-subtitle">Posted: {{ post.date | date: "%b %Y" }}</i>
                 <br>
-
-                {% if post.lead-image %}
-                {% assign alt-text = "Post lead image" %}
-                {% if post.lead-image-alt-text %}
-                {% assign alt-text=post.lead-image-alt-text %}
-                {% endif %}
-
-                <img src="/assets/photos/{{ post.lead-image }}" alt="{{post.alt-text}}" class="img-fluid"
-                    style="padding-top: 6;" />
-                {% endif %}
-                <br>
+                
+            </a>
                 <br>
                 <div class="post-excerpt">
-                    {{ post.content }}
+                    {{ post.content | markdownify | strip_html | truncatewords: 50 }}
                 </div>
-
-
+            </div>
             </div>
             <br>
-            <hr>
             {% endfor %}
         </div>
     </div>

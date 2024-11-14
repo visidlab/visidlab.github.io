@@ -1,19 +1,21 @@
 Easiest way to create a news post is to duplicate and modify an existing news file.
 Each post must have a unique file name following this pattern: YYYY-MM-DD-title.md
 
+## Please upload the picture that you want to use in your post here (/assets/photos/YOURIMAGE.IMG)
+
 You need to change the following:
 
 goes between the ```---``` lines
-- title
-- lead-image
-- lead-image-alt-text
+- title: *Title of your poste*
+- lead-image: /assets/photos/*name of the picture file*
+- lead-image-alt-text: *alt text for the picturee*
 
 goes below the ```---``` lines
 - content
 
 ## Markdown cheatsheet
 *IMAGES*
-```![alt text!]((/assets/photos/YOURIMAGE.IMG)```
+```![alt text!](/assets/photos/YOURIMAGE.IMG)```
 
 *LINKS*
 ```[link text](https://www.example.com)```
@@ -27,7 +29,7 @@ Example post:
 ---
 layout: post
 title: A descriptive title
-lead-image: lead-logo.png
+lead-image: /assets/photos/lead-logo.png
 lead-image-alt-text: Lead image alt text
 ---
 
