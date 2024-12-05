@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Acceptance to Nordic STS
-lead-image: /assets/photos/nordicsts23-logo.png
+lead-image: /assets/photos/news/nordicsts23-logo.png
 lead-image-alt-text: Logo for the Nordic STS 2023 conference
 ---
 

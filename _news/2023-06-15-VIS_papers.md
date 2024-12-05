@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accepted papers to VIS 23
-lead-image: /assets/photos/vis23-logo.png
+lead-image: /assets/photos/news/vis23-logo.png
 lead-image-alt-text: Logo for the IEEE VIS 23 conference
 ---
 

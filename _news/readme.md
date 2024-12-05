@@ -1,20 +1,36 @@
-Easiest way to create a news post is to duplicate and modify an existing news file.
-Each post must have a unique file name following this pattern: YYYY-MM-DD-title.md
+## ## Instructions for Creating a News Post
+1. **Copy This File**: Make a copy of this file and save it in the `/_news` folder. 
+   - After copying, delete these instructional lines so your document starts with the `---` metadata section.
+2. **Upload Images**:
+   - Upload your lead image to `/assets/photos/news/YOURIMAGE.IMG`.
+   - If you want to use additional images, upload them to the same folder and reference them in the content section of your post.
 
-## Please upload the picture that you want to use in your post here (/assets/photos/YOURIMAGE.IMG)
+---
+layout: post
+title: Accepted papers to CHI 23
+lead-image: /assets/photos/news/YOURIMAGE.IMG
+lead-image-alt-text: Logo for the CHI 23 conference
+author: person.key
+---
+
 
 You need to change the following:
 
+Name of the file YYYY-MM-DD-short-title 
+
 goes between the ```---``` lines
-- title: *Title of your poste*
+- title: *Title of your post*
 - lead-image: /assets/photos/*name of the picture file*
 - lead-image-alt-text: *alt text for the picturee*
+- author: person.*YOURKEY*
+## if you don't want to have an author, just remove this line
 
 goes below the ```---``` lines
-- content
+
+- content of your post
 
 ## Markdown cheatsheet
-*IMAGES*
+*IMAGES (other then lead image)*
 ```![alt text!](/assets/photos/YOURIMAGE.IMG)```
 
 *LINKS*
@@ -23,17 +39,5 @@ goes below the ```---``` lines
 *MORE INFO ABOUT MARKDOWN*
 https://www.markdownguide.org/basic-syntax/#overview
 
+ 
 
-Example post:
-```
----
-layout: post
-title: A descriptive title
-lead-image: /assets/photos/lead-logo.png
-lead-image-alt-text: Lead image alt text
----
-
-![lead image alt text](/assets/photos/2020_lead-image.png)
-
-Add content here.
-```

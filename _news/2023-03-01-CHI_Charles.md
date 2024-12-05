@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Charles receives a CHI 2023 honorable mention
-lead-image: /assets/photos/charles-award-chi23.png
+lead-image: /assets/photos/news/charles-award-chi23.png
 lead-image-alt-text: Overview figure from Charles' award winning CHI 23 paper
 ---
 

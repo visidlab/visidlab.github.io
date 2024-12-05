@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accepted papers to VIS 24
-lead-image: /assets/photos/2024_vis_logo.png
+lead-image: /assets/photos/news/2024_vis_logo.png
 lead-image-alt-text: Logo for the 2024 IEEE VIS conference
 ---
 

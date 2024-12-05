@@ -6,9 +6,16 @@ layout: header
     <div class="row">
         <div class="col-sm-8">
 
-            <h2 class="news"> {{ page.title }} </h1>
+            <h2 class="news" style="color: #E4136F;"> {{ page.title }} </h1>
             <br>
             {{ page.date | date: "%-d %B %Y" }}
+            <br>
+            {% if author == person.key %}
+            <a href="{{ person.permalink }}"> <strong>{{ person.first_name }} {{ person.last_name }}</strong> </a>
+            {% unless author == false %} 
+            <a href="/"> <strong>VISID</strong> </a> 
+            {% endunless %}
+            {% endif %}
             <br>
           
                 
