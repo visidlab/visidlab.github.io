@@ -1,4 +1,4 @@
-## ## Instructions for Creating a News Post
+## Instructions for Creating a News Post
 1. **Copy This File**: Make a copy of this file and save it in the `/_news` folder. 
    - After copying, delete these instructional lines so your document starts with the `---` metadata section.
 2. **Upload Images**:
@@ -21,7 +21,7 @@ Name of the file YYYY-MM-DD-short-title
 goes between the ```---``` lines
 - title: *Title of your post*
 - lead-image: /assets/photos/*name of the picture file*
-- lead-image-alt-text: *alt text for the picturee*
+- lead-image-alt-text: *alt text for the picture*
 - author: person.*YOURKEY*
 ## if you don't want to have an author, just remove this line
 
