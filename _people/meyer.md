@@ -28,5 +28,5 @@ orcid: 0000-0002-8971-6245
 twitter: miriah_meyer
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: visualization design, HCI, methodology, cake
+keywords: visualization design, HCI, theory, sewing
 ---
