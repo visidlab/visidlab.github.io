@@ -1,43 +1,60 @@
-## Instructions for Creating a News Post
-1. **Copy This File**: Make a copy of this file and save it in the `/_news` folder. 
-   - After copying, delete these instructional lines so your document starts with the `---` metadata section.
-2. **Upload Images**:
-   - Upload your lead image to `/assets/photos/news/YOURIMAGE.IMG`.
-   - If you want to use additional images, upload them to the same folder and reference them in the content section of your post.
+***Instructions for Creating a News Post***
 
----
-layout: post
-title: Accepted papers to CHI 23
-lead-image: /assets/photos/news/YOURIMAGE.IMG
-lead-image-alt-text: Logo for the CHI 23 conference
-author: person.key
----
+1. Create a New News Post File
+	•	Navigate to the /_news folder.
+	•	Copy the file named template.md and save it with a new name in the following format:
+YYYY-MM-DD-short-title.md
+Example: 2024-12-08-weekly-update.md
 
+2. Edit the Front Matter
+In the newly created file, update the following fields at the top of the file (called the “front matter”):
 
-You need to change the following:
+**Title**
+	•	Replace YOUR TITLE with your desired title for the post.
+Example:
+title: Weekly News
 
-Name of the file YYYY-MM-DD-short-title 
+**Lead Image**
+	1.	Upload your main image (the lead image) to:
+/assets/photos/news/
+	2.	Update the lead-image field with your uploaded image’s file name.
+Example:
+lead-image: /assets/photos/news/my-news-image.png
+	3.	Update the lead-image-alt-text with a short description of the image for accessibility.
+Example:
+lead-image-alt-text: A scenic view of the mountains
 
-goes between the ```---``` lines
-- title: *Title of your post*
-- lead-image: /assets/photos/*name of the picture file*
-- lead-image-alt-text: *alt text for the picture*
-- author: person.*YOURKEY*
-## if you don't want to have an author, just remove this line
+**Author**
+	•	Add your author key in the author field.
+Example:
+author: person.yourkey
+	•	If no author is needed, remove the entire author line.
 
-goes below the ```---``` lines
+**Published**
+	•	Set published to true if the post is ready to go live.
+If you’re still working on it or want it reviewed first, keep published as false.
+Example:
+published: true
 
-- content of your post
+3. Write Your Content
 
-## Markdown cheatsheet
-*IMAGES (other then lead image)*
-```![alt text!](/assets/photos/YOURIMAGE.IMG)```
+Below the front matter section, replace CONTENT with the body of your news post. You can include text, additional images, links, and more.
 
-*LINKS*
-```[link text](https://www.example.com)```
+4. Uploading Additional Images
+	•	Upload any extra images to:
+/assets/photos/news/
+	•	Add them to your post using this Markdown syntax:
 
-*MORE INFO ABOUT MARKDOWN*
-https://www.markdownguide.org/basic-syntax/#overview
+![Alt text](/assets/photos/news/additional-image.png)
 
+5. Adding Links
+
+Use the following Markdown syntax to include links:
+
+[Link text](https://example.com)
+
+Markdown Resources
+
+For more details on formatting your post using Markdown, visit:
+https://www.markdownguide.org/basic-syntax/#overview 
  
-
