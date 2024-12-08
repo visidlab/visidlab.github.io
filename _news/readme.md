@@ -59,11 +59,11 @@ Below the front matter section, replace `CONTENT` with the body of your news pos
 - Upload any extra images to:  
   `/assets/photos/news/`
 - Add them to your post using this Markdown syntax:
-![Alt text](/assets/photos/news/additional-image.png)
+`![Alt text](/assets/photos/news/additional-image.png)`
 
 ## 5. Adding Links
 - Use the following Markdown syntax to include links:
-[Link text](https://example.com)
+`[Link text](https://example.com)`
 
 ## Markdown Resources
 - For more details on formatting your post using Markdown, visit:
