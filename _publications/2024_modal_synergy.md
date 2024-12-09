@@ -20,7 +20,7 @@ year: 2024
 bibentry: inproceedings
 bib:
   journal: 
-  booktitle: Audiovisual symposium 2024
+  booktitle: Audiovisual symposium
   editor: 
   publisher: Dalarna Audiovisual Academy (DAVA)
   address: Dalarna University, Falun, Sweden
