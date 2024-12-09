@@ -14,7 +14,7 @@ authors:
 - ronnberg
 - lowgren
 
-journal-short: Audiovisual
+journal-short: Audiovisual Symposium
 year: 2024
 
 bibentry: inproceedings
