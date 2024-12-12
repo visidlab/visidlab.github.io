@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "Engaging gameplay for audio games"
+title: "Engaging Gameplay for Audio Games"
 key: 2020_rs_thesis
 type: thesis
 order: 2020-1
