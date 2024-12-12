@@ -13,7 +13,7 @@ authors:
   - Rickard Falk
 
 advisors:
-  - ronnberg
+  - Niklas Rönnberg
 
 year: 2020
 
