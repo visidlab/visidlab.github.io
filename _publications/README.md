@@ -2,6 +2,7 @@
 
 Please use the template provided below when adding a new publication. Fill in
 all the information to the best of your ability.
+**IF** you are adding an dissertation, make a copy of `2024_ms_thesis.md` and use that as your template.
 
 ## Keys and Filenames
 
