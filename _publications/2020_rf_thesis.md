@@ -6,8 +6,8 @@ type: thesis
 order: 2020-1
 
 shortname: Audio games
-image: 2020_rs_thesis.png
-image_large: 2020_rs_thesis_large.png
+image: 2020_rf_thesis.png
+image_large: 2020_rf_thesis_large.png
 
 authors:
   - Rickard Falk
