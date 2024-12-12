@@ -1,11 +1,11 @@
 ---
 layout: publication
-title: "Engaging gameplay for audio games"
+title: "Insight-based Evaluation of a Map-based Dashboard"
 key: 2022_ah_thesis
 type: thesis
 order: 2022-1
 
-shortname: Audio games
+shortname: Dashboards
 image: 2022_ah_thesis.png
 image_large: 2022_ah_thesis_large.png
 
