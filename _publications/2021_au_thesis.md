@@ -7,7 +7,7 @@ order: 2021-1
 
 shortname: UX of Visual Scripting
 image: 2021_au_thesis.png
-image_large: 2021_au_thesiss_large.png
+image_large: 2021_au_thesis_large.png
 
 authors:
   - Alexander Uggla
