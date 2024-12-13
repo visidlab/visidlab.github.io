@@ -3,7 +3,7 @@ layout: post
 title: Collaborative Media Revisited
 lead-image: /assets/photos/news/cm_2014.png
 lead-image-alt-text: Book release at Media Evolution, Malmö, in January 2014.
-author: person.lowgren
+author: lowgren
 published: true
 ---
 
