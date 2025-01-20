@@ -34,7 +34,6 @@ pdf: https://arxiv.org/abs/2210.16988
 
 
 
-
 abstract: "
 <p>The Data Bricks Space Mission is a prototype activity based on data physicalization for teaching kids about data. The design of the activity is based on a literature review and interviews with elementary school teachers, and targets kids aged 10-12. Using Lego bricks and a fictional space adventure story, teachers can use the Data Bricks Space Mission activity to empower kids to produce data, communicate their findings, and gain a better understanding of the relationship between data and the world around them.</p>
 "
