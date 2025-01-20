@@ -5,7 +5,7 @@ key: 2022_lor-a_thesis
 type: thesis
 order: 2022-5
 
-shortname: Data Bricks
+shortname: Data Bricks Thesis
 image: 2022_data_bricks.png
 image_large: 2022_data_bricks.png
 
