@@ -1,13 +1,14 @@
-name: 'Netlify Preview Deploy'
+name: "Netlify Preview Deploy"
 
 on:
   pull_request:
-    types: ['opened', 'edited', 'synchronize']
+    types: ["opened", "edited", "synchronize"]
 
 jobs:
   deploy:
-    name: 'Deploy'
-    runs-on: ubuntu-latest
+    name: "Deploy"
+    # runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v1
