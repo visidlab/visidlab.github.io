@@ -22,8 +22,6 @@ address: |
   Kopparhammaren 2, MIT/ITN  <br>
   601 74 Norrköping, Sweden  <br>
 orchid: 0000-0001-9419-3402
-twitter: gotdairyya
-
 # Suggestion: 3 research key phrases, 1 personal
 keywords: feminist epistemology, vis, communicating science research, cats
 ---
