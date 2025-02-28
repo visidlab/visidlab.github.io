@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Derya and Miriah launch new exhibit at the Vis Center
+title: Data & Me exhibit launch
 lead-image: /assets/photos/news/dataandme-scaled.jpg
 lead-image-alt-text: the data and me touch-table interface with a person building a data flower 
 author: meyer
