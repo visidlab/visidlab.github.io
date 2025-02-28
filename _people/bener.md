@@ -8,7 +8,7 @@ permalink: /team/bener/
 role: phdstudent
 # If you selected faculty, then fill in your title below
 title: 
-email: jose.bener.de.sousa.nunes@liu.se
+email: jose.bener@liu.se
 
 
 # leave empty if you don't have apersonal website
