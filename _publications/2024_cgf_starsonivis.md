@@ -27,17 +27,17 @@ year: 2024
 
 bibentry: article
 bib:
-  journal: Personal and Ubiquitous Computing
+  journal: Computer Graphics Forum
   # booktitle:
   # editor:
-  publisher: Springer
+  publisher: Computer Graphics Forum
   # address:
-  doi: 10.1007/S00779-024-01795-8
+  doi: 10.1111/cgf.15114
   # url:
   # volume:
   # number:
   # pages:
-  month: 5
+  month: 6
   # pmcid:
 
 
