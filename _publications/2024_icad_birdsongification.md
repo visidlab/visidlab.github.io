@@ -5,7 +5,7 @@ key: 2024_icad_birdsongification
 type: paper
 order: 2024-6
 
-shortname: OpenSpace Sonification
+shortname: Birdsongification
 image: 2024_icad_birdsongification.png
 image_large: 2024_icad_birdsongification.png
 
@@ -27,17 +27,17 @@ bib:
   pages: 34-41
 
 
-# award: ICAD Best Student paper and Best Academic Use of Sound
+# award: 
 
 # Provide a preprint and supplement pdf
 
-pdf: 2021_icad_openspacesonification.pdf
+# pdf:
 # supplement:
 
 # Link to an official preprint server
 # preprint_server: 
 
-abstract: " <p>Data visualization software is commonly used to explore outer space in a planetarium environment, where the visuals of the software is typically accompanied with a narrator and supplementary background music. By letting sound take a bigger role in these kinds of presentations, a more informative and immersive experience can be achieved. The aim of the present study was to explore how sonification can be used as a complement to the visualization software OpenSpace to convey information about the Solar System, as well as increasing the perceived immersiveness for the audience in a planetarium environment. This was investigated by implementing a sonification that conveyed planetary properties, such as the size and orbital period of a planet, by mapping this data to sonification parameters. With a user-centered approach, the sonification was designed iteratively and evaluated in both an online and planetarium environment. The results of the evaluations show that the participants found the sonification informative and interesting, which suggest that sonification can be beneficially used as a complement to visualization in a planetarium environment.</p> "
+abstract: " <p>Choosing whether to represent data in an abstract or concrete manner through sonification is generally dependent on the applicability of the dataset and personal preference of the designer. For supporting a visualization with a high level of abstraction, a sonification can purposefully act as a complement by giving concrete contextual cues to the data representation with the use of auditory icons. This paper presents a case study of using bird songs as auditory icons to give context to a biology visualization, and explores how additional information of the bird species can be conveyed together with the auditory icons with parameter mapping sonification. The auditory icons are used as a foundation to convey additional information of the dataset, either by creating a parametric auditory icon, or by adding an additional sonification that accompanies the auditory icon. A user evaluation was conducted to validate and compare the different sonification mappings. The results show that there is a subjective difference of how participants perceived the sonifications, where the participants preferred sonifications that had a concrete mapping design. The sonification approaches that are explored in this study have the potential to be applied to more general sonification designs.</p> "
 ---
 
 # Acknowledgements
