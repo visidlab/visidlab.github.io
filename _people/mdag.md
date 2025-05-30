@@ -5,7 +5,7 @@ last_name: Dagkouli-Kyriakolgou
 key: mdag
 permalink: /team/mdag/
 # Pick one of the following
-role: postdoc
+role: alumnus
 email: myrto.dagkouli-kyriakoglou@liu.se
 department: ITN & Tema
 division: MIT & Tema G
@@ -14,7 +14,7 @@ organization: LiU
 personal-site:
 #  leave empty if you're active. Add something like "M.S.'16" or "B.S.'17" if you got a degree while with the Vis Collective. Add "N" if you left before you got a degree.
 graduated:
-year_left:
+year_left: 2025
 
 gs: https://scholar.google.com/citations?user=5InmKNUAAAAJ&hl=el
 address: |
