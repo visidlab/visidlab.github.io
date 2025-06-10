@@ -13,7 +13,7 @@ authors:
   - elmquist
 
 advisors:
-  - Niklas Rönnberg
+  - Niklas Rönnberg, 
   - Alexander Bock
   
 
