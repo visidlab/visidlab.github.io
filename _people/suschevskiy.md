@@ -24,7 +24,7 @@ year_left:
 gs: https://scholar.google.com/citations?user=TycFXMIAAAAJ&hl=en
 address: |
   Linköpings Universitet <br>
-  Kopparhammaren 2, MIT/ITN  <br>
+  Kopparhammaren 2, Room 3052, MIT/ITN  <br>
   601 74 Norrköping, Sweden  <br>
 orcid: 0000-0003-2122-1024
 bluesky: vvseva.bsky.social‬
