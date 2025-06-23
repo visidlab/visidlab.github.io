@@ -14,7 +14,7 @@ authors:
   - ronnberg
 
 advisors:
-  - Niklas Rönnberg
+  - ronnberg
 
 year: 2020
 
