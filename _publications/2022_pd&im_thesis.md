@@ -12,6 +12,7 @@ image_large: 2022_pd&im_thesis_large.png
 authors:
   - Peder Dromberg
   - Ivanna Maric
+  - elmquist
 
 advisors:
   - Elias Elmquist
