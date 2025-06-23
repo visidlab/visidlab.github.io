@@ -11,6 +11,7 @@ image_large: 2020_rf_thesis_large.png
 
 authors:
   - Rickard Falk
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
