@@ -11,6 +11,7 @@ image_large: 2023-act_thesis_large.png
 
 authors:
   - Anton Cevey Tärnholm
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
