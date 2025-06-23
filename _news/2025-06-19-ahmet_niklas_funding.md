@@ -13,4 +13,4 @@ It is an 18-month project that officially starts in January 2026 and aims to eng
 
 As project applicants from Linköping University, we teamed up with Portalen i Norrköping (Caroline Bielkhammar), Cnema (Yvonne Olofsson, Johan Mild, Johan Karlsson), and Visualiseringscenter (Anna Öst, Lisa Lindgren) in this project.
 
-(Photo credit: Amanda Lagerqvist, Norrköpings visualiseringscenter C)
+(Photo credit: Amanda Lagerqvist, Visualiseringscenter C)
