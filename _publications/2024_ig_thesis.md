@@ -11,6 +11,7 @@ image_large: 2024_ig_thesis_large.png
 
 authors:
   - Ivar Gorenko
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
