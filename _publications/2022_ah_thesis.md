@@ -11,6 +11,7 @@ image_large: 2022_ah_thesis_large.png
 
 authors:
   - Anna Häägg
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
