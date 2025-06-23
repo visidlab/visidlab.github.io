@@ -11,6 +11,7 @@ image_large: 2021_au_thesis_large.png
 
 authors:
   - Alexander Uggla
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
