@@ -169,6 +169,9 @@ layout: header
                 {% if author == page.key %}
                 {% include publication_list_entry.html %}
                 {% endif %}
+                {% if advisor == page.key %}
+                {% assign hasthesis = true %}
+                {% endif %}
                 {% endfor %}
                 {% endif %}
                 {% endfor %}
