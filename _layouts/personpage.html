@@ -42,7 +42,7 @@ layout: header
 {% if author == page.key %}
 {% assign hasthesis = true %}
 {% endif %}
-{% if advisor == page.key %}
+{% if advisors == page.key %}
 {% assign hasthesis = true %}
 {% endif %}
 {% endfor %}
@@ -169,7 +169,7 @@ layout: header
                 {% if author == page.key %}
                 {% include publication_list_entry.html %}
                 {% endif %}
-                {% if advisor == page.key %}
+                {% if advisors == page.key %}
                 {% assign hasthesis = true %}
                 {% endif %}
                 {% endfor %}
