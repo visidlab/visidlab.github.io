@@ -11,6 +11,7 @@ image_large: 2022_la_thesis_large.png
 
 authors:
   - Linus Arvidsson
+  - ronnberg
 
 advisors:
   - Niklas Rönnberg
