@@ -5,7 +5,7 @@ key: 2025_ch_yz_thesis
 type: thesis
 order: 2025-2
 
-shortname: Audio games
+shortname: Immersive installation
 image: 2025_ch_yz_thesis.png
 image_large: 2025_ch_yz_thesis_large.png
 
