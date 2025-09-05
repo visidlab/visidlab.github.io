@@ -7,4 +7,4 @@ author: mmeyer
 published: true
 ---
 
-On Thursday, September 4, Derya successfully defended her thesis "Shifting Perspectives: Conducting Visualization Research with Entanlement Epistemology". She gave a sharp, engaging, and deeply thoughtful defense. We are all so proud of you, Derya! Stort grattis!
+On Thursday, September 4, Derya successfully defended her thesis "Shifting Perspectives: Conducting Visualization Research with Entanglement Epistemology". She gave a sharp, engaging, and deeply thoughtful defense. We are all so proud of you, Derya! Stort grattis!
