@@ -16,14 +16,17 @@ authors:
   - Benjamin Bach
 
 journal-short: VIS
-year: 2024
+year: 2025
 
 bibentry: inproceedings
 bib:
   booktitle: 
-  publisher: (to be published) Proceedings of 2024 IEEE VIS Conference
-  doi: 
-  # pages: 1-12
+  journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of 2024 IEEE VIS Conference)
+  doi: 10.1109/TVCG.2024.3456334
+  pages: 1246-1256
+  volume: 31
+  number: 1
+  month: 1
 
 #award: 
 

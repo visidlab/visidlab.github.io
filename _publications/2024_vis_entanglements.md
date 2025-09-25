@@ -15,14 +15,17 @@ authors:
   - meyer
 
 journal-short: VIS
-year: 2024
+year: 2025
 
 bibentry: inproceedings
 bib:
   booktitle: 
-  publisher: (to be published) Proceedings of 2024 IEEE VIS Conference
-  doi: 
-  # pages: 1-12
+  journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of 2024 IEEE VIS Conference)
+  doi: 10.1109/TVCG.2024.3456171
+  pages: 1279-1289
+  volume: 31
+  number: 1
+  month: 1
 
 award: IEEE VIS 2024 Best Paper Award
 
