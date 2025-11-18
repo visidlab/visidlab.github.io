@@ -13,7 +13,7 @@ image_large: 2025_disturbance_free_city_large.png
 authors:
 - Anna Fredriksson
 - Linnea Eriksson
-- Niklas Rönnberg
+- ronnberg
 
 journal-short: 
 year: 2025
