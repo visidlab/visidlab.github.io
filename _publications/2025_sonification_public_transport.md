@@ -31,7 +31,7 @@ bib:
   month:
   pmcid:
 
-award: Best paper
+award: Best Paper Award
 
 publisherURL: 
 
