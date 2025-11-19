@@ -2,7 +2,7 @@
 layout: publication
 title: "Den störningsfria staden: En antologi om bygglogistik, stads- och trafikplanering"
 key: 2025_den_storningsfria_staden
-type: book
+type: preprint
 
 order: 2025-0
 
