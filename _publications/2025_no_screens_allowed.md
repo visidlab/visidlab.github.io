@@ -1,8 +1,8 @@
 ---
 layout: publication
 title: "No Screens Allowed In Rheta: Using A Fictional World To Teach Physical Interaction Design"
-key: 2025_sonification_public_transport
-type: 2025_no_screens_allowed
+key: 2025_no_screens_allowed
+type: paper
 
 order: 2025-11
 
