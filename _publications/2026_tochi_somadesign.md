@@ -1,7 +1,7 @@
 ---
 layout: publication
 # Quotes make the : possible, otherwise you can type this without quotes
-title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
+title: "Change and be changed: Looking back at ten years of the soma design research program"
 # Keys must be unique to each paper, see section below for more details
 key: 2026_tochi_somadesign
 # Select one of the options below
