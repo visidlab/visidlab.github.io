@@ -86,7 +86,7 @@ external-project:
 #    file: 2018_infovis_juniper_talk.mp4
 
 # Provide a preprint and supplement pdf
-pdf: 2026_tochi_somadesign.pdf
+pdf:
 supplement:
 
 # Link to the repository where the code is hosted
