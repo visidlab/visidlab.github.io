@@ -14,18 +14,6 @@ layout: header
         {% endif %}
         {% endfor %}
 
-        {% if haspreprints %}
-        <h1>Preprints</h1>
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == 'preprint' %}
-        <div class="row">
-            {% include publication_list_entry.html %}
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-
         <h1>Peer-Reviewed Journal and Conference Papers </h1>
 
         {% for publication in publications reversed %}
@@ -70,6 +58,18 @@ layout: header
         {% endfor %}
 
         <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
+
+                {% if haspreprints %}
+        <h1>Preprints</h1>
+        {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == 'preprint' %}
+        <div class="row">
+            {% include publication_list_entry.html %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
 
 
     </article>
