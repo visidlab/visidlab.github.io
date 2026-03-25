@@ -1,7 +1,7 @@
 ---
 layout: publication
 # Quotes make the : possible, otherwise you can type this without quotes
-title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
+title: "Whatever happened to collaborative media? Hope, trust and locality in a troubled media landscape"
 # Keys must be unique to each paper, see section below for more details
 key: 2026_socarxiv_collabmedia
 # Select one of the options below
@@ -13,7 +13,7 @@ type: preprint
 order: 2026-03
 
 # Auto-generates titles and alt-descriptors
-shortname: Troubling Collaboration
+shortname: Whatever happened to collaborative media?
 # Add a 2:1 aspect ratio (e.g., width: 400px, height: 200px) to the folder /assets/images/publications/
 # image: 2026_socarxiv_collabmedia.png
 # Add a 2:1 aspect ratio teaser figure (e.g., width: 1200px, height: 600px) to the folder /assets/images/publications/
