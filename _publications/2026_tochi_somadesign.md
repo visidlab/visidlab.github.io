@@ -15,9 +15,9 @@ order: 2023-11
 # Auto-generates titles and alt-descriptors
 shortname: Soma Design Research Program
 # Add a 2:1 aspect ratio (e.g., width: 400px, height: 200px) to the folder /assets/images/publications/
-# image: 2026_tochi_somadesign.png
+image: 2026_tochi_somadesign.png
 # Add a 2:1 aspect ratio teaser figure (e.g., width: 1200px, height: 600px) to the folder /assets/images/publications/
-# image_large: 2026_tochi_somadesign.png
+image_large: 2026_tochi_somadesign.png
 
 # Authors in the "database" can be used with just their person "key"
 authors:

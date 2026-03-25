@@ -30,5 +30,5 @@ orcid: 0000-0003-2122-1024
 bluesky: vvseva.bsky.social‬
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: Computational Social Science, Open Science, 
+keywords: Computational Social Science, Open Science, Constructivism
 ---

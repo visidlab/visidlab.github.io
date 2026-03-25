@@ -21,7 +21,7 @@ year: 2025
 bibentry: book
 bib:
   journal: 
-  booktitle: Den störningsfria staden: En antologi om bygglogistik, stads-och trafikplanering
+  booktitle: "Den störningsfria staden: En antologi om bygglogistik, stads-och trafikplanering"
   editor: Fredriksson, Anna and Eriksson, Linnea and Rönnberg, Niklas
   publisher: Linköping University Electronic Press
   address: 

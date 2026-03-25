@@ -7,6 +7,7 @@ layout: header
 
         {% assign publications = site.publications | sort: 'key' %}
         {% assign publications = publications | sort: 'key' %}
+        {% assign publications_for_year = site.publications | sort: 'key' | sort: 'year' | reverse %}
 
         {% for pub in site.publications %}
         {% if pub.type == 'preprint' %}
@@ -14,66 +15,120 @@ layout: header
         {% endif %}
         {% endfor %}
 
-        <h1>Peer-Reviewed Journal and Conference Papers </h1>
-
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == "paper" %}
-        <div class="row">
-            {% include publication_list_entry.html %}
+        <div class="publication-view-switch" role="group" aria-label="Publication display mode">
+            <button type="button" class="is-active" data-view-target="type">By Type</button>
+            <button type="button" data-view-target="year">By Year</button>
         </div>
-        {% endif %}
-        {% endfor %}
 
-        <!-- <h1>Selected Posters</h1>
+        <div id="publications-by-type" class="publication-view is-active">
+            <h1>Peer-Reviewed Journal and Conference Papers </h1>
 
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == "poster" %}
-        <div class="row">
-            {% include publication_list_entry.html %}
+            {% for publication in publications reversed %}
+            {% if publication.personal %}
+            {% elsif publication.type == "paper" %}
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!-- <h1>Selected Posters</h1>
+
+            {% for publication in publications reversed %}
+            {% if publication.personal %}
+            {% elsif publication.type == "poster" %}
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %} -->
+            <h1>Selected Abstracts</h1>
+
+            {% for publication in publications reversed %}
+            {% if publication.personal %}
+            {% elsif publication.type == "abstract" %}
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %}
+            <br>
+            <h1>Dissertations and Theses</h1>
+
+            {% for publication in publications reversed %}
+            {% if publication.personal %}
+            {% elsif publication.type == "thesis" %}
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
+
+                    {% if haspreprints %}
+            <h1>Preprints</h1>
+            {% for publication in publications reversed %}
+            {% if publication.personal %}
+            {% elsif publication.type == 'preprint' %}
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
         </div>
-        {% endif %}
-        {% endfor %} -->
-        <h1>Selected Abstracts</h1>
 
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == "abstract" %}
-        <div class="row">
-            {% include publication_list_entry.html %}
+        <div id="publications-by-year" class="publication-view">
+            {% assign current_year = '' %}
+            {% for publication in publications_for_year %}
+            {% if publication.personal %}
+            {% else %}
+            {% assign publication_year = publication.year %}
+            {% if publication_year == nil or publication_year == '' %}
+            {% if publication.date %}
+            {% assign publication_year = publication.date | date: '%Y' %}
+            {% else %}
+            {% assign publication_year = 'Undated' %}
+            {% endif %}
+            {% endif %}
+
+            {% if publication_year != current_year %}
+            {% assign current_year = publication_year %}
+            <h1>{{ current_year }}</h1>
+            {% endif %}
+
+            <div class="row">
+                {% include publication_list_entry.html %}
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
-        <br>
-        <h1>Dissertations and Theses</h1>
-
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == "thesis" %}
-        <div class="row">
-            {% include publication_list_entry.html %}
-        </div>
-        {% endif %}
-        {% endfor %}
-
-        <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
-
-                {% if haspreprints %}
-        <h1>Preprints</h1>
-        {% for publication in publications reversed %}
-        {% if publication.personal %}
-        {% elsif publication.type == 'preprint' %}
-        <div class="row">
-            {% include publication_list_entry.html %}
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-
-
     </article>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var buttons = document.querySelectorAll(".publication-view-switch button");
+        var byType = document.getElementById("publications-by-type");
+        var byYear = document.getElementById("publications-by-year");
+
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                var target = button.getAttribute("data-view-target");
+                var showType = target === "type";
+
+                buttons.forEach(function (btn) {
+                    btn.classList.remove("is-active");
+                });
+                button.classList.add("is-active");
+
+                byType.classList.toggle("is-active", showType);
+                byYear.classList.toggle("is-active", !showType);
+            });
+        });
+    });
+</script>
 
 <br>
 <br>
