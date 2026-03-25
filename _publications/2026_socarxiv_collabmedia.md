@@ -44,7 +44,7 @@ year: 2026
 # Try to include a DOI, or use the publisher URL below
 # Specify new BibTeX fields by adding a new key and value inside "bib:"
 # Make sure to add a space between the colon and your entry
-bibentry: article | inproceedings | phdthesis | book
+bibentry: article
 bib:
   journal: SocArXiv
   booktitle:
