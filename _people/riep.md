@@ -6,7 +6,7 @@ key: riep
 permalink: /team/riep/
 # Pick one of the following
 role: faculty
-title: guest
+title: Guest
 email: maria.riep@liu.se
 
 # leave empty if you don't have apersonal website
