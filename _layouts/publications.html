@@ -16,8 +16,8 @@ layout: header
         {% endfor %}
 
         <div class="publication-view-switch" role="group" aria-label="Publication display mode">
-            <button type="button" class="is-active" data-view-target="type">By Type</button>
-            <button type="button" data-view-target="year">By Year</button>
+            <button type="button" class="is-active" data-view-target="type" aria-pressed="true">By Type</button>
+            <button type="button" data-view-target="year" aria-pressed="false">By Year</button>
         </div>
 
         <div id="publications-by-type" class="publication-view is-active">
@@ -79,7 +79,7 @@ layout: header
             {% endif %}
         </div>
 
-        <div id="publications-by-year" class="publication-view">
+        <div id="publications-by-year" class="publication-view" hidden>
             {% assign current_year = '' %}
             {% for publication in publications_for_year %}
             {% if publication.personal %}
@@ -113,6 +113,10 @@ layout: header
         var byType = document.getElementById("publications-by-type");
         var byYear = document.getElementById("publications-by-year");
 
+        // Ensure a deterministic initial state even if CSS fails to load.
+        byType.hidden = false;
+        byYear.hidden = true;
+
         buttons.forEach(function (button) {
             button.addEventListener("click", function () {
                 var target = button.getAttribute("data-view-target");
@@ -120,11 +124,15 @@ layout: header
 
                 buttons.forEach(function (btn) {
                     btn.classList.remove("is-active");
+                    btn.setAttribute("aria-pressed", "false");
                 });
                 button.classList.add("is-active");
+                button.setAttribute("aria-pressed", "true");
 
                 byType.classList.toggle("is-active", showType);
                 byYear.classList.toggle("is-active", !showType);
+                byType.hidden = !showType;
+                byYear.hidden = showType;
             });
         });
     });
