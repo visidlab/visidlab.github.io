@@ -51,7 +51,7 @@ bib:
   editor:
   publisher: 
   address:
-  doi: 10.31235/osf.io/wg54d_v1
+  doi: 10.31235/osf.io/wg54d_v2
   url:
   volume:
   number:
@@ -66,7 +66,7 @@ award:
 publisherURL:
 
 # Link to an official preprint server
-preprint_server: https://doi.org/10.31235/osf.io/wg54d_v1
+preprint_server: https://doi.org/10.31235/osf.io/wg54d_v2
 
 # Links to a project hosted on VDL, or else externally on your own site
 project:
