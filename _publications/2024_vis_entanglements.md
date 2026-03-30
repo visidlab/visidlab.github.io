@@ -3,7 +3,7 @@ layout: publication
 title: "Entanglements for Visualization: Changing Research Outcomes through Feminist Theory"
 key: 2024_vis_entanglements
 type: paper
-order: 2024-2
+order: 2024-9
 
 shortname: Entanglements
 image: 2024_vis_entanglements.png

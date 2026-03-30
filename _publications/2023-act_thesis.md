@@ -3,7 +3,7 @@ layout: publication
 title: "Lacing a Chord Between Motor Skills and Sonification"
 key: 2023-act_thesis
 type: thesis
-order: 2023-1
+order: 2023-11
 
 shortname: Immersive Collaborative Gaming
 image: 2023-act_thesis.png
@@ -21,7 +21,6 @@ year: 2023
 institution: LiU 
 thesis_type: MS of Media and Communication Technology
 month: Spring
-year: 2023
 
 
 

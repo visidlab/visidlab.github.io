@@ -3,7 +3,7 @@ layout: publication
 title: "SonAir: the design of a sonification of radar data for air traffic control"
 key: 2023_jomui_sonair
 type: paper
-order: 2023-9
+order: 2023-7
 
 shortname: SonAir
 image: 2023_jomui_sonair.png

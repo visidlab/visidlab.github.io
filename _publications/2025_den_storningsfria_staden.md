@@ -4,7 +4,7 @@ title: "Den störningsfria staden: En antologi om bygglogistik, stads- och trafi
 key: 2025_den_storningsfria_staden
 type: preprint
 
-order: 2025-0
+order: 2025-5
 
 shortname: Störningsfri stad
 image: 2025_disturbance_free_city.png

@@ -3,7 +3,7 @@ layout: publication
 title: "Parallel Chords: an audio-visual analytics design for parallel coordinates"
 key: 2023_pauc_parallellchords
 type: paper
-order: 2023-9
+order: 2024-5
 
 shortname: ParallellChords
 image: 2023_pauc_parallellchords.png
@@ -22,7 +22,7 @@ authors:
   - ronnberg
   
 journal-short: PAUC
-year: 2023
+year: 2024
 
 bibentry: article
 bib:

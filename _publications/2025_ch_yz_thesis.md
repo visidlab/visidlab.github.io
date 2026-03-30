@@ -3,7 +3,7 @@ layout: publication
 title: "Imaginary Seas, Real Encounters - Exploring Biophilic Immersive Installation as a Laboratory for Social Connection"
 key: 2025_ch_yz_thesis
 type: thesis
-order: 2025-2
+order: 2025-5
 
 shortname: Immersive installation
 image: 2025_ch_yz_thesis.png

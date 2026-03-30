@@ -3,7 +3,7 @@ layout: publication
 title: "Open Your Ears and Take a Look: A State‐of‐the‐Art Report on the Integration of Sonification and Visualization"
 key: 2024_cgf_starsonivis
 type: paper
-order: 2024-9
+order: 2024-6
 
 shortname: StarSoniVis
 image: 2024_cgf_starsonivis.png

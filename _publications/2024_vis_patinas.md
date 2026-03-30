@@ -3,7 +3,7 @@ layout: publication
 title: "Discursive Patinas: Anchoring Discussions in Data Visualizations"
 key: 2024_vis_patinas
 type: paper
-order: 2024-1
+order: 2024-9
 
 shortname: Patinas
 image: 2024_vis_patinas.png

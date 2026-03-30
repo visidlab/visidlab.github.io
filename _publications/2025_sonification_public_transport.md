@@ -3,8 +3,7 @@ layout: publication
 title: "Towards sonification for accessibility in public transport"
 key: 2025_sonification_public_transport
 type: paper
-
-order: 2025-0
+order: 2025-6
 
 shortname: Sonification public transport
 image: 2025_sonification_public_transport.png

@@ -3,7 +3,7 @@ layout: publication
 title: "Visualizing Impact: Visualization Workshops for Personal Data and Assessment for Social Organizations"
 key: 2024_ms_thesis
 type: thesis
-order: 2024-1
+order: 2024-10
 
 shortname: Visualizing Impact
 image: 2024_ms_thesis.png
