@@ -6,7 +6,7 @@ key: riep
 permalink: /team/riep/
 # Pick one of the following
 role: faculty
-title: Guest
+title: Visiting Research Fellow 
 email: maria.riep@liu.se
 
 # leave empty if you don't have apersonal website
@@ -21,5 +21,5 @@ gs:
 orcid: 
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: 
+keywords: archaeology
 ---

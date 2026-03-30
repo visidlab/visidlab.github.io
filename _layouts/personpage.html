@@ -76,6 +76,24 @@ layout: header
 
 <div class="container">
     <h1>{{ page.first_name }} {{ page.last_name }}</h1>
+    {% if page.year_joined %}
+    {% if page.role == "phdstudent" or page.role == "postdoc" or page.role == "msstudent" or page.role == "undergrad" or page.role == "alumnus" %}
+    <p>
+        {% if page.role == "phdstudent" %}
+        PhD Student
+        {% elsif page.role == "postdoc" %}
+        Postdoctoral Researcher
+        {% elsif page.role == "msstudent" %}
+        Master's Student
+        {% elsif page.role == "undergrad" %}
+        Undergraduate Student
+        {% elsif page.role == "alumnus" %}
+        {{page.graduated}} Alumnus
+        {% endif %}
+        ({{ page.year_joined }}--{{ page.year_left | default: "Present" }})
+    </p>
+    {% endif %}
+    {% endif %}
     <div class="row">
         <div class="col-lg-9">
             <!-- List of Publications -->

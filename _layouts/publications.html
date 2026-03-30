@@ -5,9 +5,26 @@ layout: header
 <div class="container">
     <article>
 
-        {% assign publications = site.publications | sort: 'key' %}
-        {% assign publications = publications | sort: 'key' %}
-        {% assign publications_for_year = site.publications | sort: 'key' | sort: 'year' | reverse %}
+        {% assign publications = site.publications | sort: 'key' | sort: 'order' | reverse %}
+        {% assign publications_for_year = site.publications | sort: 'key' | sort: 'order' | reverse %}
+        {% assign paper_count = 0 %}
+        {% assign abstract_count = 0 %}
+        {% assign thesis_count = 0 %}
+        {% assign preprint_count = 0 %}
+
+        {% for pub in publications %}
+        {% unless pub.personal %}
+        {% if pub.type == 'paper' %}
+        {% assign paper_count = paper_count | plus: 1 %}
+        {% elsif pub.type == 'abstract' %}
+        {% assign abstract_count = abstract_count | plus: 1 %}
+        {% elsif pub.type == 'thesis' %}
+        {% assign thesis_count = thesis_count | plus: 1 %}
+        {% elsif pub.type == 'preprint' %}
+        {% assign preprint_count = preprint_count | plus: 1 %}
+        {% endif %}
+        {% endunless %}
+        {% endfor %}
 
         {% for pub in site.publications %}
         {% if pub.type == 'preprint' %}
@@ -21,9 +38,18 @@ layout: header
         </div>
 
         <div id="publications-by-type" class="publication-view is-active">
-            <h1>Peer-Reviewed Journal and Conference Papers </h1>
+            <nav class="publication-type-toc" aria-label="Publication type table of contents">
+                <a href="#pub-type-paper">Papers ({{ paper_count }})</a>
+                <a href="#pub-type-abstract">Abstracts ({{ abstract_count }})</a>
+                <a href="#pub-type-thesis">Theses ({{ thesis_count }})</a>
+                {% if haspreprints %}
+                <a href="#pub-type-preprint">Preprints ({{ preprint_count }})</a>
+                {% endif %}
+            </nav>
 
-            {% for publication in publications reversed %}
+            <h1 id="pub-type-paper">Peer-Reviewed Journal and Conference Papers</h1>
+
+            {% for publication in publications %}
             {% if publication.personal %}
             {% elsif publication.type == "paper" %}
             <div class="row">
@@ -42,9 +68,9 @@ layout: header
             </div>
             {% endif %}
             {% endfor %} -->
-            <h1>Selected Abstracts</h1>
+            <h1 id="pub-type-abstract">Selected Abstracts</h1>
 
-            {% for publication in publications reversed %}
+            {% for publication in publications %}
             {% if publication.personal %}
             {% elsif publication.type == "abstract" %}
             <div class="row">
@@ -53,9 +79,9 @@ layout: header
             {% endif %}
             {% endfor %}
             <br>
-            <h1>Dissertations and Theses</h1>
+            <h1 id="pub-type-thesis">Dissertations and Theses</h1>
 
-            {% for publication in publications reversed %}
+            {% for publication in publications %}
             {% if publication.personal %}
             {% elsif publication.type == "thesis" %}
             <div class="row">
@@ -67,8 +93,8 @@ layout: header
             <!-- <h1>Commentaries, Editorials, Book Chapters & Published Abstracts </h1>-->
 
                     {% if haspreprints %}
-            <h1>Preprints</h1>
-            {% for publication in publications reversed %}
+                    <h1 id="pub-type-preprint">Preprints</h1>
+            {% for publication in publications %}
             {% if publication.personal %}
             {% elsif publication.type == 'preprint' %}
             <div class="row">

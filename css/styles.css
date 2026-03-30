@@ -263,6 +263,42 @@ a.newslink:hover {
   .publication-view.is-active {
     display: block;
   }
+
+  .publication-type-toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .publication-type-toc a {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 999px;
+    color: #1c4f8a;
+    background: #f8fbff;
+    text-decoration: none;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .publication-type-toc a:hover,
+  .publication-type-toc a:focus {
+    background: #e9f2ff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .publication-type-toc {
+      gap: 0.45rem;
+    }
+
+    .publication-type-toc a {
+      font-size: 0.92rem;
+      padding: 0.32rem 0.62rem;
+    }
+  }
   /* ~~~~~~~~~~~~~~~~~~~~~ */
 
   /* NRKP GALLERY */

@@ -16,7 +16,7 @@
 
     <div class="col">
         <em style="color: var({{ color }})">
-            <h3> {{ person.first_name }} {{ person.last_name }}</h3>
+            <h3> <a href="{{ person.permalink }}"> {{ person.first_name }} {{ person.last_name }} </a> </h3>
         </em>
 
         {% assign role = '' %}
@@ -37,8 +37,8 @@
 
         <p> {{ person.keywords }} </p>
 
-        <a href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
-            Publications</a>
+        <!-- <a href="{{ person.permalink }}"><i class="fa fa-folder-open" style="color: var({{ color }})"></i>
+            Publications</a> -->
 
 
 
