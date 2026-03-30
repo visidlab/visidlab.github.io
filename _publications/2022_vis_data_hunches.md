@@ -6,7 +6,7 @@ title: "Data Hunches: Incorporating Personal Knowledge into Visualizations"
 key: 2022_vis_data_hunches
 # Select one of the options below
 type: paper
-order: 2022-08
+order: 2022-9
 # use this if this paper was previously a preprint and you need to preserve the old URL
 # redirect_from: /publications/2017_preprint_lineage
 

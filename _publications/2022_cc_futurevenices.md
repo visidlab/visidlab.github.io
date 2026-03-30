@@ -6,6 +6,7 @@ title: "Looking at future Venice(s) through coffee grounds: Coffee cup reading a
 key: 2022_cc_futurevenices
 # Select one of the options below
 type: abstract
+order: 2022-6
 
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than

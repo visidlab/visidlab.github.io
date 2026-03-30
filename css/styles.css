@@ -288,6 +288,58 @@ a.newslink:hover {
     vertical-align: middle;
     border-radius: 5px;
   }
+
+  .nrkp-carousel {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .nrkp-carousel .carousel-inner {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+
+  .nrkp-carousel .carousel-item {
+    padding: 0.5rem 2.5rem 1rem;
+  }
+
+  .nrkp-carousel .nrkp-slide-grid {
+    margin: 0;
+  }
+
+  .nrkp-carousel .carousel-item img {
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+  }
+
+  .nrkp-carousel .carousel-indicators [data-bs-target] {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+
+  .nrkp-carousel .carousel-control-prev,
+  .nrkp-carousel .carousel-control-next {
+    width: 8%;
+  }
+
+  .about-page-bottom-space {
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .nrkp-carousel .carousel-item {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .nrkp-carousel .carousel-item img {
+      height: 160px;
+    }
+  }
   /* ~~~~~~~~~~~~~~~~~~~~~ */
 
   /* REMOVE HIGHLIGHT ON CITATIONS */

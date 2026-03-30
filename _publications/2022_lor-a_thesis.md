@@ -3,7 +3,7 @@ layout: publication
 title: "Data Bricks Space Mission: Supporting Teachers for Children's Data Literacy in Primary Schools through Data Physicalization"
 key: 2022_lor-a_thesis
 type: thesis
-order: 2022-5
+order: 2022-8
 
 shortname: Data Bricks Thesis
 image: 2022_data_bricks.png

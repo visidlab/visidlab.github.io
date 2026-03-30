@@ -4,7 +4,7 @@ title: "An exploratory use of audiovisual displays on oceanographic data"
 key: 2022_oceanographic_data
 type: paper
 
-order: 2022-6
+order: 2022-5
 
 shortname: Audiovisual displays on oceanographic data
 image: 2022_oceanographic_data.png

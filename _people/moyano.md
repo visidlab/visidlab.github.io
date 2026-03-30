@@ -11,6 +11,7 @@ email: daniela.moyano-davila@liu.se
 # leave empty if you don't have apersonal website
 personal-site: https://danielamoyano.cl
 
+year_joined: 2025
 #  leave empty if you're active. Add something like "M.S.'16" or "B.S.'17" if you got a degree while with the Vis Collective. Add "N" if you left before you got a degree.
 graduated:
 # add your graduation year

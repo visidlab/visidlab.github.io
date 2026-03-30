@@ -4,7 +4,7 @@ title: "Expected teamwork attributes between human operator and automation in ai
 key: 2022_teamwork
 type: paper
 
-order: 2022-8
+order: 2022-9
 
 shortname: Teamwork attributes
 image: 2022_teamwork.png

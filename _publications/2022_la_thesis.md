@@ -3,7 +3,7 @@ layout: publication
 title: "Immersive Audio: Simulated Acoustics for Interactive Experiences"
 key: 2022_la_thesis
 type: thesis
-order: 2022-1
+order: 2022-5
 
 shortname: Immersive Audio
 image: 2022_la_thesis.png

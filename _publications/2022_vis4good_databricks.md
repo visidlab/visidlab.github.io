@@ -3,7 +3,7 @@ layout: publication
 title: "Data Bricks Space Mission: Teaching Kids about Data with Physicalization"
 key: 2022_vis4good_databricks
 type: paper
-order: 2022-9
+order: 2022-12
 
 shortname: Data Bricks
 image: 2022_data_bricks.png

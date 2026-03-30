@@ -3,7 +3,7 @@ layout: publication
 title: "Towards the Combination of Visualization and Sonification for Cylindrical Displays"
 key: 2022_avi_cylindrical
 type: paper
-order: 2022-5
+order: 2022-6
 
 shortname: Cylindrical
 image: 2022_avi_cylindrical.png

@@ -3,7 +3,7 @@ layout: publication
 title: "Troubling Collaboration: Matters of Care for Visualization Design Study"
 key: 2023_chi_troubling
 type: paper
-order: 2023-2
+order: 2023-4
 
 shortname: Troubling
 image: 2023_chi_troubling.png

@@ -3,7 +3,7 @@ layout: publication
 title: "Here’s what you need to know about my data: Exploring Expert Knowledge’s Role in Data Analysis"
 key: 2025_vis_hunches
 type: paper
-order: 2025-1
+order: 2025-9
 
 shortname: Hunches
 image: 2025_vis_hunches.png

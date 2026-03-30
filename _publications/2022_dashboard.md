@@ -4,7 +4,7 @@ title: "Insight-based Evaluation of a Map-based Dashboard"
 key: 2022_dashboard
 type: paper
 
-order: 2022-9
+order: 2022-8
 
 shortname: Map-based dashboards
 image: 2022_dashboard.png

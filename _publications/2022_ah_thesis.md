@@ -3,7 +3,7 @@ layout: publication
 title: "Insight-based Evaluation of a Map-based Dashboard"
 key: 2022_ah_thesis
 type: thesis
-order: 2022-1
+order: 2022-8
 
 shortname: Dashboards
 image: 2022_ah_thesis.png

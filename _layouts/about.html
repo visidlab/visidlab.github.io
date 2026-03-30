@@ -31,7 +31,7 @@ layout: header
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container about-page-bottom-space">
 <div class="row" style="padding-left: 30px; padding-right: 30px;">
     <!-- Photo gallery -->
     <div class="col">
@@ -56,14 +56,52 @@ layout: header
     </p>
 
 
-    <ul class="image-gallery" style="width: fit-content">
-        {% for photo in site.data.gallery limit: 4 %}
-        <li>
-            <a href="{{ photo.link }}" target="_blank"><img src="assets/nrkp/{{ photo.name }}"
-                    alt="{{ photo.text }}" /></a>
-        </li>
-        {% endfor %}
-    </ul>
+    {% assign nrkp_images = site.static_files | where_exp: "file", "file.path contains '/assets/nrkp/'" | sort: "name" %}
+    {% if nrkp_images and nrkp_images.size > 0 %}
+    {% assign slide_count = nrkp_images.size | plus: 2 | divided_by: 3 %}
+    <div id="nrkpCarousel" class="carousel slide nrkp-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            {% for slide in (1..slide_count) %}
+            <button type="button" data-bs-target="#nrkpCarousel" data-bs-slide-to="{{ forloop.index0 }}"
+                {% if forloop.first %}class="active" aria-current="true"{% endif %}
+                aria-label="Slide {{ forloop.index }}"></button>
+            {% endfor %}
+        </div>
+
+        <div class="carousel-inner">
+            {% for image in nrkp_images %}
+            {% assign image_index_mod = forloop.index0 | modulo: 3 %}
+            {% if image_index_mod == 0 %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="row g-3 nrkp-slide-grid">
+            {% endif %}
+            {% assign image_meta = site.data.gallery | where: "name", image.name | first %}
+            {% assign image_alt = image_meta.text | default: image.name %}
+            <div class="col-4">
+                <a href="{% if image_meta and image_meta.link %}{{ image_meta.link }}{% else %}{{ image.path | relative_url }}{% endif %}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ image.path | relative_url }}" class="d-block w-100" alt="{{ image_alt }}" loading="lazy" />
+                </a>
+            </div>
+
+            {% if image_index_mod == 2 or forloop.last %}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#nrkpCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#nrkpCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {% else %}
+    <p>No location images found in assets/nrkp.</p>
+    {% endif %}
     </div>
 </div>
 </div>
