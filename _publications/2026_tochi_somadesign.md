@@ -10,7 +10,7 @@ type: paper
 # Papers are ordered by year. However, in years with many papers, we want some ordering at a lower level. You can do
 # that by specifying an order for the papers of that year. For example, 2023-11 will put papers with values lower than
 # 2023-11 below that paper. Notice that sorting is lexicographic.
-order: 2023-11
+order: 2026-01
 
 # Auto-generates titles and alt-descriptors
 shortname: Soma Design Research Program
