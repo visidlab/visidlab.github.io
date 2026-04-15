@@ -106,6 +106,4 @@ for extending visualization research outside the bounds of academia</p>
 
 # Acknowledgements
 
-This work is funded in part by the Swedish Research Council
-(Grant No. 2024-05726); by the Wallenberg AI, Autonomous Systems and Software Program (WASP) funded by the Knut and Alice
-Wallenberg Foundation.
+This  work  is  funded  in  part  by  the  Wallenberg  AI,  Autonomous Systems and Software Program (WASP) funded by the Knut and Alice Wallenberg Foundation; Svenska Postkod Lotteriet; and by InspireLab at KTH. We would also like to thank the people and spaces who made the  workshops possible, fun, and interesting, including the Visualiseringscenter C, Östergötlands Stadsmission, Maria-Paz Briones, Lisa Sundén, and Matilda Stafsted.
