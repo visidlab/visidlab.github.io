@@ -9,6 +9,8 @@ shortname: Workshops In A Box
 image: 2026_eurovis_workshop.png
 image_large: 2026_eurovis_workshop_teaser.jpg
 
+
+
 authors:
   - akbaba
   - Camilla Svensson
@@ -64,6 +66,7 @@ bib:
 
 # Link to an official preprint server
 # preprint_server: https://osf.io/h793u/
+preprint_server: https://osf.io/sxv5w/files/2r96f
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
