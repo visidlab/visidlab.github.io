@@ -63,7 +63,7 @@ external-project: https://trrracer.netlify.app/
 # supplement: https://gotdairyya.github.io/pair-interview-primer/about/
 
 # Link to an official preprint server
-# preprint_server: https://osf.io/h793u/
+preprint_server: https://arxiv.org/abs/2604.14417
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
