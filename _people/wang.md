@@ -25,5 +25,5 @@ gs: https://scholar.google.com/citations?hl=en&user=WvamcaUAAAAJ
 orcid: 0009-0005-0732-212X
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: visual analytics, energy system, user intension, games
+keywords: visual analytics, energy system, requirement exploration, games
 ---
