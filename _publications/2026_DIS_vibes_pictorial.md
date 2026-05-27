@@ -2,7 +2,7 @@
 layout: publication
 title: "Designing Vibes in a Science Museum: from @Science to @🤗"
 key: 2026_DIS_vibes_pictorial
-type: pictorial
+type: paper
 order: 2026-06
 
 shortname: Designing Vibes in a Science Museum
