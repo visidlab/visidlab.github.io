@@ -30,7 +30,7 @@ const typeLabel: Record<string, string> = {
 
 <Layout title="Publications | Visualization Collective" description="Research publications from the Visualization Collective at Linköping University.">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="page">
+  <div class="page" style="--page-accent: #4ade80">
     <SiteHeader />
     <main id="main-content" class="pubs-main">
       <header class="pubs-hero">
@@ -80,7 +80,7 @@ const typeLabel: Record<string, string> = {
                   {(pub.data['journal-short'] ?? pub.data.bib?.booktitle) && (
                     <span class="pub-venue">{pub.data['journal-short'] ?? pub.data.bib?.booktitle}</span>
                   )}
-                  <span class="pub-type-badge">{typeLabel[pubType] ?? pubType}</span>
+                  <span class={`pub-type-badge type-${pubType}`}>{typeLabel[pubType] ?? pubType}</span>
                 </div>
               </div>
               <div class="pub-actions">
@@ -132,7 +132,8 @@ const typeLabel: Record<string, string> = {
   .page { width: min(calc(100% - 3rem), 78rem); margin: 0 auto; padding: 1.25rem 0 5rem; }
   .pubs-main { padding-top: 4.5rem; }
   .eyebrow { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
-  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); }
+  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); display: inline-block; position: relative; }
+  h1::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 5px; background: var(--page-accent); border-radius: 3px; }
   .intro { max-width: 42rem; margin: 1rem 0 0; font-size: 1.05rem; line-height: 1.75; color: var(--muted-foreground); }
 
   .filters { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
@@ -159,7 +160,19 @@ const typeLabel: Record<string, string> = {
   .pub-authors { font-size: 0.85rem; color: var(--muted-foreground); margin: 0; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .pub-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 0.75rem; align-items: center; }
   .pub-venue { font-size: 0.82rem; font-style: italic; color: var(--muted-foreground); }
-  .pub-type-badge { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); background: var(--muted); padding: 0.15rem 0.5rem; border-radius: 999px; }
+  .pub-type-badge { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 999px; background: var(--type-bg, var(--muted)); color: var(--type-color, var(--muted-foreground)); }
+  .type-paper       { --type-bg: #dbeafe; --type-color: #1d4ed8; }
+  .type-thesis      { --type-bg: #ede9fe; --type-color: #6d28d9; }
+  .type-abstract    { --type-bg: #ffedd5; --type-color: #9a3412; }
+  .type-poster      { --type-bg: #fce7f3; --type-color: #9d174d; }
+  .type-preprint    { --type-bg: #fefce8; --type-color: #854d0e; }
+  .type-commentary  { --type-bg: #d1fae5; --type-color: #065f46; }
+  :root[data-theme='dark'] .type-paper      { --type-bg: #1e3a5f; --type-color: #93c5fd; }
+  :root[data-theme='dark'] .type-thesis     { --type-bg: #3b1f6e; --type-color: #c4b5fd; }
+  :root[data-theme='dark'] .type-abstract   { --type-bg: #431407; --type-color: #fdba74; }
+  :root[data-theme='dark'] .type-poster     { --type-bg: #500724; --type-color: #fbcfe8; }
+  :root[data-theme='dark'] .type-preprint   { --type-bg: #422006; --type-color: #fde68a; }
+  :root[data-theme='dark'] .type-commentary { --type-bg: #064e3b; --type-color: #6ee7b7; }
 
   .pub-actions { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; }
   .pub-detail-link, .pub-external { font-size: 0.82rem; font-weight: 600; color: var(--foreground); text-decoration: none; padding: 0.25rem 0.65rem; border: 1px solid var(--control-border); border-radius: 999px; transition: background 100ms ease; white-space: nowrap; }

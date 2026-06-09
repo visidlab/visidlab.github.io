@@ -32,16 +32,12 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 >
 	<a class="skip-link" href="#main-content">Skip to content</a>
 
-	<div class="page">
+	<div class="page" style="--page-accent: #dcff68">
 		<SiteHeader />
 
 		<main id="main-content">
 			<section class="hero" id="top">
 				<div class="hero-copy">
-					{home.eyebrow && <p class="eyebrow">{home.eyebrow}</p>}
-					<div class="hero-logo">
-						<img class="hero-logo-img" src="/logo-big.png" alt="VID Lab" />
-					</div>
 					{home.hero_text && <p class="hero-text">{home.hero_text}</p>}
 					{home.hero_note && <p class="hero-note">{home.hero_note}</p>}
 					<div class="hero-actions">
@@ -68,14 +64,14 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 				</div>
 			</section>
 
-			<section class="recent-pubs" id="publications">
+			<section class="recent-pubs animate-up" id="publications">
 				<header class="section-header">
 					<p class="eyebrow">Recent work</p>
 					<h2>Latest publications</h2>
 				</header>
 				<div class="pub-grid">
-					{recent.map(pub => (
-						<article class="pub-card">
+					{recent.map((pub, i) => (
+						<article class="pub-card animate-up" style={`--delay:${i * 80}ms`}>
 							<p class="pub-year">{pub.data.year}</p>
 							<h3 class="pub-title">{pub.data.title}</h3>
 							{pub.data.authors && (
@@ -97,20 +93,20 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 				</div>
 			</section>
 
-			<section class="recent-news" id="news">
+			<section class="recent-news animate-up" id="news">
 				<header class="section-header">
 					<p class="eyebrow">What's happening</p>
 					<h2>Latest news</h2>
 				</header>
 				<div class="news-list">
-					{recentNews.map(item => {
+					{recentNews.map((item, i) => {
 						const dateMatch = item.id.match(/^(\d{4}-\d{2}-\d{2})/);
 						const date = dateMatch
 							? new Date(dateMatch[1]).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 							: '';
 						const href = `/news/${item.id}`;
 						return (
-							<a class="news-item" href={href}>
+							<a class="news-item animate-up" href={href} style={`--delay:${i * 80}ms`}>
 								{item.data['lead-image'] && (
 									<div class="news-img-wrap">
 										<img
@@ -160,6 +156,10 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 		gap: 3rem;
 		align-items: center;
 		padding: 7rem 0 6.5rem;
+	}
+
+	.float-anim {
+		animation: float 5s ease-in-out infinite;
 	}
 
 	.hero-image-wrap {
@@ -276,6 +276,22 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 
 	.section-header {
 		margin-bottom: 2rem;
+	}
+
+	.section-header h2 {
+		display: inline-block;
+		position: relative;
+	}
+
+	.section-header h2::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 100%;
+		height: 4px;
+		background: var(--page-accent);
+		border-radius: 2px;
 	}
 
 	.pub-grid {

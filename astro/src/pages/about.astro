@@ -13,7 +13,7 @@ const about = aboutPage!.data;
   description="VID Lab — Visualization and Interaction Design at Linköping University."
 >
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="page">
+  <div class="page" style="--page-accent: #fb923c">
     <SiteHeader />
     <main id="main-content" class="about-main">
       <header class="about-hero">
@@ -21,7 +21,7 @@ const about = aboutPage!.data;
         <h1>{about.title ?? 'About Us'}</h1>
       </header>
 
-      <div class="about-body">
+      <div class="about-body animate-up">
         <div class="about-text">
           <div class="about-content">
             <Content />
@@ -45,7 +45,7 @@ const about = aboutPage!.data;
         </div>
       </div>
 
-      <section class="gallery-section">
+      <section class="gallery-section animate-up" style="--delay: 150ms">
         <header class="gallery-header">
           <p class="eyebrow">Life in the lab</p>
           <h2>Gallery</h2>
@@ -67,7 +67,8 @@ const about = aboutPage!.data;
   .about-main { padding-top: 4.5rem; }
 
   .eyebrow { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
-  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); }
+  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); display: inline-block; position: relative; }
+  h1::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 5px; background: var(--page-accent); border-radius: 3px; }
 
   .about-body {
     display: grid;

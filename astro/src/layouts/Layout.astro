@@ -89,6 +89,73 @@ const schemaData =
 		<script src="/cookie-consent.js" defer></script>
 		<script is:inline>
 			(() => {
+				// Entrance animations
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('in-view');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+				document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+
+				// Scroll circles
+				const colors = ['#dcff68','#d19cec','#f472b6','#4ade80','#60a5fa','#fb923c','#fbbf24','#34d399'];
+				const page = document.querySelector('.page');
+				if (!page) return;
+
+				// Make .page the positioning context
+				if (getComputedStyle(page).position === 'static') {
+					page.style.position = 'relative';
+				}
+
+				const pageH = page.scrollHeight;
+				const count = 22;
+
+				for (let i = 0; i < count; i++) {
+					const circle = document.createElement('div');
+					circle.className = 'scroll-circle';
+
+					const size = 10 + Math.random() * 22;
+					const color = colors[Math.floor(Math.random() * colors.length)];
+					// Place in left or right margin (outside main content column)
+					const side = Math.random() < 0.5 ? -1 : 1;
+					const xOffset = 30 + Math.random() * 80; // px from edge
+					const left = side === -1
+						? `-${xOffset}px`
+						: `calc(100% + ${xOffset - size}px)`;
+					const top = (i / count) * pageH * 0.95 + Math.random() * (pageH / count) * 0.5;
+
+					Object.assign(circle.style, {
+						width: `${size}px`,
+						height: `${size}px`,
+						background: color,
+						left,
+						top: `${top}px`,
+						'--drift-duration': `${5 + Math.random() * 5}s`,
+						'--drift-delay':    `${-Math.random() * 5}s`,
+					});
+
+					page.appendChild(circle);
+				}
+
+				// Reveal circles as they scroll into view
+				const circleObserver = new IntersectionObserver((entries) => {
+					entries.forEach(e => {
+						if (e.isIntersecting) {
+							e.target.classList.add('visible');
+						} else {
+							e.target.classList.remove('visible');
+						}
+					});
+				}, { threshold: 0 });
+
+				document.querySelectorAll('.scroll-circle').forEach(c => circleObserver.observe(c));
+			})();
+		</script>
+		<script is:inline>
+			(() => {
 				const storageKey = 'maria-theme';
 				const root = document.documentElement;
 				const toggle = document.querySelector('[data-theme-toggle]');
@@ -161,13 +228,14 @@ const schemaData =
 		--foreground: #171717;
 		--muted: #f7f7f7;
 		--muted-foreground: #676767;
+		--page-accent: var(--page-accent);
 		--border: #d9d9d9;
 		--control-border: #d0d0d0;
 		--border-strong: #232323;
 		--card: #ffffff;
 		--card-foreground: #171717;
 		--ring: #171717;
-		--selection: #dcff68;
+		--selection: var(--page-accent);
 		--accent: #d19cec;
 		--accent-link: #5869d8;
 		--shadow-soft: 0 18px 36px rgba(23, 23, 23, 0.08);
@@ -339,10 +407,18 @@ const schemaData =
 		min-height: 44px;
 		display: inline-flex;
 		align-items: center;
+		padding: 0.2rem 0.6rem;
+		border-radius: 0.4rem;
 		font-size: 0.95rem;
 		font-weight: 600;
 		letter-spacing: -0.02em;
 		text-decoration: none;
+		transition: color 120ms ease, background-color 120ms ease;
+	}
+
+	.shared-nav a[aria-current='page'] {
+		background: var(--page-accent);
+		color: #1a1a1a;
 	}
 
 	.shared-menu {
@@ -384,13 +460,15 @@ const schemaData =
 
 	.shared-nav a:hover,
 	.shared-menu-trigger:hover {
-		color: var(--accent);
+		background: var(--page-accent);
+		color: #1a1a1a;
 		opacity: 1;
 	}
 
 	.shared-nav a:focus-visible,
 	.shared-menu-trigger:focus-visible {
-		color: var(--accent);
+		background: var(--page-accent);
+		color: #1a1a1a;
 		opacity: 1;
 	}
 
@@ -557,7 +635,8 @@ const schemaData =
 	.shared-mobile-panel a:focus-visible,
 	.shared-mobile-submenu-trigger:hover,
 	.shared-mobile-submenu-trigger:focus-visible {
-		background: var(--muted);
+		background: var(--page-accent);
+		color: #1a1a1a;
 	}
 
 	.shared-mobile-submenu-trigger {
@@ -662,7 +741,49 @@ const schemaData =
 		width: auto;
 	}
 
-	@media (prefers-reduced-motion: reduce) {
+	/* Scroll circles */
+	.scroll-circle {
+		position: absolute;
+		border-radius: 50%;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 600ms ease, transform 600ms ease;
+		transform: scale(0.4);
+		z-index: 0;
+	}
+	.scroll-circle.visible {
+		opacity: 1;
+		transform: scale(1);
+	}
+	@keyframes drift {
+		0%   { translate: 0 0; }
+		33%  { translate: 6px -10px; }
+		66%  { translate: -5px 8px; }
+		100% { translate: 0 0; }
+	}
+	.scroll-circle.visible {
+		animation: drift var(--drift-duration, 6s) ease-in-out infinite var(--drift-delay, 0s);
+	}
+
+	/* Entrance animations */
+	.animate-up {
+		opacity: 0;
+		transform: translateY(28px);
+		transition: opacity 550ms ease, transform 550ms ease;
+		transition-delay: var(--delay, 0ms);
+	}
+	.animate-up.in-view {
+		opacity: 1;
+		transform: none;
+	}
+
+	/* Hero float */
+	@keyframes float {
+		0%, 100% { transform: translateY(0px); }
+		50%       { transform: translateY(-10px); }
+	}
+
+@media (prefers-reduced-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}

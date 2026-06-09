@@ -24,7 +24,7 @@ const active = allPeople.sort((a, b) => {
 
 <Layout title="People | VID Lab" description="Meet the researchers and students of the VID Lab at Linköping University.">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="page">
+  <div class="page" style="--page-accent: #f472b6">
     <SiteHeader />
     <main id="main-content" class="people-main">
       <header class="people-hero">
@@ -39,7 +39,7 @@ const active = allPeople.sort((a, b) => {
           const photoSrc = `/photos/people/${key}.jpg`;
           const href = `/people/${key}`;
           return (
-            <div class="person-row">
+            <div class="person-row animate-up" style={`--delay:${active.indexOf(person) * 60}ms`}>
               <a class="person-photo-link" href={href} tabindex="-1" aria-hidden="true">
                 <div class="person-photo-wrap">
                   <img
@@ -55,7 +55,7 @@ const active = allPeople.sort((a, b) => {
                 </div>
               </a>
               <div class="person-info">
-                <p class="person-role">{roleLabel[person.data.role] ?? person.data.role}</p>
+                <span class={`person-role role-${person.data.role}`}>{roleLabel[person.data.role] ?? person.data.role}</span>
                 <h2 class="person-name"><a href={href}>{person.data.first_name} {person.data.last_name}</a></h2>
                 {person.data.keywords && <p class="person-keywords">{person.data.keywords}</p>}
                 <div class="person-links">
@@ -96,7 +96,24 @@ const active = allPeople.sort((a, b) => {
   .page { width: min(calc(100% - 3rem), 78rem); margin: 0 auto; padding: 1.25rem 0 5rem; }
   .people-main { padding-top: 4.5rem; }
   .eyebrow { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
-  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); }
+  h1 {
+    margin: 0.5rem 0 0;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+    line-height: 1.03;
+    color: var(--foreground);
+    display: inline-block;
+    position: relative;
+  }
+  h1::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 100%; height: 5px;
+    background: var(--page-accent);
+    border-radius: 3px;
+  }
   .intro { max-width: 42rem; margin: 1rem 0 0; font-size: 1.05rem; line-height: 1.75; color: var(--muted-foreground); }
 
   .people-list {
@@ -137,7 +154,31 @@ const active = allPeople.sort((a, b) => {
   .person-photo-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 800; color: var(--muted-foreground); text-transform: uppercase; }
 
   .person-info { display: flex; flex-direction: column; gap: 0.35rem; padding-top: 0.25rem; }
-  .person-role { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
+  .person-role {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: var(--role-bg, var(--muted));
+    color: var(--role-color, var(--muted-foreground));
+    margin: 0;
+  }
+  .role-faculty    { --role-bg: #ede9fe; --role-color: #6d28d9; }
+  .role-postdoc    { --role-bg: #dbeafe; --role-color: #1d4ed8; }
+  .role-researcher { --role-bg: #d1fae5; --role-color: #065f46; }
+  .role-phdstudent { --role-bg: #fce7f3; --role-color: #9d174d; }
+  .role-msstudent  { --role-bg: #ffedd5; --role-color: #9a3412; }
+  .role-staff      { --role-bg: #f1f5f9; --role-color: #475569; }
+  :root[data-theme='dark'] .role-faculty    { --role-bg: #3b1f6e; --role-color: #c4b5fd; }
+  :root[data-theme='dark'] .role-postdoc    { --role-bg: #1e3a5f; --role-color: #93c5fd; }
+  :root[data-theme='dark'] .role-researcher { --role-bg: #064e3b; --role-color: #6ee7b7; }
+  :root[data-theme='dark'] .role-phdstudent { --role-bg: #500724; --role-color: #fbcfe8; }
+  :root[data-theme='dark'] .role-msstudent  { --role-bg: #431407; --role-color: #fdba74; }
+  :root[data-theme='dark'] .role-staff      { --role-bg: #1e293b; --role-color: #94a3b8; }
   h2.person-name { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--foreground); margin: 0 0 0.15rem; }
   h2.person-name a { color: inherit; text-decoration: none; transition: color 120ms ease; }
   h2.person-name a:hover { color: var(--accent); text-decoration: none; }
