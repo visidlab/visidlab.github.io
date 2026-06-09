@@ -1,0 +1,202 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+
+const allNews = await getCollection('news');
+const sorted = allNews.sort((a, b) => {
+  // slug starts with date like 2023-04-28-...
+  return b.id.localeCompare(a.id);
+});
+---
+
+<Layout
+  title="News | Visualization Collective"
+  description="Latest news and updates from the Visualization Collective."
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="page">
+    <SiteHeader />
+
+    <main id="main-content" class="news-main">
+      <header class="news-hero">
+        <p class="eyebrow">Updates</p>
+        <h1>News</h1>
+        <p class="intro">
+          Announcements, conference appearances, and highlights from the Visualization Collective.
+        </p>
+      </header>
+
+      <section class="news-list" aria-label="News items">
+        {sorted.map((item) => {
+          const dateStr = item.id.match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
+          const date = dateStr ? new Date(dateStr) : null;
+          const href = `/news/${item.id}`;
+          return (
+            <article class="news-item">
+              <div class="news-meta">
+                {date && (
+                  <time class="news-date" datetime={dateStr}>
+                    {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </time>
+                )}
+                {item.data['lead-image'] && (
+                  <a href={href} tabindex="-1" aria-hidden="true">
+                    <img
+                      class="news-image"
+                      src={item.data['lead-image']}
+                      alt={item.data['lead-image-alt-text'] ?? ''}
+                      loading="lazy"
+                    />
+                  </a>
+                )}
+              </div>
+              <div class="news-body">
+                <h2 class="news-title"><a href={href}>{item.data.title}</a></h2>
+                <a class="read-more" href={href}>Read more →</a>
+              </div>
+            </article>
+          );
+        })}
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    width: min(calc(100% - 3rem), 78rem);
+    margin: 0 auto;
+    padding: 1.25rem 0 5rem;
+  }
+
+  .news-main {
+    padding-top: 4.5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0.5rem 0 0;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+    line-height: 1.03;
+    color: var(--foreground);
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--muted-foreground);
+  }
+
+  .news-list {
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 0;
+  }
+
+  .news-item {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+  }
+
+  .news-meta {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+  }
+
+  .news-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: 8rem;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+  }
+
+  .news-body {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+  }
+
+  h2.news-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  h2.news-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 120ms ease;
+  }
+
+  h2.news-title a:hover {
+    color: var(--accent);
+  }
+
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: color 120ms ease;
+  }
+
+  .read-more:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      width: min(calc(100% - 1.5rem), 78rem);
+      padding-top: 1rem;
+    }
+    .news-main { padding-top: 4rem; }
+    .news-item {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .news-meta {
+      flex-direction: row;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+    .news-image {
+      max-width: 4rem;
+    }
+  }
+</style>

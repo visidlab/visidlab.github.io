@@ -1,0 +1,182 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+
+export async function getStaticPaths() {
+  const pubs = await getCollection('publications');
+  return pubs.map(pub => ({ params: { id: pub.id }, props: { pub } }));
+}
+
+const { pub } = Astro.props;
+const { Content } = await render(pub);
+const d = pub.data;
+
+const allPeople = await getCollection('people');
+const keyToName: Record<string, string> = {};
+for (const person of allPeople) {
+  const k = (person.data.key ?? person.id).toLowerCase();
+  keyToName[k] = `${person.data.first_name} ${person.data.last_name}`;
+}
+
+function resolveAuthor(a: string): string {
+  return keyToName[a.toLowerCase()] ?? a;
+}
+
+// Map key → person page href (only for lab members)
+const keyToHref: Record<string, string> = {};
+for (const person of allPeople) {
+  const k = (person.data.key ?? person.id).toLowerCase();
+  if (!person.id.startsWith('alumni/')) {
+    keyToHref[k] = `/people/${person.data.key ?? person.id}`;
+  }
+}
+
+const venue = d.bib?.journal || d.bib?.booktitle || d.bib?.publisher || d['journal-short'] || '';
+const doi = d.bib?.doi;
+const pages = d.bib?.pages;
+const volume = d.bib?.volume;
+const number = d.bib?.number;
+
+const typeLabel: Record<string, string> = {
+  paper: 'Paper', thesis: 'Thesis', abstract: 'Abstract',
+  poster: 'Poster', preprint: 'Preprint', commentary: 'Commentary',
+};
+const pubType = (d.type ?? 'paper').trim();
+---
+
+<Layout title={`${d.title} | Visualization Collective`} description={d.abstract?.replace(/<[^>]+>/g, '').slice(0, 160) ?? d.title}>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page">
+    <SiteHeader />
+    <main id="main-content" class="pub-page">
+      <nav class="breadcrumb"><a href="/publications">← Publications</a></nav>
+      <div class="pub-layout">
+        <div class="pub-body">
+          <header class="pub-header">
+            <div class="pub-meta-top">
+              {d.year && <span class="pub-year">{d.year}</span>}
+              <span class="pub-type-badge">{typeLabel[pubType] ?? pubType}</span>
+            </div>
+            <h1>{d.title}</h1>
+            {d.authors && (
+              <p class="pub-authors">
+                {d.authors.map((a, i) => {
+                  const name = resolveAuthor(a);
+                  const href = keyToHref[a.toLowerCase()];
+                  return (
+                    <span>
+                      {i > 0 && ', '}
+                      {href ? <a class="author-link" href={href}>{name}</a> : name}
+                    </span>
+                  );
+                })}
+              </p>
+            )}
+          </header>
+
+          {(d.image_large ?? d.image) && (
+            <div class="pub-image-wrap">
+              <img class="pub-image" src={`/publication-images/${d.image_large ?? d.image}`}
+                alt={d.shortname ?? d.title} loading="eager" />
+            </div>
+          )}
+
+          {d.abstract && (
+            <section class="pub-section">
+              <h2>Abstract</h2>
+              <div class="pub-abstract" set:html={d.abstract} />
+            </section>
+          )}
+
+          <section class="pub-section">
+            <h2>Citation</h2>
+            <div class="pub-citation">
+              <p>
+                {d.authors?.map(resolveAuthor).join(', ')}.{' '}
+                <strong>{d.title}</strong>.{' '}
+                {pubType === 'thesis' ? (
+                  <span>{d.institution}, {d.thesis_type}, {d.month} {d.year}.</span>
+                ) : (
+                  <span>
+                    {venue && <em>{venue}</em>}
+                    {volume && `, ${volume}`}{number && `(${number})`}
+                    {pages && `, pp. ${pages}`}
+                    {doi && <span>, <a href={`http://dx.doi.org/${doi}`}>doi:{doi}</a></span>}
+                    {d.year && `, ${d.year}`}.
+                  </span>
+                )}
+              </p>
+            </div>
+          </section>
+
+          <Content />
+        </div>
+
+        <aside class="pub-sidebar">
+          <section class="sidebar-section">
+            <h3>Resources</h3>
+            <ul class="resource-list">
+              {(doi || d.publisherURL) && (
+                <li><a href={doi ? `http://dx.doi.org/${doi}` : d.publisherURL!} target="_blank" rel="noopener">Publisher page ↗</a></li>
+              )}
+              {d.pdf && <li><a href={d.pdf} target="_blank" rel="noopener">PDF ↗</a></li>}
+              {d.code && <li><a href={d.code} target="_blank" rel="noopener">Source code ↗</a></li>}
+              {d.preprint_server && <li><a href={d.preprint_server} target="_blank" rel="noopener">Preprint ↗</a></li>}
+            </ul>
+          </section>
+          {d.year && (
+            <section class="sidebar-section">
+              <h3>Details</h3>
+              <dl class="detail-list">
+                <dt>Year</dt><dd>{d.year}</dd>
+                <dt>Type</dt><dd>{typeLabel[pubType] ?? pubType}</dd>
+                {venue && <><dt>Venue</dt><dd>{venue}</dd></>}
+                {doi && <><dt>DOI</dt><dd><a href={`http://dx.doi.org/${doi}`}>{doi}</a></dd></>}
+              </dl>
+            </section>
+          )}
+        </aside>
+      </div>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page { width: min(calc(100% - 3rem), 78rem); margin: 0 auto; padding: 1.25rem 0 5rem; }
+  .pub-page { padding-top: 3rem; }
+  .breadcrumb { margin-bottom: 2rem; }
+  .breadcrumb a { font-size: 0.9rem; font-weight: 600; color: var(--muted-foreground); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--foreground); }
+  .pub-layout { display: grid; grid-template-columns: 1fr 16rem; gap: 3rem; align-items: start; }
+  .pub-header { margin-bottom: 1.5rem; }
+  .pub-meta-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; }
+  .pub-year { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--muted-foreground); }
+  .pub-type-badge { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); background: var(--muted); padding: 0.15rem 0.5rem; border-radius: 999px; }
+  h1 { font-size: clamp(1.6rem, 2.8vw, 2.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.12; color: var(--foreground); margin: 0 0 0.75rem; }
+  .pub-authors { font-size: 1rem; color: var(--muted-foreground); margin: 0; line-height: 1.5; }
+  .author-link { color: var(--foreground); text-decoration: none; font-weight: 600; transition: color 120ms ease; }
+  .author-link:hover { color: var(--accent); }
+  .pub-image-wrap { margin: 1.5rem 0; border-radius: 1rem; overflow: hidden; border: 1px solid var(--border); }
+  .pub-image { width: 100%; height: auto; display: block; }
+  .pub-section { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--foreground); margin: 0 0 0.75rem; }
+  .pub-abstract { font-size: 1rem; line-height: 1.75; color: var(--muted-foreground); }
+  .pub-abstract :global(p) { margin: 0 0 0.75rem; }
+  .pub-citation { background: var(--muted); border-radius: 0.75rem; padding: 1rem 1.25rem; font-size: 0.92rem; line-height: 1.7; }
+  .pub-citation p { margin: 0; }
+  .pub-citation a { color: var(--foreground); }
+  .pub-sidebar { position: sticky; top: 2rem; display: grid; gap: 1.5rem; }
+  .sidebar-section { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.25rem; }
+  h3 { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-family: var(--font-mono); color: var(--muted-foreground); margin: 0 0 0.75rem; }
+  .resource-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+  .resource-list a { font-size: 0.9rem; font-weight: 600; color: var(--foreground); text-decoration: none; }
+  .resource-list a:hover { text-decoration: underline; }
+  .detail-list { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.75rem; margin: 0; font-size: 0.88rem; }
+  dt { color: var(--muted-foreground); font-weight: 600; white-space: nowrap; }
+  dd { color: var(--foreground); margin: 0; word-break: break-word; }
+  dd a { color: inherit; text-decoration: none; }
+  dd a:hover { text-decoration: underline; }
+  @media (max-width: 860px) { .pub-layout { grid-template-columns: 1fr; } .pub-sidebar { position: static; } }
+  @media (max-width: 640px) { .page { width: min(calc(100% - 1.5rem), 78rem); padding-top: 1rem; } }
+</style>

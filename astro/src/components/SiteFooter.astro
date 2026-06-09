@@ -1,0 +1,27 @@
+---
+import { siteConfig } from '../config/site';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="shared-footer">
+	<div class="shared-footer-inner">
+		<div class="shared-footer-left">
+			<a href="/" class="footer-brand" aria-label="VID Lab homepage">
+				<img class="footer-logo brand-logo-dark"  src="/VID_logo_black.svg" alt="VID Lab" height="22" />
+				<img class="footer-logo brand-logo-light" src="/VID_logo_white.svg" alt="VID Lab" height="22" />
+			</a>
+			<p class="shared-footer-copy">&copy; {currentYear} VID Lab, Linköping University</p>
+			<div class="shared-footer-links">
+				{siteConfig.socialLinks.map((link) => (
+					<a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+				))}
+			</div>
+		</div>
+
+		<div class="footer-liu">
+			<!-- Replace these with SVG/PNG versions when available -->
+			<img class="liu-logo brand-logo-dark"  src="/LiU_primary_black.png" alt="Linköping University" height="40" onerror="this.closest('.liu-logo-wrap').style.display='none'" />
+			<img class="liu-logo brand-logo-light" src="/LiU_primary_white.png" alt="Linköping University" height="40" onerror="this.closest('.liu-logo-wrap').style.display='none'" />
+		</div>
+	</div>
+</footer>
