@@ -100,58 +100,46 @@ const schemaData =
 				}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 				document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
 
-				// Scroll circles
-				const colors = ['#dcff68','#d19cec','#f472b6','#4ade80','#60a5fa','#fb923c','#fbbf24','#34d399'];
-				const page = document.querySelector('.page');
-				if (!page) return;
+				// Large background blobs
+				const blobColors = ['#d19cec','#dcff68','#f472b6','#60a5fa','#4ade80','#fb923c'];
+				const blobData = [];
+				const blobs = [
+					{ x: 15,  y: 10,  size: 600, colorIdx: 0, speed: 0.06 },
+					{ x: 75,  y: 25,  size: 500, colorIdx: 1, speed: 0.10 },
+					{ x: 30,  y: 55,  size: 650, colorIdx: 2, speed: 0.04 },
+					{ x: 80,  y: 70,  size: 550, colorIdx: 3, speed: 0.08 },
+					{ x: 10,  y: 80,  size: 480, colorIdx: 4, speed: 0.12 },
+					{ x: 60,  y: 90,  size: 580, colorIdx: 5, speed: 0.05 },
+				];
 
-				// Make .page the positioning context
-				if (getComputedStyle(page).position === 'static') {
-					page.style.position = 'relative';
-				}
-
-				const pageH = page.scrollHeight;
-				const count = 22;
-
-				for (let i = 0; i < count; i++) {
-					const circle = document.createElement('div');
-					circle.className = 'scroll-circle';
-
-					const size = 10 + Math.random() * 22;
-					const color = colors[Math.floor(Math.random() * colors.length)];
-					// Place in left or right margin (outside main content column)
-					const side = Math.random() < 0.5 ? -1 : 1;
-					const xOffset = 30 + Math.random() * 80; // px from edge
-					const left = side === -1
-						? `-${xOffset}px`
-						: `calc(100% + ${xOffset - size}px)`;
-					const top = (i / count) * pageH * 0.95 + Math.random() * (pageH / count) * 0.5;
-
-					Object.assign(circle.style, {
-						width: `${size}px`,
-						height: `${size}px`,
-						background: color,
-						left,
-						top: `${top}px`,
-						'--drift-duration': `${5 + Math.random() * 5}s`,
-						'--drift-delay':    `${-Math.random() * 5}s`,
+				blobs.forEach(({ x, y, size, colorIdx, speed }) => {
+					const el = document.createElement('div');
+					el.className = 'bg-blob';
+					Object.assign(el.style, {
+						width:       `${size}px`,
+						height:      `${size}px`,
+						left:        `calc(${x}vw - ${size / 2}px)`,
+						top:         `calc(${y}vh - ${size / 2}px)`,
+						background:  blobColors[colorIdx],
 					});
+					document.body.appendChild(el);
+					blobData.push({ el, speed });
+				});
 
-					page.appendChild(circle);
-				}
+				let ticking = false;
+				window.addEventListener('scroll', () => {
+					if (!ticking) {
+						requestAnimationFrame(() => {
+							const sy = window.scrollY;
+							blobData.forEach(({ el, speed }) => {
+								el.style.transform = `translateY(${-sy * speed}px)`;
+							});
+							ticking = false;
+						});
+						ticking = true;
+					}
+				}, { passive: true });
 
-				// Reveal circles as they scroll into view
-				const circleObserver = new IntersectionObserver((entries) => {
-					entries.forEach(e => {
-						if (e.isIntersecting) {
-							e.target.classList.add('visible');
-						} else {
-							e.target.classList.remove('visible');
-						}
-					});
-				}, { threshold: 0 });
-
-				document.querySelectorAll('.scroll-circle').forEach(c => circleObserver.observe(c));
 			})();
 		</script>
 		<script is:inline>
@@ -741,28 +729,15 @@ const schemaData =
 		width: auto;
 	}
 
-	/* Scroll circles */
-	.scroll-circle {
-		position: absolute;
+/* Background blobs */
+	.bg-blob {
+		position: fixed;
 		border-radius: 50%;
-		opacity: 0;
 		pointer-events: none;
-		transition: opacity 600ms ease, transform 600ms ease;
-		transform: scale(0.4);
-		z-index: 0;
-	}
-	.scroll-circle.visible {
-		opacity: 1;
-		transform: scale(1);
-	}
-	@keyframes drift {
-		0%   { translate: 0 0; }
-		33%  { translate: 6px -10px; }
-		66%  { translate: -5px 8px; }
-		100% { translate: 0 0; }
-	}
-	.scroll-circle.visible {
-		animation: drift var(--drift-duration, 6s) ease-in-out infinite var(--drift-delay, 0s);
+		z-index: -1;
+		opacity: 0.06;
+		will-change: transform;
+		filter: blur(60px);
 	}
 
 	/* Entrance animations */

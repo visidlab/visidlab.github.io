@@ -28,7 +28,7 @@ const people = defineCollection({
 });
 
 const publications = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/publications' }),
+	loader: glob({ pattern: '**/[!_]*.md', base: './src/content/publications' }),
 	schema: z.object({
 		title: z.string(),
 		key: loosyString,
@@ -49,7 +49,7 @@ const publications = defineCollection({
 });
 
 const news = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
+	loader: glob({ pattern: '**/[!_]*.md', base: './src/content/news' }),
 	schema: z.object({
 		title: z.string(),
 		'lead-image': z.string().optional(),

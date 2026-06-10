@@ -71,7 +71,7 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 				</header>
 				<div class="pub-grid">
 					{recent.map((pub, i) => (
-						<article class="pub-card animate-up" style={`--delay:${i * 80}ms`}>
+						<a class="pub-card animate-up" href={`/publications/${pub.id}`} style={`--delay:${i * 80}ms`}>
 							<p class="pub-year">{pub.data.year}</p>
 							<h3 class="pub-title">{pub.data.title}</h3>
 							{pub.data.authors && (
@@ -81,11 +81,9 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 								<p class="pub-venue">{pub.data['journal-short']}</p>
 							)}
 							{pub.data.publisherURL && (
-								<a class="pub-link" href={pub.data.publisherURL} target="_blank" rel="noopener">
-									View paper →
-								</a>
+								<span class="pub-link">View paper →</span>
 							)}
-						</article>
+						</a>
 					))}
 				</div>
 				<div class="see-all">
@@ -309,6 +307,8 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 		border: 1px solid var(--border);
 		border-radius: 1.35rem;
 		transition: transform 140ms ease, box-shadow 140ms ease;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.pub-card:hover {
