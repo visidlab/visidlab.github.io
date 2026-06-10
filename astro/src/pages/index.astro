@@ -133,7 +133,7 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 <style>
 	.page {
 		position: relative;
-		width: min(calc(100% - 3rem), 78rem);
+		width: min(calc(100% - 12rem), 64rem);
 		margin: 0 auto;
 		padding: 1.25rem 0 5rem;
 	}
@@ -144,7 +144,12 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 		font-weight: 600;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: var(--muted-foreground);
+		color: #1a1a1a;
+		background: var(--page-accent);
+		padding: 0.1rem 0.4rem;
+		border-radius: 0.2rem;
+		display: block;
+		width: fit-content;
 		margin: 0;
 	}
 
