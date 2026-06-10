@@ -66,7 +66,7 @@ bib:
 
 # Link to an official preprint server
 # preprint_server: https://osf.io/h793u/
-preprint_server: https://zenodo.org/records/20071583
+preprint_server: https://arxiv.org/abs/2606.09835
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
