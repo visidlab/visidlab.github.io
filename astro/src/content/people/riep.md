@@ -5,7 +5,7 @@ last_name: Riep
 key: riep
 permalink: /team/riep/
 # Pick one of the following
-role: faculty
+role: guest
 title: Visiting Research Fellow 
 email: maria.riep@liu.se
 

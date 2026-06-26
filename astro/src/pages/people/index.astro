@@ -6,18 +6,21 @@ import SiteHeader from '../../components/SiteHeader.astro';
 const allPeople = await getCollection('people', ({ id }) => !id.startsWith('alumni/'));
 const alumni = await getCollection('people', ({ id }) => id.startsWith('alumni/'));
 
-const roleOrder: Record<string, number> = {
-  faculty: 0, postdoc: 1, researcher: 2, phdstudent: 3, msstudent: 4, staff: 5,
-};
 const roleLabel: Record<string, string> = {
   faculty: 'Faculty', postdoc: 'Postdoctoral Researcher', researcher: 'Researcher',
-  phdstudent: 'PhD Student', msstudent: 'MS Student', staff: 'Staff',
+  phdstudent: 'PhD Student', msstudent: 'MS Student', staff: 'Staff', guest: 'Guest',
+};
+
+const groupOrder: Record<string, number> = {
+  faculty: 0, postdoc: 0, researcher: 0, staff: 0,
+  phdstudent: 1, msstudent: 1,
+  guest: 2,
 };
 
 const active = allPeople.sort((a, b) => {
-  const rA = roleOrder[a.data.role] ?? 99;
-  const rB = roleOrder[b.data.role] ?? 99;
-  if (rA !== rB) return rA - rB;
+  const gA = groupOrder[a.data.role] ?? 3;
+  const gB = groupOrder[b.data.role] ?? 3;
+  if (gA !== gB) return gA - gB;
   return a.data.last_name.localeCompare(b.data.last_name);
 });
 ---
@@ -33,13 +36,13 @@ const active = allPeople.sort((a, b) => {
         <p class="intro">A multidisciplinary group of researchers and students working at the intersection of data, design, and technology.</p>
       </header>
 
-      <section class="people-list" aria-label="Active members">
-        {active.map(person => {
+      <div class="people-list">
+        {active.map((person, i) => {
           const key = person.data.key ?? person.id;
           const photoSrc = `/photos/people/${key}.jpg`;
           const href = `/people/${key}`;
           return (
-            <div class="person-row animate-up" style={`--delay:${active.indexOf(person) * 60}ms`}>
+            <div class="person-row animate-up" style={`--delay:${i * 60}ms`}>
               <a class="person-photo-link" href={href} tabindex="-1" aria-hidden="true">
                 <div class="person-photo-wrap">
                   <img
@@ -56,7 +59,7 @@ const active = allPeople.sort((a, b) => {
               </a>
               <div class="person-info">
                 <span class={`person-role role-${person.data.role}`}>{roleLabel[person.data.role] ?? person.data.role}</span>
-                <h2 class="person-name"><a href={href}>{person.data.first_name} {person.data.last_name}</a></h2>
+                <h3 class="person-name"><a href={href}>{person.data.first_name} {person.data.last_name}</a></h3>
                 {person.data.title && <p class="person-title">{person.data.title}</p>}
                 {person.data.keywords && <p class="person-keywords">{person.data.keywords}</p>}
                 <div class="person-links">
@@ -69,7 +72,7 @@ const active = allPeople.sort((a, b) => {
             </div>
           );
         })}
-      </section>
+      </div>
 
       {alumni.length > 0 && (
         <section class="alumni-section">
@@ -174,14 +177,16 @@ const active = allPeople.sort((a, b) => {
   .role-phdstudent { --role-bg: #fce7f3; --role-color: #9d174d; }
   .role-msstudent  { --role-bg: #ffedd5; --role-color: #9a3412; }
   .role-staff      { --role-bg: #f1f5f9; --role-color: #475569; }
+  .role-guest      { --role-bg: #fef9c3; --role-color: #854d0e; }
   :root[data-theme='dark'] .role-faculty    { --role-bg: #3b1f6e; --role-color: #c4b5fd; }
   :root[data-theme='dark'] .role-postdoc    { --role-bg: #1e3a5f; --role-color: #93c5fd; }
   :root[data-theme='dark'] .role-researcher { --role-bg: #064e3b; --role-color: #6ee7b7; }
   :root[data-theme='dark'] .role-phdstudent { --role-bg: #500724; --role-color: #fbcfe8; }
   :root[data-theme='dark'] .role-msstudent  { --role-bg: #431407; --role-color: #fdba74; }
   :root[data-theme='dark'] .role-staff      { --role-bg: #1e293b; --role-color: #94a3b8; }
-  h2.person-name { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--foreground); margin: 0 0 0.15rem; }
-  h2.person-name a {
+  :root[data-theme='dark'] .role-guest      { --role-bg: #422006; --role-color: #fde68a; }
+  h3.person-name { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--foreground); margin: 0 0 0.15rem; }
+  h3.person-name a {
     color: inherit;
     text-decoration: none;
     background: linear-gradient(#dcff68, #dcff68) no-repeat left center / 0% 100%;
@@ -189,7 +194,7 @@ const active = allPeople.sort((a, b) => {
     border-radius: 0.15rem;
     padding: 0 0.1rem;
   }
-  h2.person-name a:hover {
+  h3.person-name a:hover {
     background-size: 100% 100%;
     color: #1a1a1a;
   }
