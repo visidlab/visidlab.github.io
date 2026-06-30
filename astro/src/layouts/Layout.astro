@@ -771,11 +771,7 @@ const schemaData =
 		}
 	}
 
-	@media (max-width: 720px) {
-		.display-title {
-			font-size: clamp(2.4rem, 10vw, 3.4rem);
-		}
-
+	@media (max-width: 920px) {
 		.shared-header {
 			gap: 0.75rem;
 			align-items: center;
@@ -805,6 +801,12 @@ const schemaData =
 			right: 0;
 			margin-left: 0;
 			z-index: 30;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.display-title {
+			font-size: clamp(2.4rem, 10vw, 3.4rem);
 		}
 
 		.shared-footer-inner {
