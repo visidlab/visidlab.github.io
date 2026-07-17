@@ -7,7 +7,7 @@ const loosyString = z.union([z.string(), z.null(), z.record(z.any()), z.number()
   .transform(v => (typeof v === 'string' ? v : undefined));
 
 const people = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/people' }),
+	loader: glob({ pattern: '**/[!_]*.md', base: './src/content/people' }),
 	schema: z.object({
 		first_name: z.string(),
 		last_name: z.string(),
@@ -64,7 +64,7 @@ const news = defineCollection({
 });
 
 const pages = defineCollection({
-	loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+	loader: glob({ pattern: '**/[!_]*.md', base: './src/content/pages' }),
 	schema: z.object({
 		title: loosyString,
 		eyebrow: loosyString,
