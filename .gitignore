@@ -12,5 +12,8 @@ vendor
 .bundle
 *.gem
 
+# Tools
+.claude
+
 # OS
 .DS_Store
