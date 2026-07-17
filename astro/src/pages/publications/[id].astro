@@ -117,12 +117,14 @@ const pubType = (d.type ?? 'paper').trim();
           <section class="sidebar-section">
             <h3>Resources</h3>
             <ul class="resource-list">
+              {d.preprint_server && <li><a class="resource-primary" href={d.preprint_server} target="_blank" rel="noopener">Preprint (open access) ↗</a></li>}
+              {d.pdf && <li><a class="resource-primary" href={d.pdf} target="_blank" rel="noopener">PDF ↗</a></li>}
               {(doi || d.publisherURL) && (
                 <li><a href={doi ? `http://dx.doi.org/${doi}` : d.publisherURL!} target="_blank" rel="noopener">Publisher page ↗</a></li>
               )}
-              {d.pdf && <li><a href={d.pdf} target="_blank" rel="noopener">PDF ↗</a></li>}
               {d.code && <li><a href={d.code} target="_blank" rel="noopener">Source code ↗</a></li>}
-              {d.preprint_server && <li><a href={d.preprint_server} target="_blank" rel="noopener">Preprint ↗</a></li>}
+              {d.supplement && <li><a href={d.supplement} target="_blank" rel="noopener">Supplement ↗</a></li>}
+              {d['external-project'] && <li><a href={d['external-project']} target="_blank" rel="noopener">Project site ↗</a></li>}
             </ul>
           </section>
           {d.year && (
@@ -153,7 +155,8 @@ const pubType = (d.type ?? 'paper').trim();
   .pub-meta-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; }
   .pub-year { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--muted-foreground); }
   .pub-type-badge { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); background: var(--muted); padding: 0.15rem 0.5rem; border-radius: 999px; }
-  h1 { font-size: clamp(1.6rem, 2.8vw, 2.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.12; color: var(--foreground); margin: 0 0 0.75rem; }
+  h1 { font-size: clamp(1.6rem, 2.8vw, 2.6rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.12; color: var(--foreground); margin: 0 0 0.75rem; user-select: text; -webkit-user-select: text; }
+  .pub-body * { user-select: text; -webkit-user-select: text; }
   .pub-authors { font-size: 1rem; color: var(--muted-foreground); margin: 0; line-height: 1.5; }
   .author-link { color: var(--foreground); text-decoration: none; font-weight: 600; transition: color 120ms ease; }
   .author-link:hover { color: var(--accent); }
@@ -172,6 +175,7 @@ const pubType = (d.type ?? 'paper').trim();
   .resource-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
   .resource-list a { font-size: 0.9rem; font-weight: 600; color: var(--foreground); text-decoration: none; }
   .resource-list a:hover { text-decoration: underline; }
+  .resource-primary { color: var(--accent) !important; }
   .detail-list { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.75rem; margin: 0; font-size: 0.88rem; }
   dt { color: var(--muted-foreground); font-weight: 600; white-space: nowrap; }
   dd { color: var(--foreground); margin: 0; word-break: break-word; }

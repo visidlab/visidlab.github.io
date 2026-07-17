@@ -45,6 +45,11 @@ const publications = defineCollection({
 		publisherURL: loosyString,
 		abstract: loosyString,
 		layout: loosyString,
+		pdf: loosyString,
+		preprint_server: loosyString,
+		code: loosyString,
+		supplement: loosyString,
+		'external-project': loosyString,
 	}),
 });
 
