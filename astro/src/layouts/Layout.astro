@@ -183,9 +183,15 @@ const schemaData =
 
 <style is:global>
 	/* Ensure all page content is selectable */
-	body * {
-		-webkit-user-select: text;
-		user-select: text;
+	body, body * {
+		-webkit-user-select: text !important;
+		user-select: text !important;
+	}
+
+	/* Except interactive elements where none makes sense */
+	button, [role="button"] {
+		-webkit-user-select: none !important;
+		user-select: none !important;
 	}
 
 	@font-face {
