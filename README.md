@@ -54,18 +54,3 @@ npm run dev
 
 The site runs at `http://localhost:4321`.
 
-### Tech stack
-
-- **Framework:** Astro 6
-- **Styling:** Tailwind CSS v4
-- **Content:** Markdown files with YAML frontmatter
-- **Deployment:** GitHub Actions → GitHub Pages
-
----
-
-## Branch structure
-
-| Branch | Purpose |
-|---|---|
-| `main` | **Production.** All content edits go here. Auto-deploys to the live site |
-| `main-jekyll-archive` | Archive of the old Jekyll site (read-only) |
