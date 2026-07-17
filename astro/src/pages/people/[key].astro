@@ -1,0 +1,193 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people', ({ id }) => !id.startsWith('alumni/'));
+  return people.map(person => {
+    const key = person.data.key ?? person.id;
+    return { params: { key }, props: { person } };
+  });
+}
+
+const { person } = Astro.props;
+const d = person.data;
+const key = d.key ?? person.id;
+
+const roleLabel: Record<string, string> = {
+  faculty: 'Faculty', postdoc: 'Postdoctoral Researcher', researcher: 'Researcher',
+  phdstudent: 'PhD Student', msstudent: 'MS Student', staff: 'Staff',
+};
+
+const typeLabel: Record<string, string> = {
+  paper: 'Paper', thesis: 'Thesis', abstract: 'Abstract',
+  poster: 'Poster', preprint: 'Preprint', commentary: 'Commentary',
+};
+
+// Build key → full name map for resolving author keys
+const allPeople = await getCollection('people');
+const keyToName: Record<string, string> = {};
+for (const p of allPeople) {
+  const k = (p.data.key ?? p.id).toLowerCase();
+  keyToName[k] = `${p.data.first_name} ${p.data.last_name}`;
+}
+const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
+
+// Find publications where this person appears as an author (by key)
+const allPubs = await getCollection('publications');
+const pubs = allPubs
+  .filter(p => p.data.authors?.some(a => a.toLowerCase() === key.toLowerCase()))
+  .filter(p => p.data.year)
+  .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+---
+
+<Layout title={`${d.first_name} ${d.last_name} | VID Lab`} description={`${d.first_name} ${d.last_name} — ${roleLabel[d.role] ?? d.role} at VID Lab, Linköping University.`}>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page">
+    <SiteHeader />
+    <main id="main-content" class="person-page">
+      <nav class="breadcrumb"><a href="/people">← People</a></nav>
+
+      <div class="person-header">
+        <div class="person-photo-wrap">
+          <img
+            class="person-photo"
+            src={`/photos/people/${key}.jpg`}
+            alt={`${d.first_name} ${d.last_name}`}
+            loading="eager"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+          />
+          <div class="person-photo-fallback" style="display:none">
+            {d.first_name[0]}{d.last_name[0]}
+          </div>
+        </div>
+        <div class="person-meta">
+          <p class="person-role">{roleLabel[d.role] ?? d.role}</p>
+          <h1>{d.first_name} {d.last_name}</h1>
+          {d.keywords && <p class="person-keywords">{d.keywords}</p>}
+          {d.year_joined && <p class="person-since">Member since {d.year_joined}</p>}
+          <div class="person-links">
+            {d.email && <a href={`mailto:${d.email}`} class="link-chip">Email</a>}
+            {d['personal-site'] && <a href={d['personal-site']} target="_blank" rel="noopener" class="link-chip">Website ↗</a>}
+            {d.gs && <a href={d.gs} target="_blank" rel="noopener" class="link-chip">Google Scholar ↗</a>}
+            {d.orcid && <a href={`https://orcid.org/${d.orcid}`} target="_blank" rel="noopener" class="link-chip">ORCID ↗</a>}
+          </div>
+        </div>
+      </div>
+
+      {pubs.length > 0 && (
+        <section class="pubs-section">
+          <h2>Publications <span class="pub-count">({pubs.length})</span></h2>
+          <ul class="pub-list">
+            {pubs.map(pub => {
+              const imgFile = pub.data.image_large ?? pub.data.image;
+              const pubType = (pub.data.type ?? 'paper').trim();
+              return (
+                <li class="pub-item">
+                  {imgFile ? (
+                    <a class="pub-thumb-wrap" href={`/publications/${pub.id}`}>
+                      <img class="pub-thumb" src={`/publication-images/${imgFile}`}
+                        alt={pub.data.shortname ?? pub.data.title} loading="lazy" />
+                    </a>
+                  ) : (
+                    <div class="pub-thumb-wrap pub-thumb-empty" />
+                  )}
+                  <div class="pub-main">
+                    <h3 class="pub-title">
+                      <a href={`/publications/${pub.id}`}>{pub.data.title}</a>
+                    </h3>
+                    {pub.data.authors && (
+                      <p class="pub-authors">
+                        {pub.data.authors.map((a, i) => (
+                          <span>
+                            {i > 0 && ', '}
+                            <span class:list={[a.toLowerCase() === key.toLowerCase() && 'self-author']}>
+                              {resolveAuthor(a)}
+                            </span>
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                    <div class="pub-meta">
+                      <span class="pub-year">{pub.data.year}</span>
+                      {(pub.data['journal-short'] ?? pub.data.bib?.booktitle) && (
+                        <span class="pub-venue">{pub.data['journal-short'] ?? pub.data.bib?.booktitle}</span>
+                      )}
+                      <span class="pub-type-badge">{typeLabel[pubType] ?? pubType}</span>
+                    </div>
+                  </div>
+                  <a class="pub-detail-link" href={`/publications/${pub.id}`}>Details</a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      {pubs.length === 0 && (
+        <p class="no-pubs">No publications indexed yet.</p>
+      )}
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page { width: min(calc(100% - 12rem), 64rem); margin: 0 auto; padding: 1.25rem 0 5rem; }
+  .person-page { padding-top: 3rem; }
+  .breadcrumb { margin-bottom: 2rem; }
+  .breadcrumb a { font-size: 0.9rem; font-weight: 600; color: var(--muted-foreground); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--foreground); }
+
+  .person-header { display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+
+  .person-photo-wrap { flex-shrink: 0; width: 9rem; height: 9rem; border-radius: 50%; overflow: hidden; background: var(--muted); border: 1px solid var(--border); }
+  .person-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .person-photo-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; color: var(--muted-foreground); text-transform: uppercase; }
+
+  .person-meta { display: grid; gap: 0.35rem; align-content: start; }
+  .person-role { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted-foreground); margin: 0; }
+  h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; letter-spacing: -0.04em; color: var(--foreground); margin: 0; }
+  .person-keywords { font-size: 0.95rem; color: var(--muted-foreground); margin: 0; }
+  .person-since { font-size: 0.85rem; color: var(--muted-foreground); margin: 0; font-family: var(--font-mono); }
+
+  .person-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+  .link-chip { font-size: 0.85rem; font-weight: 600; color: var(--foreground); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid var(--control-border); border-radius: 999px; transition: background 100ms ease; }
+  .link-chip:hover { background: var(--muted); }
+
+  h2 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; color: var(--foreground); margin: 0 0 1.5rem; }
+  .pub-count { font-size: 1rem; font-weight: 400; color: var(--muted-foreground); }
+
+  .pub-list { list-style: none; margin: 0; padding: 0; }
+  .pub-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+  .pub-item:first-child { border-top: 1px solid var(--border); }
+
+  .pub-thumb-wrap { flex-shrink: 0; width: 6rem; height: 4.5rem; border-radius: 0.5rem; overflow: hidden; background: var(--muted); border: 1px solid var(--border); display: block; text-decoration: none; transition: opacity 120ms ease; }
+  .pub-thumb-wrap:hover { opacity: 0.85; }
+  .pub-thumb-empty { cursor: default; pointer-events: none; }
+  .pub-thumb { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+  .pub-main { flex: 1; display: grid; gap: 0.25rem; min-width: 0; }
+  .pub-title { font-size: 0.95rem; font-weight: 600; line-height: 1.4; color: var(--foreground); margin: 0; }
+  .pub-title a { color: inherit; text-decoration: none; }
+  .pub-title a:hover { text-decoration: underline; }
+  .pub-authors { font-size: 0.82rem; color: var(--muted-foreground); margin: 0; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .self-author { color: var(--foreground); font-weight: 600; }
+
+  .pub-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 0.65rem; align-items: center; }
+  .pub-year { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--muted-foreground); }
+  .pub-venue { font-size: 0.8rem; font-style: italic; color: var(--muted-foreground); }
+  .pub-type-badge { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-foreground); background: var(--muted); padding: 0.12rem 0.45rem; border-radius: 999px; }
+
+  .pub-detail-link { flex-shrink: 0; font-size: 0.82rem; font-weight: 600; color: var(--foreground); text-decoration: none; padding: 0.25rem 0.65rem; border: 1px solid var(--control-border); border-radius: 999px; transition: background 100ms ease; white-space: nowrap; }
+  .pub-detail-link:hover { background: var(--muted); }
+
+  .no-pubs { color: var(--muted-foreground); padding: 2rem 0; }
+
+  @media (max-width: 560px) {
+    .page { width: min(calc(100% - 1.5rem), 78rem); padding-top: 1rem; }
+    .person-header { flex-direction: column; gap: 1.25rem; }
+    .person-photo-wrap { width: 6rem; height: 6rem; }
+    .pub-thumb-wrap { display: none; }
+  }
+</style>

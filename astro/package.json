@@ -1,0 +1,39 @@
+{
+  "name": "maria-astro-theme",
+  "description": "A clean Astro portfolio theme for UX designers and product designers.",
+  "type": "module",
+  "version": "1.0.1",
+  "author": "Andrei Alba",
+  "license": "MIT",
+  "keywords": [
+    "astro-theme",
+    "astro",
+    "portfolio",
+    "ux",
+    "designer",
+    "tailwindcss"
+  ],
+  "homepage": "https://maria-lake.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreialba/maria.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^6.0.1",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.0"
+  }
+}

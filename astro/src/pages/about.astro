@@ -1,0 +1,210 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+const aboutPage = await getEntry('pages', 'about');
+const { Content } = await render(aboutPage!);
+const about = aboutPage!.data;
+---
+
+<Layout
+  title={`${about.title ?? 'About'} | VID Lab`}
+  description="VID Lab — Visualization and Interaction Design at Linköping University."
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page" style="--page-accent: #fb923c">
+    <SiteHeader />
+    <main id="main-content" class="about-main">
+      <header class="about-hero">
+        {about.eyebrow && <p class="eyebrow">{about.eyebrow}</p>}
+        <h1>{about.title ?? 'About Us'}</h1>
+      </header>
+
+      <div class="about-body animate-up">
+        <div class="about-text">
+          <div class="about-content">
+            <Content />
+          </div>
+
+          {about.location && (
+            <div class="location">
+              <span class="location-pin">📍</span>
+              <p set:html={about.location.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')} />
+            </div>
+          )}
+        </div>
+
+        <div class="about-image-wrap">
+          <img
+            class="group-photo"
+            src={about.group_photo ?? '/photos/group2025.gif'}
+            alt={about.group_photo_alt ?? 'VID Lab group photo'}
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      <section class="gallery-section animate-up" style="--delay: 150ms">
+        <header class="gallery-header">
+          <p class="eyebrow">Life in the lab</p>
+          <h2>Gallery</h2>
+        </header>
+        <div class="gallery-grid">
+          {(about.gallery ?? []).map(img => (
+            <div class="gallery-item">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page { width: min(calc(100% - 12rem), 64rem); margin: 0 auto; padding: 1.25rem 0 5rem; }
+  .about-main { padding-top: 4.5rem; }
+
+  .eyebrow { font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #1a1a1a; background: var(--page-accent); padding: 0.1rem 0.4rem; border-radius: 0.2rem; margin: 0; width: fit-content; display: block; }
+  h1 { margin: 0.5rem 0 0; font-weight: 800; letter-spacing: -0.05em; font-size: clamp(2.6rem, 4.6vw, 4.4rem); line-height: 1.03; color: var(--foreground); display: inline-block; position: relative; }
+  h1::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 100%; height: 5px; background: var(--page-accent); border-radius: 3px; }
+
+  .about-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .about-text { display: grid; gap: 1.25rem; }
+
+  .about-content { display: grid; gap: 1.25rem; }
+
+  .about-content :global(p) {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .about-content :global(p:first-child) {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--foreground);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+
+  .location {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+    padding: 1.25rem;
+    background: var(--muted);
+    border-radius: 1rem;
+  }
+
+  .location-pin { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  .location p {
+    font-size: 0.95rem;
+    color: var(--muted-foreground);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .location strong { color: var(--foreground); }
+
+  .about-image-wrap {
+    position: sticky;
+    top: 2rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .group-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 860px) {
+    .about-body {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .about-image-wrap { position: static; }
+  }
+
+  .gallery-section {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .gallery-header {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin: 0.5rem 0 0;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.06;
+    color: var(--foreground);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .gallery-item {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--muted);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.04);
+  }
+
+  .gallery-item:hover {
+    outline: 2px solid var(--accent);
+    outline-offset: 0;
+  }
+
+  @media (max-width: 720px) {
+    .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 460px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 560px) {
+    .page { width: min(calc(100% - 1.5rem), 78rem); padding-top: 1rem; }
+    .about-main { padding-top: 4rem; }
+  }
+</style>

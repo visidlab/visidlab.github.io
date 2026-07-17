@@ -1,0 +1,160 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+
+export async function getStaticPaths() {
+  const allNews = await getCollection('news');
+  return allNews.map(item => ({ params: { id: item.id } }));
+}
+
+const { id } = Astro.params;
+const allNews = await getCollection('news');
+const item = allNews.find(n => n.id === id);
+if (!item) return Astro.redirect('/news');
+
+const { Content } = await render(item);
+const dateStr = item.id.match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
+const date = dateStr ? new Date(dateStr) : null;
+---
+
+<Layout
+  title={`${item.data.title} | VID Lab`}
+  description={item.data.title}
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page">
+    <SiteHeader />
+    <main id="main-content" class="news-post-main">
+      <a class="back-link" href="/news">← All news</a>
+
+      <article class="news-post">
+        <header class="post-header">
+          {date && (
+            <time class="post-date" datetime={dateStr}>
+              {date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          )}
+          <h1 class="post-title">{item.data.title}</h1>
+        </header>
+
+        {item.data['lead-image'] && (
+          <div class="post-image-wrap">
+            <img
+              class="post-image"
+              src={item.data['lead-image']}
+              alt={item.data['lead-image-alt-text'] ?? ''}
+              loading="eager"
+            />
+          </div>
+        )}
+
+        <div class="post-content prose">
+          <Content />
+        </div>
+      </article>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    width: min(calc(100% - 12rem), 64rem);
+    margin: 0 auto;
+    padding: 1.25rem 0 5rem;
+  }
+
+  .news-post-main {
+    padding-top: 3rem;
+    max-width: 48rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 120ms ease;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .post-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin-bottom: 0.75rem;
+  }
+
+  .post-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--foreground);
+    margin: 0 0 2rem;
+  }
+
+  .post-image-wrap {
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 28rem;
+    object-fit: cover;
+  }
+
+  .post-content {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--muted-foreground);
+  }
+
+  .post-content :global(p) {
+    margin: 0 0 1.25rem;
+  }
+
+  .post-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .post-content :global(a) {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 120ms ease;
+  }
+
+  .post-content :global(a:hover) {
+    color: var(--accent);
+  }
+
+  .post-content :global(img) {
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      width: min(calc(100% - 1.5rem), 78rem);
+      padding-top: 1rem;
+    }
+    .news-post-main { padding-top: 2.5rem; }
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 layout: personpage
-first_name: Caterina (Kate)
+first_name: Kate
 last_name: Blomgren
 key: blomgren
 permalink: /team/blomgren/
@@ -21,5 +21,5 @@ gs: https://scholar.google.com/citations?user=dQbMpv8AAAAJ&hl=en
 orcid: 0009-0009-9186-5168
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: data visualisation, feminist theory, game design,
+keywords: data visualisation, feminist and critical theory, game research, cute cats
 ---

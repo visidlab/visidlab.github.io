@@ -1,0 +1,130 @@
+---
+import { siteConfig } from '../config/site';
+const currentPath = Astro.url.pathname || '/';
+const menuPanelId = 'shared-menu-panel';
+---
+
+<header class="shared-header">
+	<a class="shared-brand" href="/" aria-label={`${siteConfig.name} homepage`}>
+		<img class="brand-logo brand-logo-dark" src="/VID_logo_black.svg" alt="VID Lab" height="32" />
+		<img class="brand-logo brand-logo-light" src="/VID_logo_white.svg" alt="VID Lab" height="32" />
+	</a>
+
+	<div class="shared-header-actions">
+		<nav class="shared-nav shared-nav-desktop" aria-label="Primary navigation">
+			{siteConfig.navLinks.map((link) => (
+				<a href={link.href} aria-current={link.href === currentPath ? 'page' : undefined}>
+					{link.label}
+				</a>
+			))}
+
+			{siteConfig.extraPages.length > 0 && (
+				<div class="shared-menu">
+					<button
+						class="shared-menu-trigger"
+						type="button"
+						aria-haspopup="menu"
+						aria-expanded="false"
+						aria-controls={menuPanelId}
+					>
+						<span>Other</span>
+						<img src="/icons/chevron-down.svg" alt="" width="16" height="16" />
+					</button>
+					<div class="shared-menu-panel" id={menuPanelId} role="menu" aria-label="More navigation pages">
+						{siteConfig.extraPages.map((link) => (
+							<a href={link.href} role="menuitem">
+								{link.label}
+							</a>
+						))}
+					</div>
+				</div>
+			)}
+		</nav>
+
+		<button
+			class="shared-theme-toggle"
+			type="button"
+			data-theme-toggle
+			aria-label="Switch to dark mode"
+			aria-pressed="false"
+		>
+			<span class="shared-theme-toggle-icons" aria-hidden="true">
+				<svg
+					class="shared-theme-icon shared-theme-icon-sun"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<circle cx="12" cy="12" r="4.25"></circle>
+					<path d="M12 2.75v2.5"></path>
+					<path d="M12 18.75v2.5"></path>
+					<path d="M21.25 12h-2.5"></path>
+					<path d="M5.25 12h-2.5"></path>
+					<path d="M18.54 5.46l-1.77 1.77"></path>
+					<path d="M7.23 16.77l-1.77 1.77"></path>
+					<path d="M18.54 18.54l-1.77-1.77"></path>
+					<path d="M7.23 7.23L5.46 5.46"></path>
+				</svg>
+				<svg
+					class="shared-theme-icon shared-theme-icon-moon"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M20.2 14.35A8.75 8.75 0 1 1 9.65 3.8 7 7 0 0 0 20.2 14.35Z"></path>
+				</svg>
+			</span>
+		</button>
+
+		<details class="shared-nav-mobile">
+			<summary class="shared-nav-toggle" aria-label="Toggle navigation menu">
+				<span class="shared-nav-toggle-box" aria-hidden="true">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</summary>
+
+			<nav class="shared-mobile-panel" aria-label="Mobile">
+				{siteConfig.navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+
+				<details class="shared-mobile-submenu">
+					<summary class="shared-mobile-submenu-trigger">
+						<span>Other</span>
+						<img src="/icons/chevron-down.svg" alt="" width="16" height="16" />
+					</summary>
+					<div class="shared-mobile-submenu-panel">
+						{siteConfig.extraPages.map((link) => <a href={link.href}>{link.label}</a>)}
+					</div>
+				</details>
+			</nav>
+		</details>
+	</div>
+</header>
+
+<script is:inline>
+	(() => {
+		const menu = document.querySelector('.shared-menu');
+		const button = menu?.querySelector('.shared-menu-trigger');
+		if (!menu || !button) return;
+
+		const setExpanded = (value) => {
+			button.setAttribute('aria-expanded', String(value));
+		};
+
+		menu.addEventListener('focusin', () => setExpanded(true));
+		menu.addEventListener('focusout', (event) => {
+			if (!menu.contains(event.relatedTarget)) {
+				setExpanded(false);
+			}
+		});
+		menu.addEventListener('mouseenter', () => setExpanded(true));
+		menu.addEventListener('mouseleave', () => setExpanded(false));
+	})();
+</script>

@@ -1,37 +1,71 @@
-# Vis Collective Lab Website
+# VID Lab Website
 
-The Vis Collective Lab Website draws inspo (& code) from the [Vis Design Lab](https://github.com/visdesignlab/visdesignlab.github.io) and is built with Jekyll.
+The lab website for the [Visualization & Interaction Design Lab](https://visidlab.github.io) at Linköping University.
 
-## If you want to set up the site locally do this (but you don't have to):
+Built with [Astro](https://astro.build) and deployed automatically to GitHub Pages on every push to `main`.
 
-### Setup Jekyll
+---
 
-To set up Jekyll, make sure you have ruby and bundler. Then run:
+## For lab members: how to update the website
 
-`bundle install`
-Further details on installing Jekyll and its requirements: https://jekyllrb.com/docs/installation/
+You don't need to install anything to add content. Just edit or create Markdown files and push to `main`.
 
-### Run Jekyll
+### Where to find things
 
-`bundle exec jekyll serve -i`
-Running Jekyll in incremental (-i) mode is significantly faster.
+```
+astro/src/content/
+├── publications/    ← one .md file per paper
+│   └── _README.md  ← how to add a publication ← START HERE
+├── news/            ← one .md file per news post
+│   └── _README.md  ← how to add a news post
+├── people/          ← one .md file per person
+│   └── alumni/      ← people who have left the lab
+└── pages/
+    ├── home.md      ← homepage hero text and links
+    └── about.md     ← about page text and photo
+```
 
-### View the Generated Site
+Open the `_README.md` file inside the folder you want to update — it contains a full template and field-by-field explanation.
 
-`open http://0.0.0.0:4000/`
+### Workflow
 
-## Without local set up
+1. Pull the latest `main` branch
+2. Create or edit a `.md` file in the right folder
+3. Commit and push to `main`
+4. GitHub Actions will build and deploy the site automatically (takes ~1 minute)
 
-1. Create a branch from main
+### Images
 
-   ![image](https://user-images.githubusercontent.com/8480871/218048347-6809786b-815a-45b5-884f-33b156855cf3.png)
+| Image type | Where to put it |
+|---|---|
+| Publication thumbnails | `astro/public/publication-images/` |
+| News post images | `astro/public/assets/photos/news/` |
+| People photos | `astro/public/photos/people/` (filename = person's key, e.g. `meyer.jpg`) |
 
-2. Make your changes
-3. Create a pull request
-4. View deployed preview on the branch
+---
 
-   <img width="916" alt="image" src="https://user-images.githubusercontent.com/8480871/218048223-8ebebdb0-d8f4-4704-98b9-cb8056bd260e.png">
+## For developers: running locally
 
-5. Merge branch
+```bash
+cd astro
+npm install
+npm run dev
+```
 
-   ![image](https://user-images.githubusercontent.com/8480871/218048746-84385789-18af-4d1e-a596-49ac31fc3cec.png)
+The site runs at `http://localhost:4321`.
+
+### Tech stack
+
+- **Framework:** Astro 6
+- **Styling:** Tailwind CSS v4
+- **Content:** Markdown files with YAML frontmatter
+- **Deployment:** GitHub Actions → GitHub Pages
+
+---
+
+## Branch structure
+
+| Branch | Purpose |
+|---|---|
+| `main` | **Production.** All content edits go here. Auto-deploys to the live site |
+| `main-jekyll-archive` | Archive of the old Jekyll site (read-only) |
