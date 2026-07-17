@@ -182,6 +182,12 @@ const schemaData =
 </html>
 
 <style is:global>
+	/* Ensure all page content is selectable */
+	body * {
+		-webkit-user-select: text;
+		user-select: text;
+	}
+
 	@font-face {
 		font-family: 'Manrope Variable';
 		font-style: normal;
