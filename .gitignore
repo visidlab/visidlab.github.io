@@ -4,6 +4,7 @@ astro/.astro
 astro/node_modules
 
 # Jekyll (archive — do not commit these)
+.bundle
 _site
 .sass-cache
 .jekyll-cache
