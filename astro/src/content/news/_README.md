@@ -88,4 +88,4 @@ Another paragraph with more detail.
 
 ## 6. Done!
 
-Save the file, commit, and push to the `astro-redesign` branch. GitHub Actions will build and deploy automatically within a minute or two.
+Save the file, commit, and push to `main`. GitHub Actions will build and deploy automatically within a minute or two.

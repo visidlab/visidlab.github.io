@@ -1,12 +1,12 @@
 # How to add a publication
 
-This file is a guide for lab members. 
+This file is a guide for lab members. It is **not** shown on the website.
 
 ---
 
 ## 1. Create a new file
 
-Add a new `.md` file in this folder (`src/content/publications/`).
+Add a new `.md` file in this folder (`astro/src/content/publications/`).
 
 **File naming convention:**
 ```
@@ -46,20 +46,15 @@ year: 2025
 
 bibentry: inproceedings
 bib:
-  journal:
   booktitle: "Proceedings of the ACM Conference on Human Factors in Computing Systems"
-  editor:
   publisher: ACM
-  address:
   doi: 10.1145/xxxxxxx.xxxxxxx
-  url:
-  volume:
-  number:
   pages: 1-12
   month: April
-  pmcid:
 
 publisherURL: https://doi.org/10.1145/xxxxxxx.xxxxxxx
+preprint_server: https://arxiv.org/abs/xxxx.xxxxx
+code: https://github.com/viscollective/yourrepo
 
 abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <strong>bold</strong> and <em>italic</em>.</p>"
 ---
@@ -86,6 +81,21 @@ abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <
 | `publisherURL` | No | Link to the paper on the publisher's site (DOI link preferred) |
 | `abstract` | No | Full abstract wrapped in `<p>` tags, as a quoted string |
 
+### Link fields (shown in the Resources sidebar)
+
+**Do not store PDF files in this repository.** Instead, link to where the paper is hosted externally.
+
+| Field | Description |
+|---|---|
+| `preprint_server` | Link to a preprint (arXiv, OSF, etc.). Shown prominently as "Preprint (open access)" |
+| `pdf` | Direct link to a PDF hosted elsewhere (not in this repo) |
+| `publisherURL` | Publisher or DOI page. Shown as "Publisher page" |
+| `code` | GitHub or other repository link. Shown as "Source code" |
+| `supplement` | Link to supplementary materials |
+| `external-project` | Link to a dedicated project site |
+
+Leave any unused link fields out of the file entirely.
+
 ---
 
 ## 4. Author keys vs. full names
@@ -100,7 +110,7 @@ authors:
 
 The website will automatically resolve these to full names and link them to the person's profile page.
 
-For **external collaborators**, just write their full name:
+For **external collaborators**, write their full name:
 ```yaml
 authors:
   - akbaba
@@ -130,19 +140,19 @@ Typical sizes:
 
 ---
 
-## 6. Publication types and their badge colors
+## 6. Publication types
 
-| Type value | Badge label | Badge color |
-|---|---|---|
-| `paper` | Paper | Blue |
-| `thesis` | Thesis | Purple |
-| `abstract` | Abstract | Orange |
-| `poster` | Poster | Pink |
-| `preprint` | Preprint | Yellow |
-| `commentary` | Commentary | Teal |
+| Type value | Badge label |
+|---|---|
+| `paper` | Paper |
+| `thesis` | Thesis |
+| `abstract` | Abstract |
+| `poster` | Poster |
+| `preprint` | Preprint |
+| `commentary` | Commentary |
 
 ---
 
 ## 7. Done!
 
-Save the file, commit, and push. 
+Save the file, commit, and push to `main`. GitHub Actions will build and deploy automatically within a minute or two.

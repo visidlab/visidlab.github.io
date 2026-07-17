@@ -3,7 +3,7 @@ name: Deploy Astro site to GitHub Pages
 on:
   push:
     branches:
-      - astro-redesign
+      - main
 
   workflow_dispatch:
 
