@@ -1,5 +1,16 @@
+# Astro
+astro/dist
+astro/.astro
+astro/node_modules
+
+# Jekyll (archive — do not commit these)
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+.bundle
+*.gem
+
+# OS
+.DS_Store
