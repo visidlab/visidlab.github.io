@@ -26,7 +26,7 @@ bib:
   editor: 
   publisher: 
   address: 
-  doi:  
+  doi: 10.1111/cgf.70445 
   url: 
   volume: 
   number: 
@@ -64,6 +64,7 @@ external-project: https://trrracer.netlify.app/
 
 # Link to an official preprint server
 preprint_server: https://arxiv.org/abs/2604.14417
+publisherURL: https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70445
 
 
 # # Extra supplements, such as talk slides, data sets, etc.

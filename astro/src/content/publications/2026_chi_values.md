@@ -22,7 +22,7 @@ bibentry: inproceedings
 bib:
   booktitle: "SIGCHI Conference on Human Factors in Computing Systems (CHI)"
   publisher: ACM
-  doi: 10.1145/3772318.37915
+  doi: 10.1145/3772318.3791501
   pages: 1-8
   award:
 

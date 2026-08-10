@@ -28,7 +28,7 @@ bib:
   editor: 
   publisher: 
   address: 
-  doi:  
+  doi:  10.1111/cgf.70453
   url: 
   volume: 
   number: 
@@ -66,7 +66,8 @@ bib:
 
 # Link to an official preprint server
 # preprint_server: https://osf.io/h793u/
-preprint_server: https://zenodo.org/records/20071583
+preprint_server: https://arxiv.org/abs/2606.09835
+publisherURL: https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70453
 
 
 # # Extra supplements, such as talk slides, data sets, etc.

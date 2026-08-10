@@ -23,16 +23,16 @@ year: 2026
 
 bibentry: inproceedings
 bib:
-  journal: Proceedings of the ACM Designing Interactive Systems Conference
+  journal: Proceedings of the 2026 Designing Interactive Systems Conference
   booktitle: 
   editor: 
   publisher: ACM
   address: 
-  doi:  
+  doi: 10.1145/3800645.3813762 
   url: 
   volume: 
   number: 
-  pages: 
+  pages: 2125 - 2139
   month: 
 
 # award: IEEE VIS 2021 Honorable Mention Award
@@ -67,6 +67,7 @@ bib:
 # Link to an official preprint server
 # preprint_server: https://osf.io/h793u/
 preprint_server: https://zenodo.org/records/20378230
+publisherURL: https://dl.acm.org/doi/abs/10.1145/3800645.3813762
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
