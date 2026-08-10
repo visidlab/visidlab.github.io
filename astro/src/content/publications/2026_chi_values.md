@@ -22,9 +22,10 @@ bibentry: inproceedings
 bib:
   booktitle: "SIGCHI Conference on Human Factors in Computing Systems (CHI)"
   publisher: ACM
-  doi: 
-  # pages: 1-12
+  doi: 10.1145/3772318.37915
+  pages: 1-8
   award:
+
 
 # award: IEEE VIS 2021 Honorable Mention Award
 
@@ -57,6 +58,7 @@ bib:
 
 # Link to an official preprint server
 preprint_server: https://arxiv.org/abs/2602.22051
+publisherURL: https://dl.acm.org/doi/10.1145/3772318.3791501
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
