@@ -57,7 +57,7 @@ keywords: data visualisation, interaction design, sound
 | `year_left` | No | For alumni only: year they left (number, no quotes) |
 | `gs` | No | Full Google Scholar profile URL |
 | `orcid` | No | ORCID identifier (just the number, e.g. `0000-0001-2345-6789`) |
-| `keywords` | No | 3–5 research keywords, comma-separated |
+| `keywords` | No | 3 keywords about your research interests, 1 keyword about a personal interest |
 
 ---
 
