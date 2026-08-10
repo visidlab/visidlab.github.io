@@ -15,7 +15,7 @@ authors:
   - meyer
 
 journal-short: VIS
-year: 2025
+year: 2024
 
 bibentry: inproceedings
 bib:
@@ -26,6 +26,7 @@ bib:
   volume: 31
   number: 1
   month: 1
+  year: 2025
 
 award: IEEE VIS 2024 Best Paper Award
 
@@ -58,6 +59,7 @@ pdf:
 
 # Link to an official preprint server
 preprint_server: https://osf.io/ubrdy/
+publisherURL: https://ieeexplore.ieee.org/document/10670254
 
 
 # # Extra supplements, such as talk slides, data sets, etc.
