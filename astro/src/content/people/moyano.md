@@ -21,5 +21,5 @@ gs: https://scholar.google.com/citations?user=dQbMpv8AAAAJ&hl=en
 orcid: 0000-0002-3454-1070
 
 # Suggestion: 3 research key phrases, 1 personal
-keywords: feminist visualization, data feminism, critical data visualization
+keywords: feminist visualization, data feminism, critical data visualization, dance
 ---
