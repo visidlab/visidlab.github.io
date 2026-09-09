@@ -2,12 +2,12 @@
 import { getCollection, getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import { isUrl } from '../lib/publications';
+import { isUrl, publicationOrderKey } from '../lib/publications';
 
 const allPublications = await getCollection('publications');
 const recent = allPublications
   .filter(p => p.data.year)
-  .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0))
+  .sort((a, b) => publicationOrderKey(b.data) - publicationOrderKey(a.data))
   .slice(0, 4);
 
 const allNews = await getCollection('news');
