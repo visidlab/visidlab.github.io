@@ -15,20 +15,15 @@ authors:
   - Derya Akbaba
   - Ryan Wyatt
 
-journal-short: CHI
-year: 2025
+journal-short: VIS
+year: 2026
 
-bibentry: inproceedings
+bibentry: 
 bib:
-  booktitle: "Proceedings of the ACM Conference on Human Factors in Computing Systems"
-  publisher: ACM
-  doi: 10.1145/xxxxxxx.xxxxxxx
-  pages: 1-12
-  month: April
+ 
 
-publisherURL: https://doi.org/10.1145/xxxxxxx.xxxxxxx
-preprint_server: https://arxiv.org/abs/xxxx.xxxxx
+publisherURL: 
 code: https://github.com/viscollective/yourrepo
 
-abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <strong>bold</strong> and <em>italic</em>.</p>"
+abstract: "<p>Science museums are a rich environment for visualization research where researchers have designed new visualizations, interaction modalities, and educational approaches. But they are also socio-technical places where power, context, and organizational structures influence how science communication is produced and perceived. In this paper, we draw on our collaboration with a local science museum, where we worked on creating a new interactive digital exhibit. Through this process, we encountered a socio-technical phenomenon: these exhibits rarely acknowledge the work or people behind them. We explored the reasons for this invisibility through an interview study with science museum staff and leadership. Our results reveal crediting of interactive exhibits to be a complex, situated challenge. This challenge, however, offers visualization research more than a practical problem to solve — it is an opportunity to reframe credit as a socio-technical design space, one where visualization can make visible not only the outcomes of science, but the processes and people that produce it.</p>"
 ---
