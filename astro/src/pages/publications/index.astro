@@ -2,22 +2,38 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
-import { isUrl, PLACEHOLDER_IMAGE, publicationOrderKey } from '../../lib/publications';
+import { isUrl, PLACEHOLDER_IMAGE, comparePublications } from '../../lib/publications';
+
+const SHOW_AUTHOR_FILTER = false;
 
 const allPeople = await getCollection('people');
 const keyToName: Record<string, string> = {};
+const keyToSurname: Record<string, string> = {};
 for (const person of allPeople) {
   const k = (person.data.key ?? person.id).toLowerCase();
   keyToName[k] = `${person.data.first_name} ${person.data.last_name}`;
+  keyToSurname[k] = person.data.last_name;
 }
 const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 
 const allPubs = await getCollection('publications');
 const sorted = allPubs
   .filter(p => p.data.year)
-  .sort((a, b) => publicationOrderKey(b.data) - publicationOrderKey(a.data));
+  .sort((a, b) => comparePublications(a.data, b.data));
 
 const years = [...new Set(sorted.map(p => p.data.year!))].sort((a, b) => b - a);
+
+// Lab-member authors actually used in at least one publication, for the author filter.
+const usedAuthorKeys = new Set<string>();
+for (const pub of sorted) {
+  for (const a of pub.data.authors ?? []) {
+    const k = a.toLowerCase();
+    if (keyToSurname[k]) usedAuthorKeys.add(k);
+  }
+}
+const authorOptions = [...usedAuthorKeys]
+  .map(k => ({ key: k, surname: keyToSurname[k] }))
+  .sort((a, b) => a.surname.localeCompare(b.surname));
 
 const rawTypes = [...new Set(sorted.map(p => (p.data.type ?? 'paper').trim()))];
 const typeOrder = ['paper', 'thesis', 'abstract', 'poster', 'preprint', 'commentary'];
@@ -55,6 +71,16 @@ const typeLabel: Record<string, string> = {
             <button class="filter-btn" data-filter="year" data-value={String(y)}>{y}</button>
           ))}
         </div>
+        {/* Author filter — hidden for now, keep SHOW_AUTHOR_FILTER to re-enable */}
+        {SHOW_AUTHOR_FILTER && (
+          <div class="filter-group">
+            <span class="filter-label">Author</span>
+            <button class="filter-btn active" data-filter="author" data-value="all">All</button>
+            {authorOptions.map(({ key, surname }) => (
+              <button class="filter-btn" data-filter="author" data-value={key}>{surname}</button>
+            ))}
+          </div>
+        )}
       </div>
       <p class="results-count" id="results-count" aria-live="polite"></p>
 
@@ -63,8 +89,11 @@ const typeLabel: Record<string, string> = {
           const imgFile = pub.data.image_large ?? pub.data.image;
           const imgSrc = imgFile ? `/publication-images/${imgFile}` : PLACEHOLDER_IMAGE;
           const pubType = (pub.data.type ?? 'paper').trim();
+          const authorKeys = (pub.data.authors ?? [])
+            .map(a => a.toLowerCase())
+            .filter(k => keyToSurname[k]);
           return (
-            <li class="pub-item" data-year={String(pub.data.year)} data-type={pubType}>
+            <li class="pub-item" data-year={String(pub.data.year)} data-type={pubType} data-authors={authorKeys.join(' ')}>
               <a class="pub-thumb-wrap" href={`/publications/${pub.id}`}>
                 <img class="pub-thumb" src={imgSrc}
                   alt={pub.data.shortname ?? pub.data.title} loading="lazy" decoding="async" />
@@ -104,13 +133,15 @@ const typeLabel: Record<string, string> = {
   const items = Array.from(list.querySelectorAll<HTMLElement>('.pub-item'));
   const noResults = document.getElementById('no-results')!;
   const countEl = document.getElementById('results-count')!;
-  const state: Record<string, string> = { type: 'all', year: 'all' };
+  const state: Record<string, string> = { type: 'all', year: 'all', author: 'all' };
 
   function applyFilters() {
     let visible = 0;
     for (const item of items) {
+      const authors = (item.dataset.authors ?? '').split(' ');
       const show = (state.type === 'all' || item.dataset.type === state.type)
-                && (state.year === 'all' || item.dataset.year === state.year);
+                && (state.year === 'all' || item.dataset.year === state.year)
+                && (state.author === 'all' || authors.includes(state.author));
       item.style.display = show ? '' : 'none';
       if (show) visible++;
     }
