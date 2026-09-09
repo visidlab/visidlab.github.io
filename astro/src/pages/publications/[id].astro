@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
-import { isUrl, PLACEHOLDER_IMAGE } from '../../lib/publications';
+import { isUrl } from '../../lib/publications';
 
 export async function getStaticPaths() {
   const pubs = await getCollection('publications');
@@ -76,10 +76,12 @@ const pubType = (d.type ?? 'paper').trim();
             )}
           </header>
 
-          <div class="pub-image-wrap">
-            <img class="pub-image" src={(d.image_large ?? d.image) ? `/publication-images/${d.image_large ?? d.image}` : PLACEHOLDER_IMAGE}
-              alt={d.shortname ?? d.title} loading="eager" />
-          </div>
+          {(d.image_large ?? d.image) && (
+            <div class="pub-image-wrap">
+              <img class="pub-image" src={`/publication-images/${d.image_large ?? d.image}`}
+                alt={d.shortname ?? d.title} loading="eager" />
+            </div>
+          )}
 
           {d.abstract && (
             <section class="pub-section">
