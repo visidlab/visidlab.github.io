@@ -69,7 +69,7 @@ abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <
 | `title` | **Yes** | Full paper title. Wrap in quotes if it contains colons |
 | `key` | No | Unique identifier, usually matches the filename without `.md` |
 | `type` | No | One of: `paper`, `thesis`, `abstract`, `poster`, `preprint`, `commentary`. Defaults to `paper` |
-| `order` | No | Used for sorting — use `YYYY-MM` format |
+| `order` | No | Used for sorting within a year, higher sorts first — use `YYYY-MM` format. If two papers share the same month, add a day (`YYYY-MM-DD`) to break the tie: `2026-11-02` sorts above `2026-11-01` |
 | `shortname` | No | Short display name for thumbnails |
 | `image` | No | Thumbnail image filename (no path). Store in `astro/public/publication-images/`. Leave blank if you don't have one yet — the site shows a placeholder image automatically |
 | `image_large` | No | Larger version of the image, same folder |
