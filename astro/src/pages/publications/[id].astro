@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
+import { isUrl, PLACEHOLDER_IMAGE } from '../../lib/publications';
 
 export async function getStaticPaths() {
   const pubs = await getCollection('publications');
@@ -75,12 +76,10 @@ const pubType = (d.type ?? 'paper').trim();
             )}
           </header>
 
-          {(d.image_large ?? d.image) && (
-            <div class="pub-image-wrap">
-              <img class="pub-image" src={`/publication-images/${d.image_large ?? d.image}`}
-                alt={d.shortname ?? d.title} loading="eager" />
-            </div>
-          )}
+          <div class="pub-image-wrap">
+            <img class="pub-image" src={(d.image_large ?? d.image) ? `/publication-images/${d.image_large ?? d.image}` : PLACEHOLDER_IMAGE}
+              alt={d.shortname ?? d.title} loading="eager" />
+          </div>
 
           {d.abstract && (
             <section class="pub-section">
@@ -117,14 +116,14 @@ const pubType = (d.type ?? 'paper').trim();
           <section class="sidebar-section">
             <h3>Resources</h3>
             <ul class="resource-list">
-              {d.preprint_server && <li><a class="resource-primary" href={d.preprint_server} target="_blank" rel="noopener">Preprint (open access) ↗</a></li>}
-              {d.pdf && <li><a class="resource-primary" href={d.pdf} target="_blank" rel="noopener">PDF ↗</a></li>}
-              {(doi || d.publisherURL) && (
+              {isUrl(d.preprint_server) && <li><a class="resource-primary" href={d.preprint_server} target="_blank" rel="noopener">Preprint (open access) ↗</a></li>}
+              {isUrl(d.pdf) && <li><a class="resource-primary" href={d.pdf} target="_blank" rel="noopener">PDF ↗</a></li>}
+              {(doi || isUrl(d.publisherURL)) && (
                 <li><a href={doi ? `http://dx.doi.org/${doi}` : d.publisherURL!} target="_blank" rel="noopener">Publisher page ↗</a></li>
               )}
-              {d.code && <li><a href={d.code} target="_blank" rel="noopener">Source code ↗</a></li>}
-              {d.supplement && <li><a href={d.supplement} target="_blank" rel="noopener">Supplement ↗</a></li>}
-              {d['external-project'] && <li><a href={d['external-project']} target="_blank" rel="noopener">Project site ↗</a></li>}
+              {isUrl(d.code) && <li><a href={d.code} target="_blank" rel="noopener">Source code ↗</a></li>}
+              {isUrl(d.supplement) && <li><a href={d.supplement} target="_blank" rel="noopener">Supplement ↗</a></li>}
+              {isUrl(d['external-project']) && <li><a href={d['external-project']} target="_blank" rel="noopener">Project site ↗</a></li>}
             </ul>
           </section>
           {d.year && (

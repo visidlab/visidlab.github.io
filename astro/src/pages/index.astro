@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import { isUrl } from '../lib/publications';
 
 const allPublications = await getCollection('publications');
 const recent = allPublications
@@ -80,7 +81,7 @@ const resolveAuthor = (a: string) => keyToName[a.toLowerCase()] ?? a;
 							{pub.data['journal-short'] && (
 								<p class="pub-venue">{pub.data['journal-short']}</p>
 							)}
-							{pub.data.publisherURL && (
+							{isUrl(pub.data.publisherURL) && (
 								<span class="pub-link">View paper →</span>
 							)}
 						</a>

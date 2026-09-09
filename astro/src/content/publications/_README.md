@@ -71,7 +71,7 @@ abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <
 | `type` | No | One of: `paper`, `thesis`, `abstract`, `poster`, `preprint`, `commentary`. Defaults to `paper` |
 | `order` | No | Used for sorting — use `YYYY-MM` format |
 | `shortname` | No | Short display name for thumbnails |
-| `image` | No | Thumbnail image filename (no path). Store in `astro/public/publication-images/` |
+| `image` | No | Thumbnail image filename (no path). Store in `astro/public/publication-images/`. Leave blank if you don't have one yet — the site shows a placeholder image automatically |
 | `image_large` | No | Larger version of the image, same folder |
 | `authors` | No | List of author keys (for lab members) or full names (for external authors) |
 | `journal-short` | No | Abbreviated venue name, e.g. `CHI`, `IEEE VIS`, `EuroVis` |
@@ -94,7 +94,7 @@ abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <
 | `supplement` | Link to supplementary materials |
 | `external-project` | Link to a dedicated project site |
 
-Leave any unused link fields out of the file entirely.
+Leave any unused link fields out of the file entirely (blank, e.g. `publisherURL:` with nothing after the colon). **Never type placeholder text like "coming soon" or "TBD" into a link field** — the site only recognizes real `http(s)://` links, so anything else is ignored and simply won't show a link. There's no need to "reserve" a resource row; it appears automatically once you add the real URL.
 
 ---
 
