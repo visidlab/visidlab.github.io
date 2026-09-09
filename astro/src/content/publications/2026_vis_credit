@@ -1,0 +1,34 @@
+---
+title: "It Seems Like Such a Simple Thing: Challenges and Opportunities for Giving Credit in Science Museums"
+key: 2026_vis_credit
+type: paper
+
+order: 2026-11
+
+shortname: It Seems Like Such a Simple Thing: Challenges and Opportunities for Giving Credit in Science Museums
+image: 
+image_large: 
+
+authors:
+  - blomgren
+  - meyer
+  - Derya Akbaba
+  - Ryan Wyatt
+
+journal-short: CHI
+year: 2025
+
+bibentry: inproceedings
+bib:
+  booktitle: "Proceedings of the ACM Conference on Human Factors in Computing Systems"
+  publisher: ACM
+  doi: 10.1145/xxxxxxx.xxxxxxx
+  pages: 1-12
+  month: April
+
+publisherURL: https://doi.org/10.1145/xxxxxxx.xxxxxxx
+preprint_server: https://arxiv.org/abs/xxxx.xxxxx
+code: https://github.com/viscollective/yourrepo
+
+abstract: "<p>Write your abstract here as a single HTML paragraph. You can use <strong>bold</strong> and <em>italic</em>.</p>"
+---
