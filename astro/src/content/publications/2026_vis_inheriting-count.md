@@ -34,7 +34,7 @@ award:
 
 publisherURL:
 
-preprint_server:
+preprint_server: https://arxiv.org/abs/2609.14813
 
 pdf:
 supplement:
